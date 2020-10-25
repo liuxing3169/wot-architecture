@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="zh-Hans">
 <head>
   <meta name="generator" content=
   "HTML Tidy for HTML5 for Linux version 5.7.27">
@@ -131,7 +131,7 @@
   max-height: 30vh;
   }
   </style>
-  <title>Web of Things (WoT) Architecture</title>
+  <title>事物的万维网 (WoT) 架构</title>
   <style id="respec-mainstyle">
   /*****************************************************************
   * ReSpec specific CSS
@@ -432,7 +432,7 @@
   }
   </style>
   <meta name="description" content=
-  "The W3C Web of Things (WoT) is intended to enable interoperability across IoT platforms and application domains. Overall, the goal of the WoT is to preserve and complement existing IoT standards and solutions. In general, the W3C WoT architecture is designed to describe what exists rather than to prescribe what to implement.">
+  "W3C 事物的万维网 (WoT)意在使跨物联网平台和应用程序域具有互操作性。总的来说，WoT的目标是维持和补充现有的物联网标准和解决方案。 一般来说，W3C WoT 架构目的是描述存在什么，而不是规定要实现什么。">
   <link rel="canonical" href=
   "https://www.w3.org/TR/wot-architecture/">
   <script type="application/ld+json">
@@ -1620,37 +1620,36 @@
     <a class="logo" href="https://www.w3.org/"><img alt="W3C"
     width="72" height="48" src=
     "https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a>
-    <h1 id="title" class="title">Web of Things (WoT)
-    Architecture</h1>
-    <h2>W3C Recommendation <time class="dt-published" datetime=
-    "2020-04-09">9 April 2020</time></h2>
+    <h1 id="title" class="title">事物的万维网 (WoT) 架构</h1>
+    <h2>W3C 推荐标准 <time class="dt-published" datetime=
+    "2020-04-09">2020年4月9日</time></h2>
     <dl>
-      <dt>This version:</dt>
+      <dt>此版本：</dt>
       <dd>
         <a class="u-url" href=
         "https://www.w3.org/TR/2020/REC-wot-architecture-20200409/">https://www.w3.org/TR/2020/REC-wot-architecture-20200409/</a>
       </dd>
-      <dt>Latest published version:</dt>
+      <dt>最新发布版本：</dt>
       <dd>
         <a href=
         "https://www.w3.org/TR/wot-architecture/">https://www.w3.org/TR/wot-architecture/</a>
       </dd>
-      <dt>Latest editor's draft:</dt>
+      <dt>最新编者草案：</dt>
       <dd>
         <a href=
         "https://w3c.github.io/wot-architecture/">https://w3c.github.io/wot-architecture/</a>
       </dd>
-      <dt>Implementation report:</dt>
+      <dt>实施报告：</dt>
       <dd>
 	<a href=
 	"https://w3c.github.io/wot-thing-description/testing/report.html">https://w3c.github.io/wot-thing-description/testing/report.html</a>
       </dd>
-      <dt>Previous version:</dt>
+      <dt>上一版本：</dt>
       <dd>
         <a class="u-url" href=
         "https://www.w3.org/TR/2020/PR-wot-architecture-20200130/">https://www.w3.org/TR/2020/PR-wot-architecture-20200130/</a>
       </dd>
-      <dt>Editors:</dt>
+      <dt>编者：</dt>
       <dd class="p-author h-card vcard" data-editor-id="75998">
         <span class="p-name fn">Matthias Kovatsch</span> (<a class=
         "p-org org h-org h-card" href=
@@ -1679,7 +1678,7 @@
       <dd class="p-author h-card vcard"><span class=
       "p-name fn">Kazuo Kajimoto</span> (Former Editor, when at
       Panasonic)</dd>
-      <dt>Participate:</dt>
+      <dt>参与：</dt>
       <dd>
         <a href="https://github.com/w3c/wot-architecture/">GitHub
         w3c/wot-architecture</a>
@@ -1699,7 +1698,7 @@
         "https://github.com/w3c/wot-architecture/pulls/">Pull
         requests</a>
       </dd>
-      <dt>Contributors:</dt>
+      <dt>贡献者：</dt>
       <dd>
         <a href=
         "https://github.com/w3c/wot-architecture/graphs/contributors">
@@ -1707,12 +1706,11 @@
       </dd>
     </dl>
       <p>
-              Please check the
-              <a href="https://w3c.github.io/wot-architecture/errata.html"><strong>errata</strong></a> for any errors or issues reported since publication.
+              请在<a href="https://w3c.github.io/wot-architecture/errata.html"><strong>errata</strong></a> 查看自发布以来的任何错误或问题报告。
             </p>
       <p>
-              See also
-              <a href="http://www.w3.org/2003/03/Translations/byTechnology?technology=wot-architecture"><strong>translations</strong></a>.
+              还可以查看
+              <a href="http://www.w3.org/2003/03/Translations/byTechnology?technology=wot-architecture"><strong>翻译</strong></a>.
             </p>
     <p class="copyright"><a href=
     "https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
@@ -1733,184 +1731,131 @@
     <hr title="Separator for header">
   </div>
   <section id="abstract" class="introductory">
-    <h2>Abstract</h2>
-    <p>The <abbr title="World Wide Web Consortium">W3C</abbr> Web
-    of Things (WoT) is intended to enable interoperability across
-    IoT platforms and application domains. Overall, the goal of the
-    WoT is to preserve and complement existing IoT standards and
-    solutions. In general, the <abbr title=
-    "World Wide Web Consortium">W3C</abbr> WoT architecture is
-    designed to describe what exists rather than to prescribe what
-    to implement.</p>
-    <p>This <em>WoT Architecture</em> specification describes the
-    abstract architecture for the <abbr title=
-    "World Wide Web Consortium">W3C</abbr> Web of Things. This
-    abstract architecture is based on a set of requirements that
-    were derived from use cases for multiple application domains,
-    both given in this document. A set of modular building blocks
-    are also identified whose detailed specifications are given in
-    other documents. This document describes how these building
-    blocks are related and work together. The WoT abstract
-    architecture defines a basic conceptual framework that can be
-    mapped onto a variety of concrete deployment scenarios, several
-    examples of which are given. However, the abstract architecture
-    described in this specification does not itself define concrete
-    mechanisms or prescribe any concrete implementation.</p>
+    <h2>概要</h2>
+    <p><abbr title="World Wide Web Consortium">W3C</abbr> 事物的万维网 (WoT) 意在使跨物联网平台和应用程序域具有互操作性。
+      总的来说，WoT 的目标是维持和补充现有的物联网标准和解决方案。 一般来说，<abbr title=
+      "World Wide Web Consortium">W3C</abbr> WoT 架构目的是描述存在什么，而不是规定要实现什么。</p>
+    <p>这份 <em>WoT 架构</em> 标准描述了<abbr title=
+      "World Wide Web Consortium">W3C</abbr> Web of Things 的抽象架构。此抽象架构基于一系列需求，这些需求是从多个应用域的用例得出的，本文档中均给出了这些需求。
+      还确定了一组模块化构件，其详细规格在其他文档中给出。这份文档介绍了这些构件如何关联以及如何协同工作。WoT 抽象架构定义了一个基本的概念框架，可以将其映射到各种具体的部署方案中，并给出了几个示例。
+      但是，本标准中描述的抽象体系结构本身并没有定义具体的机制或规定任何具体的实现。</p>
   </section>
   <section id="sotd" class="introductory">
-    <h2>Status of This Document</h2>
-    <p><em>This section describes the status of this document at
-    the time of its publication. Other documents may supersede this
-    document. A list of current <abbr title=
-    "World Wide Web Consortium">W3C</abbr> publications and the
-    latest revision of this technical report can be found in the
-    <a href="https://www.w3.org/TR/"><abbr title=
-    "World Wide Web Consortium">W3C</abbr> technical reports
-    index</a> at https://www.w3.org/TR/.</em></p>
-    <p>This document describes an abstract architecture design.
-    However, there is an <a href=
-    "https://w3c.github.io/wot-thing-description/testing/report.html">
-    Implementation Report</a> that describes a set of concrete
-    implementations based on the associated <em>WoT Thing
-    Description</em> specification. These are implementations
-    following the <abbr title=
-    "World Wide Web Consortium">W3C</abbr> Web of Things
-    architecture.</p>
+    <h2>此文档的状态</h2>
+    <p><em>本节介绍此文档在它发布时的状态。其它的文档可能会取代此文档。
+      一份当前 <abbr title="World Wide Web Consortium">W3C</abbr> 已发布的标准列表和此技术报告的最新版本
+      可以在 <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> 技术报告索引</a>的网址 https://www.w3.org/TR/ 中找到。</em></p>
+    <p>此文档描述了一个抽象架构设计。不过，这里有一份<a href="https://w3c.github.io/wot-thing-description/testing/report.html">实现报告</a>记述一些基于相应的 <em>WoT Thing Description</em> 规格而实现的具体实施项目。
+      它们是遵循 <abbr title="World Wide Web Consortium">W3C</abbr> Web of Things 架构的具体实施。</p>
     <p>
-        This document has been reviewed by <abbr title="World Wide Web Consortium">W3C</abbr> Members, by software developers, and by other <abbr title="World Wide Web Consortium">W3C</abbr> groups and interested parties, and is endorsed by the Director
-        as a <abbr title="World Wide Web Consortium">W3C</abbr> Recommendation. It is a stable document and may be used as reference material or cited from another document. <abbr title="World Wide Web Consortium">W3C</abbr>'s role in making the Recommendation
-        is to draw attention to the specification and to promote its widespread deployment. This enhances the functionality and interoperability of the Web.
+        此文档已经被 <abbr title="World Wide Web Consortium">W3C</abbr> 会员，软件开发者，和其他 <abbr title="World Wide Web Consortium">W3C</abbr> 用户组和兴趣组审核过，并作为 <abbr title="World Wide Web Consortium">W3C</abbr> 建议书被主管支持。
+        这是一份稳定的文档，可以用作参考资料或从其他文档中引用。<abbr title="World Wide Web Consortium">W3C</abbr> 在制定建议书中的作用是引起人们对该标准的关注并促使其广泛部署。这增强了 Web 的功能和互操作性。
     </p>
-    <p>This document was published by the <a href=
-    "https://www.w3.org/WoT/WG/">Web of Things Working Group</a> as
-    a Recommendation.</p>
-    <p><a href=
-    "https://github.com/w3c/wot-architecture/issues/">GitHub
-    Issues</a> are preferred for discussion of this specification.
-    Alternatively, you can send comments to our mailing list.
-    Please send them to <a href=
-    "mailto:public-wot-wg@w3.org">public-wot-wg@w3.org</a>
-    (<a href="https://lists.w3.org/Archives/Public/public-wot-wg/">archives</a>).</p>
-    <p>This document was produced by a group operating under the
-    <a href=
-    "https://www.w3.org/Consortium/Patent-Policy/"><abbr title=
-    "World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
-    <abbr title="World Wide Web Consortium">W3C</abbr> maintains a
-    <a rel="disclosure" href=
-    "https://www.w3.org/2004/01/pp-impl/95969/status">public list
-    of any patent disclosures</a> made in connection with the
-    deliverables of the group; that page also includes instructions
-    for disclosing a patent. An individual who has actual knowledge
-    of a patent which the individual believes contains <a href=
-    "https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential
-    Claim(s)</a> must disclose the information in accordance with
-    <a href=
-    "https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section
-    6 of the <abbr title="World Wide Web Consortium">W3C</abbr>
-    Patent Policy</a>.</p>
-    <p>This document is governed by the <a id=
-    "w3c_process_revision" href=
-    "https://www.w3.org/2019/Process-20190301/">1 March 2019
-    <abbr title="World Wide Web Consortium">W3C</abbr> Process
-    Document</a>.</p>
+    <p>此文档由 <a href="https://www.w3.org/WoT/WG/">Web of Things 工作组</a>作为建议发布。</p>
+    <p>
+      <a href="https://github.com/w3c/wot-architecture/issues/">GitHub Issues</a> 是讨论此标准的首选。
+      作为替代选择，你可以发送评价到我们的邮件列表。请将它们发送到<a href="mailto:public-wot-wg@w3.org">public-wot-wg@w3.org</a>
+    (<a href="https://lists.w3.org/Archives/Public/public-wot-wg/">存档</a>)。</p>
+    <p>此文档由在 <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> 专利政策</a>下运作的一个工作组制作。
+      <abbr title="World Wide Web Consortium">W3C</abbr> 维护了一个与该小组的可交付成果有关的
+      <a rel="disclosure" href="https://www.w3.org/2004/01/pp-impl/95969/status">任何专利披露的公开列表</a>；该页面还包含公开专利的说明。
+      真正了解专利的个人（该个人认为其包含<a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">基本权利要求</a>）必须
+      根据<a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure"> <abbr title="World Wide Web Consortium">W3C</abbr> 专利政策的第6节</a>披露信息。</p>
+    <p>此文档受<a id="w3c_process_revision" href="https://www.w3.org/2019/Process-20190301/">2019年3月1日<abbr title="World Wide Web Consortium">W3C</abbr>流程文档</a>的约束。</p>
   </section>
   <nav id="toc">
-    <h2 class="introductory" id="table-of-contents">Table of
-    Contents</h2>
+    <h2 class="introductory" id="table-of-contents">目录</h2>
     <ol class="toc">
       <li class="tocline">
         <a class="tocxref" href="#introduction"><bdi class=
-        "secno">1.</bdi> Introduction</a>
+        "secno">1.</bdi> 介绍</a>
       </li>
       <li class="tocline">
         <a class="tocxref" href="#conformance"><bdi class=
-        "secno">2.</bdi> Conformance</a>
+        "secno">2.</bdi> 一致性</a>
       </li>
       <li class="tocline">
         <a class="tocxref" href="#terminology"><bdi class=
-        "secno">3.</bdi> Terminology</a>
+        "secno">3.</bdi> 术语</a>
       </li>
       <li class="tocline">
         <a class="tocxref" href="#sec-use-cases"><bdi class=
-        "secno">4.</bdi> Use Cases</a>
+        "secno">4.</bdi> 用例</a>
         <ol class="toc">
           <li class="tocline">
             <a class="tocxref" href=
             "#sec-application-domains"><bdi class="secno">4.1</bdi>
-            Application Domains</a>
+            应用域</a>
             <ol class="toc">
               <li class="tocline">
                 <a class="tocxref" href=
                 "#consumer-use-cases"><bdi class=
-                "secno">4.1.1</bdi> Consumer</a>
+                "secno">4.1.1</bdi> 消费者</a>
               </li>
               <li class="tocline">
                 <a class="tocxref" href=
                 "#industrial-iot-usecases"><bdi class=
-                "secno">4.1.2</bdi> Industrial</a>
+                "secno">4.1.2</bdi> 产业</a>
                 <ol class="toc">
                   <li class="tocline">
                     <a class="tocxref" href=
                     "#example-smart-factory"><bdi class=
-                    "secno">4.1.2.1</bdi> Example: Smart
-                    Factory</a>
+                    "secno">4.1.2.1</bdi> 例子: 智能工厂</a>
                   </li>
                 </ol>
               </li>
               <li class="tocline">
                 <a class="tocxref" href=
                 "#transportationlogistics"><bdi class=
-                "secno">4.1.3</bdi> Transportation & Logistics</a>
+                "secno">4.1.3</bdi> 物流与运输</a>
               </li>
               <li class="tocline">
                 <a class="tocxref" href="#utilities"><bdi class=
-                "secno">4.1.4</bdi> Utilities</a>
+                "secno">4.1.4</bdi> 公共设备</a>
               </li>
               <li class="tocline">
                 <a class="tocxref" href="#oilandgas"><bdi class=
-                "secno">4.1.5</bdi> Oil and Gas</a>
+                "secno">4.1.5</bdi> 油和气</a>
               </li>
               <li class="tocline">
                 <a class="tocxref" href="#insurance"><bdi class=
-                "secno">4.1.6</bdi> Insurance</a>
+                "secno">4.1.6</bdi> 保险</a>
               </li>
               <li class="tocline">
                 <a class="tocxref" href=
                 "#engineering-and-construction"><bdi class=
-                "secno">4.1.7</bdi> Engineering and
-                Construction</a>
+                "secno">4.1.7</bdi> 工程建设</a>
               </li>
               <li class="tocline">
                 <a class="tocxref" href="#agriculture"><bdi class=
-                "secno">4.1.8</bdi> Agriculture</a>
+                "secno">4.1.8</bdi> 农业</a>
               </li>
               <li class="tocline">
                 <a class="tocxref" href="#healthcare"><bdi class=
-                "secno">4.1.9</bdi> Healthcare</a>
+                "secno">4.1.9</bdi> 健康服务</a>
               </li>
               <li class="tocline">
                 <a class="tocxref" href=
                 "#environmentmonitoring"><bdi class=
-                "secno">4.1.10</bdi> Environment Monitoring</a>
+                "secno">4.1.10</bdi> 环境监测</a>
               </li>
               <li class="tocline">
                 <a class="tocxref" href="#smartcities"><bdi class=
-                "secno">4.1.11</bdi> Smart Cities</a>
+                "secno">4.1.11</bdi> 智慧城市</a>
               </li>
               <li class="tocline">
                 <a class="tocxref" href=
                 "#smartbuildings"><bdi class="secno">4.1.12</bdi>
-                Smart Buildings</a>
+                智慧建筑</a>
               </li>
               <li class="tocline">
                 <a class="tocxref" href="#connectedcar"><bdi class=
-                "secno">4.1.13</bdi> Connected Car</a>
+                "secno">4.1.13</bdi> 联网汽车</a>
                 <ol class="toc">
                   <li class="tocline">
                     <a class="tocxref" href=
                     "#connectedcar-example"><bdi class=
-                    "secno">4.1.13.1</bdi> Connected Car
-                    Example</a>
+                    "secno">4.1.13.1</bdi> 联网汽车示例</a>
                   </li>
                 </ol>
               </li>
@@ -1919,165 +1864,163 @@
           <li class="tocline">
             <a class="tocxref" href=
             "#sec-common-usecase-patterns"><bdi class=
-            "secno">4.2</bdi> Common Patterns</a>
+            "secno">4.2</bdi> 常见模式</a>
             <ol class="toc">
               <li class="tocline">
                 <a class="tocxref" href=
                 "#device-controllers"><bdi class=
-                "secno">4.2.1</bdi> Device Controllers</a>
+                "secno">4.2.1</bdi> 设备控制器</a>
               </li>
               <li class="tocline">
                 <a class="tocxref" href=
                 "#thing-to-thing"><bdi class="secno">4.2.2</bdi>
-                Thing-to-Thing</a>
+                物到物</a>
               </li>
               <li class="tocline">
                 <a class="tocxref" href=
                 "#remote-access"><bdi class="secno">4.2.3</bdi>
-                Remote Access</a>
+                远程访问</a>
               </li>
               <li class="tocline">
                 <a class="tocxref" href=
                 "#smart-home-gateways"><bdi class=
-                "secno">4.2.4</bdi> Smart Home Gateways</a>
+                "secno">4.2.4</bdi> 智能家居网关</a>
               </li>
               <li class="tocline">
                 <a class="tocxref" href="#edge-devices"><bdi class=
-                "secno">4.2.5</bdi> Edge Devices</a>
+                "secno">4.2.5</bdi> 边缘设备</a>
               </li>
               <li class="tocline">
                 <a class="tocxref" href=
                 "#digital-twins"><bdi class="secno">4.2.6</bdi>
-                Digital Twins</a>
+                数字孪生</a>
                 <ol class="toc">
                   <li class="tocline">
                     <a class="tocxref" href=
                     "#cloud-ready-devices"><bdi class=
-                    "secno">4.2.6.1</bdi> Cloud-ready Devices</a>
+                    "secno">4.2.6.1</bdi> 云端设备</a>
                   </li>
                   <li class="tocline">
                     <a class="tocxref" href=
                     "#legacy-devices"><bdi class=
-                    "secno">4.2.6.2</bdi> Legacy Devices</a>
+                    "secno">4.2.6.2</bdi> 传统设备</a>
                   </li>
                 </ol>
               </li>
               <li class="tocline">
                 <a class="tocxref" href="#multi-cloud"><bdi class=
-                "secno">4.2.7</bdi> Multi-Cloud</a>
+                "secno">4.2.7</bdi> 多云</a>
               </li>
               <li class="tocline">
                 <a class="tocxref" href=
                 "#cross-domain-collaboration"><bdi class=
-                "secno">4.2.8</bdi> Cross-domain Collaboration</a>
+                "secno">4.2.8</bdi> 跨域协作</a>
               </li>
             </ol>
           </li>
           <li class="tocline">
             <a class="tocxref" href=
             "#sec-use-case-summary"><bdi class="secno">4.3</bdi>
-            Summary</a>
+            总结</a>
           </li>
         </ol>
       </li>
       <li class="tocline">
         <a class="tocxref" href="#sec-requirements"><bdi class=
-        "secno">5.</bdi> Requirements</a>
+        "secno">5.</bdi> 需求</a>
         <ol class="toc">
           <li class="tocline">
             <a class="tocxref" href=
             "#sec-functional-requirement"><bdi class=
-            "secno">5.1</bdi> Functional Requirements</a>
+            "secno">5.1</bdi> 功能需求</a>
             <ol class="toc">
               <li class="tocline">
                 <a class="tocxref" href=
                 "#sec-requirements-principles"><bdi class=
-                "secno">5.1.1</bdi> Common Principles</a>
+                "secno">5.1.1</bdi> 通用原则</a>
               </li>
               <li class="tocline">
                 <a class="tocxref" href=
                 "#sec-requirements-thing-functionalities"><bdi class="secno">
-                5.1.2</bdi> Thing Functionalities</a>
+                5.1.2</bdi> 事物功能</a>
               </li>
               <li class="tocline">
                 <a class="tocxref" href=
                 "#sec-requirements-search-and-discovery"><bdi class="secno">
-                5.1.3</bdi> Search and Discovery</a>
+                5.1.3</bdi> 搜索和发现</a>
               </li>
               <li class="tocline">
                 <a class="tocxref" href=
                 "#sec-requirements-description-mechanism"><bdi class="secno">
-                5.1.4</bdi> Description Mechanism</a>
+                5.1.4</bdi> 描述机制</a>
               </li>
               <li class="tocline">
                 <a class="tocxref" href=
                 "#sec-requirements-description-of-attributes"><bdi class="secno">
-                5.1.5</bdi> Description of Attributes</a>
+                5.1.5</bdi> 属性的描述</a>
               </li>
               <li class="tocline">
                 <a class="tocxref" href=
                 "#sec-requirements-description-of-functionalities"><bdi class="secno">
-                5.1.6</bdi> Description of Functionalities</a>
+                5.1.6</bdi> 功能的描述</a>
               </li>
               <li class="tocline">
                 <a class="tocxref" href=
                 "#sec-requirements-network"><bdi class=
-                "secno">5.1.7</bdi> Network</a>
+                "secno">5.1.7</bdi> 网络</a>
               </li>
               <li class="tocline">
                 <a class="tocxref" href=
                 "#sec-requirements-deployment"><bdi class=
-                "secno">5.1.8</bdi> Deployment</a>
+                "secno">5.1.8</bdi> 部署</a>
               </li>
               <li class="tocline">
                 <a class="tocxref" href=
                 "#sec-requirements-application"><bdi class=
-                "secno">5.1.9</bdi> Application</a>
+                "secno">5.1.9</bdi> 应用程序</a>
               </li>
               <li class="tocline">
                 <a class="tocxref" href=
                 "#sec-requirements-legacy-adoption"><bdi class=
-                "secno">5.1.10</bdi> Legacy Adoption</a>
+                "secno">5.1.10</bdi> 接纳传统</a>
               </li>
             </ol>
           </li>
           <li class="tocline">
             <a class="tocxref" href=
             "#sec-technical-requirements"><bdi class=
-            "secno">5.2</bdi> Technical Requirements</a>
+            "secno">5.2</bdi> 技术需求</a>
             <ol class="toc">
               <li class="tocline">
                 <a class="tocxref" href=
                 "#components-in-the-web-of-things-and-the-web-of-things-architecture">
-                <bdi class="secno">5.2.1</bdi> Components in the
-                Web of Things and the Web of Things
-                Architecture</a>
+                <bdi class="secno">5.2.1</bdi>WoT 中的组件和 WoT 架构</a>
               </li>
               <li class="tocline">
                 <a class="tocxref" href="#devices"><bdi class=
-                "secno">5.2.2</bdi> Devices</a>
+                "secno">5.2.2</bdi> 设备</a>
               </li>
               <li class="tocline">
                 <a class="tocxref" href="#applications"><bdi class=
-                "secno">5.2.3</bdi> Applications</a>
+                "secno">5.2.3</bdi> 应用程序</a>
               </li>
               <li class="tocline">
                 <a class="tocxref" href=
                 "#digital-twins-0"><bdi class="secno">5.2.4</bdi>
-                Digital Twins</a>
+                数字孪生</a>
               </li>
               <li class="tocline">
                 <a class="tocxref" href="#discovery"><bdi class=
-                "secno">5.2.5</bdi> Discovery</a>
+                "secno">5.2.5</bdi> 发现</a>
               </li>
               <li class="tocline">
                 <a class="tocxref" href="#security"><bdi class=
-                "secno">5.2.6</bdi> Security</a>
+                "secno">5.2.6</bdi> 安全</a>
               </li>
               <li class="tocline">
                 <a class="tocxref" href=
                 "#accessibility"><bdi class="secno">5.2.7</bdi>
-                Accessibility</a>
+                可访问性</a>
               </li>
             </ol>
           </li>
@@ -2085,66 +2028,66 @@
       </li>
       <li class="tocline">
         <a class="tocxref" href="#sec-wot-architecture"><bdi class=
-        "secno">6.</bdi> WoT Architecture</a>
+        "secno">6.</bdi> WoT 架构</a>
         <ol class="toc">
           <li class="tocline">
             <a class="tocxref" href=
             "#sec-architecture-overview"><bdi class=
-            "secno">6.1</bdi> Overview</a>
+            "secno">6.1</bdi> 概览</a>
           </li>
           <li class="tocline">
             <a class="tocxref" href="#sec-affordances"><bdi class=
-            "secno">6.2</bdi> Affordances</a>
+            "secno">6.2</bdi> 自解释性</a>
           </li>
           <li class="tocline">
             <a class="tocxref" href="#sec-web-thing"><bdi class=
-            "secno">6.3</bdi> Web Thing</a>
+            "secno">6.3</bdi> 网络事物</a>
           </li>
           <li class="tocline">
             <a class="tocxref" href=
             "#sec-interaction-model"><bdi class="secno">6.4</bdi>
-            Interaction Model</a>
+            交互模型</a>
             <ol class="toc">
               <li class="tocline">
                 <a class="tocxref" href="#properties"><bdi class=
-                "secno">6.4.1</bdi> Properties</a>
+                "secno">6.4.1</bdi> 属性</a>
               </li>
               <li class="tocline">
                 <a class="tocxref" href="#actions"><bdi class=
-                "secno">6.4.2</bdi> Actions</a>
+                "secno">6.4.2</bdi> 动作</a>
               </li>
               <li class="tocline">
                 <a class="tocxref" href="#events"><bdi class=
-                "secno">6.4.3</bdi> Events</a>
+                "secno">6.4.3</bdi> 事件</a>
               </li>
             </ol>
           </li>
           <li class="tocline">
             <a class="tocxref" href=
             "#sec-hypermedia-controls"><bdi class="secno">6.5</bdi>
-            Hypermedia Controls</a>
+            超媒体控件</a>
             <ol class="toc">
               <li class="tocline">
                 <a class="tocxref" href=
                 "#sec-hypermedia-links"><bdi class=
-                "secno">6.5.1</bdi> Links</a>
+                "secno">6.5.1</bdi> 链接</a>
               </li>
               <li class="tocline">
                 <a class="tocxref" href=
                 "#sec-hypermedia-forms"><bdi class=
-                "secno">6.5.2</bdi> Forms</a>
+                "secno">6.5.2</bdi> 表单</a>
               </li>
             </ol>
           </li>
           <li class="tocline">
             <a class="tocxref" href=
             "#sec-protocol-bindings"><bdi class="secno">6.6</bdi>
-            Protocol Bindings</a>
+            协议绑定</a>
             <ol class="toc">
               <li class="tocline">
                 <a class="tocxref" href=
                 "#hypermedia-driven"><bdi class="secno">6.6.1</bdi>
-                Hypermedia-driven</a>
+                超媒体驱动</a>
               </li>
               <li class="tocline">
                 <a class="tocxref" href=
@@ -2154,29 +2097,28 @@
               <li class="tocline">
                 <a class="tocxref" href=
                 "#sec-standard-method"><bdi class=
-                "secno">6.6.3</bdi> Standard Set of Methods</a>
+                "secno">6.6.3</bdi> 方法的标准集合</a>
               </li>
               <li class="tocline">
                 <a class="tocxref" href="#media-types"><bdi class=
-                "secno">6.6.4</bdi> Media Types</a>
+                "secno">6.6.4</bdi> 媒体类型</a>
               </li>
             </ol>
           </li>
           <li class="tocline">
             <a class="tocxref" href=
             "#sec-wot-servient-architecture-high-level"><bdi class=
-            "secno">6.7</bdi> WoT System Components and Their
-            Interconnectivity</a>
+            "secno">6.7</bdi> WoT系统组件和它们的互联性</a>
             <ol class="toc">
               <li class="tocline">
                 <a class="tocxref" href=
                 "#direct-communication"><bdi class=
-                "secno">6.7.1</bdi> Direct Communication</a>
+                "secno">6.7.1</bdi> 直接通信</a>
               </li>
               <li class="tocline">
                 <a class="tocxref" href=
                 "#indirect-communication"><bdi class=
-                "secno">6.7.2</bdi> Indirect Communication</a>
+                "secno">6.7.2</bdi> 间接通信</a>
               </li>
             </ol>
           </li>
@@ -2184,82 +2126,81 @@
       </li>
       <li class="tocline">
         <a class="tocxref" href="#sec-building-blocks"><bdi class=
-        "secno">7.</bdi> WoT Building Blocks</a>
+        "secno">7.</bdi> WoT 构建块</a>
         <ol class="toc">
           <li class="tocline">
             <a class="tocxref" href=
             "#sec-thing-description"><bdi class="secno">7.1</bdi>
-            WoT Thing Description</a>
+            WoT 事物描述</a>
           </li>
           <li class="tocline">
             <a class="tocxref" href=
             "#sec-binding-templates"><bdi class="secno">7.2</bdi>
-            WoT Binding Templates</a>
+            WoT 构建模板</a>
           </li>
           <li class="tocline">
             <a class="tocxref" href=
             "#sec-scripting-api"><bdi class="secno">7.3</bdi> WoT
-            Scripting API</a>
+            脚本 API</a>
           </li>
           <li class="tocline">
             <a class="tocxref" href=
             "#sec-security-guidelines"><bdi class="secno">7.4</bdi>
-            WoT Security and Privacy Guidelines</a>
+            WoT 安全与隐私指南</a>
           </li>
         </ol>
       </li>
       <li class="tocline">
         <a class="tocxref" href=
         "#sec-servient-implementation"><bdi class="secno">8.</bdi>
-        Abstract Servient Architecture</a>
+        抽象服务方架构</a>
         <ol class="toc">
           <li class="tocline">
             <a class="tocxref" href=
             "#behavior-implementation"><bdi class="secno">8.1</bdi>
-            Behavior Implementation</a>
+            行为执行</a>
           </li>
           <li class="tocline">
             <a class="tocxref" href="#wot-runtime"><bdi class=
-            "secno">8.2</bdi> WoT Runtime</a>
+            "secno">8.2</bdi> WoT 运行时</a>
           </li>
           <li class="tocline">
             <a class="tocxref" href=
             "#wot-scripting-api"><bdi class="secno">8.3</bdi> WoT
-            Scripting API</a>
+            脚本 API</a>
           </li>
           <li class="tocline">
             <a class="tocxref" href=
             "#exposed-thing-and-consumed-thing-abstractions"><bdi class="secno">
-            8.4</bdi> Exposed Thing and Consumed Thing
-            Abstractions</a>
+            8.4</bdi> 暴露事物和消费事物抽象</a>
           </li>
           <li class="tocline">
             <a class="tocxref" href=
             "#private-security-data"><bdi class="secno">8.5</bdi>
-            Private Security Data</a>
+            私有安全数据</a>
           </li>
           <li class="tocline">
             <a class="tocxref" href=
             "#protocol-stack-implementation"><bdi class=
-            "secno">8.6</bdi> Protocol Stack Implementation</a>
+            "secno">8.6</bdi> 协议栈实现</a>
           </li>
           <li class="tocline">
             <a class="tocxref" href="#system-api"><bdi class=
-            "secno">8.7</bdi> System API</a>
+            "secno">8.7</bdi> 系统 API</a>
           </li>
           <li class="tocline">
             <a class="tocxref" href=
             "#alt-servient-impl"><bdi class="secno">8.8</bdi>
-            Alternative Servient and WoT Implementations</a>
+            交替服务方和 WoT 实施：</a>
             <ol class="toc">
               <li class="tocline">
                 <a class="tocxref" href="#native-impl"><bdi class=
-                "secno">8.8.1</bdi> Native WoT API</a>
+                "secno">8.8.1</bdi> 本地 WoT API</a>
               </li>
               <li class="tocline">
                 <a class="tocxref" href=
                 "#existing-impl"><bdi class="secno">8.8.2</bdi>
-                Thing Description for Existing Devices</a>
+                已存在设备的事物描述</a>
               </li>
             </ol>
           </li>
@@ -2268,73 +2209,64 @@
       <li class="tocline">
         <a class="tocxref" href=
         "#sec-deployment-scenario"><bdi class="secno">9.</bdi>
-        Example WoT Deployments</a>
+        WoT 部署示例</a>
         <ol class="toc">
           <li class="tocline">
             <a class="tocxref" href=
             "#sec-client-server-roles"><bdi class="secno">9.1</bdi>
-            Thing and Consumer Roles</a>
+            事物和消费者角色</a>
           </li>
           <li class="tocline">
             <a class="tocxref" href=
             "#sec-topologies-deployment-scenarios"><bdi class=
-            "secno">9.2</bdi> Topology of WoT Systems and
-            Deployment Scenarios</a>
+            "secno">9.2</bdi> WoT 系统的拓扑和部署场景</a>
             <ol class="toc">
               <li class="tocline">
                 <a class="tocxref" href=
                 "#sec-deployment-app-dev"><bdi class=
-                "secno">9.2.1</bdi> Consumer and Thing on the Same
-                Network</a>
+                "secno">9.2.1</bdi> 消费者和事物在同一个网络</a>
               </li>
               <li class="tocline">
                 <a class="tocxref" href=
                 "#sec-deployment-intermediaries"><bdi class=
-                "secno">9.2.2</bdi> Consumer and Thing Connected
-                via Intermediaries</a>
+                "secno">9.2.2</bdi> 消费者和事物通过中介而连接</a>
                 <ol class="toc">
                   <li class="tocline">
                     <a class="tocxref" href=
                     "#sec-deployment-app-proxy-dev"><bdi class=
-                    "secno">9.2.2.1</bdi> Intermediary Acting as a
-                    Proxy</a>
+                    "secno">9.2.2.1</bdi> 中介扮演着一个代理</a>
                   </li>
                   <li class="tocline">
                     <a class="tocxref" href=
                     "#sec-deployment-digital-twin"><bdi class=
-                    "secno">9.2.2.2</bdi> Intermediary Acting as a
-                    Digital Twin</a>
+                    "secno">9.2.2.2</bdi> 中介扮演着一个数字孪生</a>
                   </li>
                 </ol>
               </li>
               <li class="tocline">
                 <a class="tocxref" href=
                 "#sec-deployment-cloud"><bdi class=
-                "secno">9.2.3</bdi> Devices in a Local Network
-                Controlled from a Cloud Service</a>
+                "secno">9.2.3</bdi> 从云服务中控制本地网络中的设备</a>
               </li>
               <li class="tocline">
                 <a class="tocxref" href=
                 "#sec-deployment-discovery-with-directory"><bdi class="secno">
-                9.2.4</bdi> Discovery Using a Thing Directory</a>
+                9.2.4</bdi> 使用事物目录进行发现</a>
               </li>
               <li class="tocline">
                 <a class="tocxref" href=
                 "#sec-deployment-service-to-service"><bdi class=
-                "secno">9.2.5</bdi> Service-to-Service Connections
-                Across Multiple Domains</a>
+                "secno">9.2.5</bdi>  跨多域的服务到服务的连接</a>
                 <ol class="toc">
                   <li class="tocline">
                     <a class="tocxref" href=
                     "#sec-deployment-service-to-service-synchronized">
-                    <bdi class="secno">9.2.5.1</bdi> Connection
-                    Through Thing Directory Synchronization</a>
+                    <bdi class="secno">9.2.5.1</bdi> 通过事物目录同步进行连接</a>
                   </li>
                   <li class="tocline">
                     <a class="tocxref" href=
                     "#sec-deployment-service-sync-proxy"><bdi class="secno">
-                    9.2.5.2</bdi> Connection Through Proxy
-                    Synchronization</a>
+                    9.2.5.2</bdi> 通过代理同步进行连接</a>
                   </li>
                 </ol>
               </li>
@@ -2345,70 +2277,61 @@
       <li class="tocline">
         <a class="tocxref" href=
         "#sec-security-considerations"><bdi class="secno">10.</bdi>
-        Security and Privacy Considerations</a>
+        安全和隐私注意事项</a>
         <ol class="toc">
           <li class="tocline">
             <a class="tocxref" href=
             "#sec-security-consideration-td-risks"><bdi class=
-            "secno">10.1</bdi> WoT Thing Description Risks</a>
+            "secno">10.1</bdi> WoT 事物描述风险</a>
             <ol class="toc">
               <li class="tocline">
                 <a class="tocxref" href=
                 "#sec-security-consideration-td-private"><bdi class="secno">
-                10.1.1</bdi> Thing Description Private Security
-                Data Risk</a>
+                10.1.1</bdi> 事物描述私有安全数据风险</a>
               </li>
               <li class="tocline">
                 <a class="tocxref" href=
                 "#sec-security-consideration-td-pii"><bdi class=
-                "secno">10.1.2</bdi> Thing Description Personally
-                Identifiable Information Risk</a>
+                "secno">10.1.2</bdi> 事物描述个人身份信息风险</a>
               </li>
               <li class="tocline">
                 <a class="tocxref" href=
                 "#sec-security-consideration-td-cm"><bdi class=
-                "secno">10.1.3</bdi> Thing Description
-                Communication Metadata Risk</a>
+                "secno">10.1.3</bdi> 事物描述通信元数据风险</a>
               </li>
             </ol>
           </li>
           <li class="tocline">
             <a class="tocxref" href=
             "#sec-security-consideration-scripting-risks"><bdi class="secno">
-            10.2</bdi> WoT Scripting API Security and Privacy
-            Risks</a>
+            10.2</bdi> WoT 脚本 API 安全性和隐私风险</a>
             <ol class="toc">
               <li class="tocline">
                 <a class="tocxref" href=
                 "#sec-security-consideration-cross-script"><bdi class="secno">
-                10.2.1</bdi> Cross-Script Security and Privacy
-                Risk</a>
+                10.2.1</bdi> 跨脚本安全和隐私风险</a>
               </li>
               <li class="tocline">
                 <a class="tocxref" href=
                 "#sec-security-consideration-device-direct-access"><bdi class="secno">
-                10.2.2</bdi> Physical Device Direct Access Security
-                and Privacy Risk</a>
+                10.2.2</bdi> 物理设备直接访问安全性和隐私风险</a>
               </li>
             </ol>
           </li>
           <li class="tocline">
             <a class="tocxref" href=
             "#sec-security-consideration-runtime-risks"><bdi class=
-            "secno">10.3</bdi> WoT Runtime Security and Privacy
-            Risks</a>
+            "secno">10.3</bdi> WoT 运行时安全性和隐私风险</a>
             <ol class="toc">
               <li class="tocline">
                 <a class="tocxref" href=
                 "#sec-security-consideration-update-provisioning"><bdi class="secno">
-                10.3.1</bdi> Provisioning and Update Security
-                Risk</a>
+                10.3.1</bdi> 配置和更新安全风险</a>
               </li>
               <li class="tocline">
                 <a class="tocxref" href=
                 "#sec-security-consideration-credentials-storage"><bdi class="secno">
-                10.3.2</bdi> Security Credentials Storage Security
-                and Privacy Risk</a>
+                10.3.2</bdi> 安全凭证存储安全性和隐私风险</a>
               </li>
             </ol>
           </li>
@@ -2416,25 +2339,25 @@
       </li>
       <li class="tocline">
         <a class="tocxref" href="#changes"><bdi class=
-        "secno">A.</bdi> Recent Specification Changes</a>
+        "secno">A.</bdi> 近期标准变更</a>
       </li>
       <li class="tocline">
         <a class="tocxref" href="#acknowledgements"><bdi class=
-        "secno">B.</bdi> Acknowledgments</a>
+        "secno">B.</bdi> 致谢</a>
       </li>
       <li class="tocline">
         <a class="tocxref" href="#references"><bdi class=
-        "secno">C.</bdi> References</a>
+        "secno">C.</bdi> 参考文献</a>
         <ol class="toc">
           <li class="tocline">
             <a class="tocxref" href=
             "#normative-references"><bdi class="secno">C.1</bdi>
-            Normative references</a>
+            标准引用</a>
           </li>
           <li class="tocline">
             <a class="tocxref" href=
             "#informative-references"><bdi class="secno">C.2</bdi>
-            Informative references</a>
+           信息参考</a>
           </li>
         </ol>
       </li>
@@ -2442,731 +2365,364 @@
   </nav>
   <section id="introduction">
     <h2 id="x1-introduction"><bdi class="secno">1.</bdi>
-    Introduction<a class="self-link" aria-label="§" href=
+    介绍<a class="self-link" aria-label="§" href=
     "#introduction"></a></h2>
-    <p>The goals of the <em>Web of Things</em> (WoT) are to improve
-    the interoperability and usability of the Internet of Things
-    (IoT). Through a collaboration involving many stakeholders over
-    many years, several building blocks have been identified that
-    help address these challenges.</p>
-    <p>This specification is focused on the scope of <abbr title=
-    "World Wide Web Consortium">W3C</abbr> WoT standardization,
-    which can be broken down into these building blocks as well as
-    the abstract architecture that defines how they are related.
-    The building blocks are defined and described in detail in
-    separate specifications. However, in addition to defining the
-    abstract architecture and its terminology and conceptual
-    framework, this specification also serves as an introduction to
-    the WoT building blocks, and explains their interworking:</p>
+    <p><em>事物的万维网</em> (WoT) 的目标是提高物联网 (IoT) 的互操作性和可用性。通过多年来许多利益相关者的合作，已经确定了有助于解决这些挑战的几个构建基块。</p>
+    <p>
+      此标准关注点聚焦在 <abbr title="World Wide Web Consortium">W3C</abbr> WoT 标准化的范围，可以将其分解为这些构建块以及定义它们之间如何关联的抽象体系架构。
+      构建块在单独的标准中有详细的定义和解释。但是，除了定义抽象架构及其术语和概念框架之外，此标准还可以作为 WoT 构建块的简介，并解释它们的互通性：</p>
+      <ul>
+        <li>
+          <em>WoT 事物描述</em> [<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-thing-description" title="Web of Things (WoT) Thing Description">WOT-THING-DESCRIPTION</a></cite>] 规范地提供了一种用于描述元数据和事物的网络层接口的机器可读的数据格式。它基于此文档中介绍的基本概念之上，比如交互能力自解释性。
+        </li>
+        <li>
+          <em>WoT 构建模板</em> [<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-binding-templates" title="Web of Things (WoT) Binding Templates">WOT-BINDING-TEMPLATES</a></cite>] 提供了关于如何为特定协议和 IoT 生态系统而定义事物网络层接口的信息指南，我们称之为协议绑定。此文档还提供了数个已存在的 IoT 生态系统和标准的例子。
+        </li>
+        <li>
+          <em>WoT 脚本 API</em> [<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-scripting-api" title="Web of Things (WoT) Scripting API">WOT-SCRIPTING-API</a></cite>]，是可选项，能够使用一种类似于 Web 浏览器 API 的通用 JavaScript API 来实现一个事物的应用程序逻辑。这简化了 IoT 应用程序开发并使跨品牌商和设备都具有可移植性。
+        </li>
+        <li>
+          <em>WoT 安全与隐私指南</em> [<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-security" title="Web of Things (WoT) Security and Privacy Guidelines">WOT-SECURITY</a></cite>] 代表一个跨领域的构建模块。该文档提供了安全实施和事物的配置方面的指南，并讨论了在实施任何 <abbr title="World Wide Web Consortium">W3C</abbr> WoT 系统时应该考虑的一些问题。
+          但是，应该强调的是，安全性和隐私指南在针对特定实现的一整套具体机制的背景下进行全面评估，而 WoT 抽象体系结构并未完全指定这种机制。特别是在当 WoT 架构被用于描述已经存在的系统时，因为 W3C WoT 不能约束此类系统的行为，只能描绘它们。在本文档中，我们还将在章节<a href="#sec-security-considerations" class="sec-ref">§&nbsp;<bdi class="secno">10.</bdi> Security and Privacy Considerations</a>讨论隐私和安全风险及其缓解措施。
+        </li>
+      </ul>
+    <p>此标准还包含非标准的体系结构方面和部署 WoT 系统的条件。尽管这些标准非规范性的定义特定的具体实现，但在示例部署方案的上下文中描述了这些准则。</p>
+    <p>此标准作为 <abbr title="World Wide Web Consortium">W3C</abbr> WoT 标准的总体，并定义了诸如术语、底层 <abbr title="World Wide Web Consortium">W3C</abbr> Web of Things 的抽象架构之类的基础，总而言之，此标准的目的是提供：</p>
     <ul>
-      <li>The <em>Web of Things (WoT) Thing Description</em>
-      [<cite><a class="bibref" data-link-type="biblio" href=
-      "#bib-wot-thing-description" title=
-      "Web of Things (WoT) Thing Description">WOT-THING-DESCRIPTION</a></cite>]
-      normatively provides a machine-readable data format for
-      describing the metadata and network-facing interfaces of
-      Things. It is based upon the fundamental concepts introduced
-      in this document, such as interaction affordances.</li>
-      <li>The <em>Web of Things (WoT) Binding Templates</em>
-      [<cite><a class="bibref" data-link-type="biblio" href=
-      "#bib-wot-binding-templates" title=
-      "Web of Things (WoT) Binding Templates">WOT-BINDING-TEMPLATES</a></cite>]
-      provides informational guidelines on how to define
-      network-facing interfaces in Things for particular protocols
-      and IoT ecosystems, which we call Protocol Bindings. The
-      document also provides examples for a number of existing IoT
-      ecosystems and standards.</li>
-      <li>The <em>Web of Things (WoT) Scripting API</em>
-      [<cite><a class="bibref" data-link-type="biblio" href=
-      "#bib-wot-scripting-api" title=
-      "Web of Things (WoT) Scripting API">WOT-SCRIPTING-API</a></cite>],
-      which is optional, enables the implementation of the
-      application logic of a Thing using a common JavaScript API
-      similar to the Web browser APIs. This simplifies IoT
-      application development and enables portability across
-      vendors and devices.</li>
-      <li>The <em>Web of Things (WoT) Security and Privacy
-      Guidelines</em> [<cite><a class="bibref" data-link-type=
-      "biblio" href="#bib-wot-security" title=
-      "Web of Things (WoT) Security and Privacy Guidelines">WOT-SECURITY</a></cite>]
-      represent a cross-cutting building block. This informational
-      document provides guidelines for the secure implementation
-      and configuration of Things, and discusses issues which
-      should be considered in any systems implementing
-        <abbr title="World Wide Web Consortium">W3C</abbr> WoT.
-        However, it should be emphasized that security and privacy
-        can only be fully evaluated in the context of a complete
-        set of concrete mechanisms for a specific implementation,
-        which the WoT abstract architecture does not fully specify.
-        This is especially true when the WoT architecture is used
-        descriptively for pre-existing systems, since the
-        <abbr title="World Wide Web Consortium">W3C</abbr> WoT
-        cannot constrain the behavior of such systems, it can only
-        describe them. In this document we also discuss privacy and
-        security risks and their mitigation at a high level in
-        section <a href="#sec-security-considerations" class=
-        "sec-ref">§&nbsp;<bdi class="secno">10.</bdi> Security and
-        Privacy Considerations</a>.
+      <li><a href="#sec-use-cases" class="sec-ref">§&nbsp;<bdi class="secno">4.</bdi>用例</a>中的通向 <abbr title="World Wide Web Consortium">W3C</abbr> WoT 架构的一组用例，
+      </li>
+      <li><a href="#sec-requirements" class="sec-ref">§&nbsp;<bdi class="secno">5.</bdi>需求</a>中的实现 WoT 的一组需求，
+      </li>
+      <li><a href="#sec-wot-architecture" class="sec-ref">§&nbsp;<bdi class="secno">6.</bdi> WoT 架构</a>中一个抽象架构的定义
+      </li>
+      <li><a href="#sec-building-blocks" class="sec-ref">§&nbsp;<bdi class="secno">7.</bdi> WoT 构建块</a>中一个关于一组 WoT 构建块和它们相互作用的概览，
+      </li>
+      <li><a href="#sec-servient-implementation" class="sec-ref">§&nbsp;<bdi class="secno">8.</bdi> 抽象服务方架构</a>中的一个关于如何映射抽象架构到可能的具体实现的说明指引，
+      </li>
+      <li><a href="#sec-deployment-scenario" class="sec-ref">§&nbsp;<bdi class="secno">9.</bdi> WoT 部署示例</a>中的可能部署场景的示例信息，
+      </li>
+      <li><a href="#sec-security-considerations" class="sec-ref">§&nbsp;<bdi class="secno">10.</bdi> 安全和隐私注意事项</a>当实施一个基于 <abbr title="World Wide Web Consortium">W3C</abbr> WoT 架构的系统时所需考虑到的关于安全和隐私的一个高级别的讨论。
       </li>
     </ul>
-    <p>This specification also covers non-normative architectural
-    aspects and conditions for the deployment of WoT systems. These
-    guidelines are described in the context of example deployment
-    scenarios, although this specification does not normatively
-    define specific concrete implementations.</p>
-    <p>This specification serves as an umbrella for <abbr title=
-    "World Wide Web Consortium">W3C</abbr> WoT specifications and
-    defines the basics such as terminology and the underlying
-    abstract architecture of the <abbr title=
-    "World Wide Web Consortium">W3C</abbr> Web of Things. In
-    summary, the purpose of this specification is to provide:</p>
-    <ul>
-      <li>a set of use cases in <a href="#sec-use-cases" class=
-      "sec-ref">§&nbsp;<bdi class="secno">4.</bdi> Use Cases</a>
-      that lead to the <abbr title=
-      "World Wide Web Consortium">W3C</abbr> WoT Architecture,
-      </li>
-      <li>a set of requirements for WoT implementations in
-        <a href="#sec-requirements" class=
-        "sec-ref">§&nbsp;<bdi class="secno">5.</bdi>
-        Requirements</a>,
-      </li>
-      <li>a definition of the abstract architecture in <a href=
-      "#sec-wot-architecture" class="sec-ref">§&nbsp;<bdi class=
-      "secno">6.</bdi> WoT Architecture</a>
-      </li>
-      <li>an overview of a set of WoT building blocks and their
-      interplay in <a href="#sec-building-blocks" class="sec-ref">
-        §&nbsp;<bdi class="secno">7.</bdi> WoT Building Blocks</a>,
-      </li>
-      <li>an informative guideline on how to map the abstract
-      architecture to possible concrete implementations in
-        <a href="#sec-servient-implementation" class=
-        "sec-ref">§&nbsp;<bdi class="secno">8.</bdi> Abstract
-        Servient Architecture</a>,
-      </li>
-      <li>informative examples of possible deployment scenarios in
-      <a href="#sec-deployment-scenario" class=
-      "sec-ref">§&nbsp;<bdi class="secno">9.</bdi> Example WoT
-      Deployments</a>,
-      </li>
-      <li>and a discussion, at a high level, of security and
-      privacy considerations to be aware of when implementing a
-      system based on the <abbr title="World Wide Web Consortium">
-        W3C</abbr> WoT architecture in <a href=
-        "#sec-security-considerations" class=
-        "sec-ref">§&nbsp;<bdi class="secno">10.</bdi> Security and
-        Privacy Considerations</a>.
-      </li>
-    </ul>
-    <p>Additional requirements, use cases, conceptual features and
-    new building blocks will be addressed in a future revision of
-    this document.</p>
+    <p>其他需求，用例，概念功能和新的构建块将会被更新到此文档的未来版本中。</p>
   </section>
   <section id="conformance">
     <h2 id="x2-conformance"><bdi class="secno">2.</bdi>
-    Conformance<a class="self-link" aria-label="§" href=
+    一致性<a class="self-link" aria-label="§" href=
     "#conformance"></a></h2>
-    <p>As well as sections marked as non-normative, all authoring
-    guidelines, diagrams, examples, and notes in this specification
-    are non-normative. Everything else in this specification is
-    normative.</p>
-    <p>The key words <em class="rfc2119">MAY</em>, <em class=
-    "rfc2119">MUST</em>, and <em class="rfc2119">SHOULD</em> in
-    this document are to be interpreted as described in <a href=
-    "https://tools.ietf.org/html/bcp14">BCP 14</a> [<cite><a class=
-    "bibref" data-link-type="biblio" href="#bib-rfc2119" title=
-    "Key words for use in RFCs to Indicate Requirement Levels">RFC2119</a></cite>]
-    [<cite><a class="bibref" data-link-type="biblio" href=
-    "#bib-rfc8174" title=
-    "Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words">RFC8174</a></cite>]
-    when, and only when, they appear in all capitals, as shown
-    here.</p>
+    <p>除被标记为非标准的章节外，本标准中的所有创造指南，图表，示例和注释都是非标准的。除此之外，本标准中的所有其它内容都是标准的。</p>
+    <p>此文档中的关键词<em class="rfc2119">可能</em>、<em class="rfc2119">必须</em> 和 <em class="rfc2119">应该</em> 在<a href="https://tools.ietf.org/html/bcp14">BCP 14</a>[<cite><a class=
+      "bibref" data-link-type="biblio" href="#bib-rfc2119" title=
+      "Key words for use in RFCs to Indicate Requirement Levels">RFC2119</a></cite>]
+      [<cite><a class="bibref" data-link-type="biblio" href=
+      "#bib-rfc8174" title=
+      "Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words">RFC8174</a></cite>] 中有详细的描述解释，当且仅当它们以全大写字母出现时，如同这里的。</p>
   </section>
   <section id="terminology" class="informative">
     <h2 id="x3-terminology"><bdi class="secno">3.</bdi>
-    Terminology<a class="self-link" aria-label="§" href=
+    术语<a class="self-link" aria-label="§" href=
     "#terminology"></a></h2>
-    <p><em>This section is non-normative.</em></p>
-    <p>This specification uses the following terms as defined here.
-    The WoT prefix is used to avoid ambiguity for terms that are
-    (re)defined specifically for Web of Things concepts.</p>
+    <p><em>本章节是非标准的。</em></p>
+    <p>此规范用到的术语在下面进行了定义。WoT 前缀用于避免为专门为 Web of Things 概念(重新)定义的术语含混不清。</p>
     <dl>
       <dt><dfn data-dfn-type="dfn" data-plurals="actions" id=
-      "dfn-action">Action</dfn></dt>
-      <dd>An Interaction Affordance that allows to invoke a
-      function of the Thing, which manipulates state (e.g.,
-      toggling a lamp on or off) or triggers a process on the Thing
-      (e.g., dim a lamp over time).</dd>
+      "dfn-action">动作</dfn></dt>
+      <dd>允许调用事物功能的一种交互能力，该功能可以操作状态(比如，拨动灯到开或关)或触发事物的一个进程(比如，随时间使一盏灯变暗)。</dd>
       <dt><dfn data-lt="WoT Binding Templates|Binding Templates"
       data-dfn-type="dfn" data-plurals=
       "binding template|wot binding template" id=
-      "dfn-wot-binding-templates">Binding Templates</dfn></dt>
-      <dd>A re-usable collection of blueprints for the
-      communication with different IoT platforms. The blueprints
-      provide information to map Interaction Affordances to
-      platform-specific messages through WoT Thing Description as
-      well as implementation notes for the required protocol stacks
-      or dedicated communication drivers.</dd>
+      "dfn-wot-binding-templates">绑定模板</dfn></dt>
+      <dd>可重用的一批与不同 IoT 平台进行通信的蓝图。蓝图提供了通过 WoT 事物描述将可交互自解释性和特定平台消息进行映射的信息，以及所需协议栈或专用通信设备的实现说明。</dd>
       <dt><dfn data-dfn-type="dfn" data-plurals="consumed things"
-      id="dfn-consumed-thing">Consumed Thing</dfn></dt>
-      <dd>A software abstraction that represents a remote Thing
-      used by the local application. The abstraction might be
-      created by a native WoT Runtime, or instantiated as an object
-      through the WoT Scripting API.</dd>
+      id="dfn-consumed-thing">被消费的事物</dfn></dt>
+      <dd>表示一个远端事物被本地应用程序使用的一个软件抽象。此抽象可能是由本地 WoT 运行时创建，或者通过 WoT 脚本 API 实例化为对象。</dd>
       <dt><dfn data-dfn-type="dfn" id=
-      "dfn-consuming-a-thing">Consuming a Thing</dfn></dt>
-      <dd>To parse and process a TD document and from it create a
-      Consumed Thing software abstraction as interface for the
-      application in the local runtime environment.</dd>
+      "dfn-consuming-a-thing">消费一个事物</dfn></dt>
+      <dd>要解析和处理一个 TD 文档，并从它创建一个被消费的事物软件抽象作为本地运行环境中应用程序的接口。</dd>
       <dt><dfn data-dfn-type="dfn" data-plurals="consumers" id=
-      "dfn-consumer">Consumer</dfn></dt>
-      <dd>An entity that can process WoT Thing Descriptions
-      (including its JSON-based representation format) and interact
-      with Things (i.e., consume Things).</dd>
+      "dfn-consumer">消费者</dfn></dt>
+      <dd>可以处理 WoT 事物描述（包括其基于 JSON 的表示格式）并与事物进行交互（比如:消费事物）的一个实体。</dd>
       <dt><dfn data-dfn-type="dfn" data-plurals="data schemas" id=
-      "dfn-data-schema">Data Schema</dfn></dt>
-      <dd>
-        A data schema describes the information model and the
-        related payload structure and corresponding data items that
-        are passed between <a href="#dfn-thing" class="internalDFN"
-        data-link-type="dfn">Things</a> and <a href="#dfn-consumer"
-        class="internalDFN" data-link-type="dfn">Consumers</a>
-        during interactions.
+      "dfn-data-schema">数据结构</dfn></dt>
+      <dd>在交互期间在<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">事物</a>和<a href="#dfn-consumer"class="internalDFN" data-link-type="dfn">消费者</a>之间传递的一种描述信息模型和有关系的负载结构和相应的数据项的数据结构。
       </dd>
       <dt><dfn data-dfn-type="dfn" data-plurals="digital twins" id=
-      "dfn-digital-twin">Digital Twin</dfn></dt>
-      <dd>A digital twin is a virtual representation of a device or
-      a group of devices that resides on a cloud or edge node. It
-      can be used to represent real-world devices which may not be
-      continuously online, or to run simulations of new
-      applications and services, before they get deployed to the
-      real devices.</dd>
+      "dfn-digital-twin">数字孪生</dfn></dt>
+      <dd>数字孪生是一种将存在于云端或边缘节点上的一个设备或一组设备的虚拟表示法。它可以被用作描绘那些可能不连续在线的真实设备，或者在将新应用程序和服务部署到真实设备前对其进行仿真。</dd>
       <dt><dfn data-dfn-type="dfn" id=
-      "dfn-domain-specific-vocabulary">Domain-specific
-      Vocabulary</dfn></dt>
-      <dd>Linked Data vocabulary that can be used in the WoT Thing
-      Description, but is not defined by <abbr title=
-      "World Wide Web Consortium">W3C</abbr> WoT.</dd>
-      <dt><dfn data-dfn-type="dfn" id="dfn-edge-device">Edge
-      Device</dfn></dt>
-      <dd>A device that provides an entry point into enterprise or
-      service provider core networks. Examples include gateways,
-      routers, switches, multiplexers, and a variety of other
-      access devices.</dd>
+      "dfn-domain-specific-vocabulary">领域专用词汇</dfn></dt>
+      <dd>可以在 WoT 事物描述中使用的相关数据词汇，但在 <abbr title="World Wide Web Consortium">W3C</abbr> WoT 中并未定义。</dd>
+      <dt><dfn data-dfn-type="dfn" id="dfn-edge-device">边缘设备</dfn></dt>
+      <dd>提供进入企业或服务提供商核心网络的入口点的设备。比如包括网关，路由器，交换机，多工器和各种其它访问设备。</dd>
       <dt><dfn data-dfn-type="dfn" data-plurals="events" id=
-      "dfn-event">Event</dfn></dt>
-      <dd>An Interaction Affordance that describes an event source,
-      which asynchronously pushes event data to Consumers (e.g.,
-      overheating alerts).</dd>
+      "dfn-event">事件</dfn></dt>
+      <dd>描述事件源的一种交互能力，异步推送事件数据给消费者。（比如，过热警报）。</dd>
       <dt><dfn data-dfn-type="dfn" data-plurals="exposed things"
-      id="dfn-exposed-thing">Exposed Thing</dfn></dt>
-      <dd>A software abstraction that represents a locally hosted
-      Thing that can be accessed over the network by remote
-      Consumers. The abstraction might be created by a native WoT
-      Runtime, or instantiated as an object through the WoT
-      Scripting API.</dd>
+      id="dfn-exposed-thing">已暴露的事物</dfn></dt>
+      <dd>代表本地托管的事物的软件抽象，远程消费者可以通过网络其进行访问。抽象可能由本地 WoT 运行时创建，或者通过 WoT 脚本 API 实例化为对象。</dd>
       <dt><dfn data-dfn-type="dfn" id=
-      "dfn-exposing-a-thing">Exposing a Thing</dfn></dt>
-      <dd>To create an Exposed Thing software abstraction in the
-      local runtime environment to manage the state of a Thing and
-      interface with the behavior implementation.</dd>
+      "dfn-exposing-a-thing">暴露一个事物</dfn></dt>
+      <dd>在本地运行时环境下创建一个暴露的事物软件抽象，以管理事物的状态和行为实现的接口。</dd>
       <dt><dfn data-dfn-type="dfn" id=
-      "dfn-hypermedia-control">Hypermedia Control</dfn></dt>
-      <dd>A serialization of a Protocol Binding in hypermedia, that
-      is, either a Web link [<cite><a class="bibref"
-      data-link-type="biblio" href="#bib-rfc8288" title=
-      "Web Linking">RFC8288</a></cite>] for navigation or a Web
-      form for performing other operations. Forms can be seen as
-      request templates provided by the Thing to be completed and
-      sent by the Consumer.</dd>
+      "dfn-hypermedia-control">超媒体控件</dfn></dt>
+      <dd>超媒体中协议绑定的序列化，即是，或者一个用于导航的 Web 链接[<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc8288" title="Web Linking">RFC8288</a></cite>]或者用于执行其他操作的一个 Web 表单。
+        表单可以被视作由事物提供的，并由消费者完成并发送的请求模板。</dd>
       <dt><dfn data-dfn-type="dfn" data-plurals=
       "interaction affordances" id=
-      "dfn-interaction-affordance">Interaction
-      Affordance</dfn></dt>
-      <dd>Metadata of a Thing that shows and describes the possible
-      choices to Consumers, thereby suggesting how Consumers may
-      interact with the Thing. There are many types of potential
-      affordances, but <abbr title=
-      "World Wide Web Consortium">W3C</abbr> WoT defines three
-      types of Interaction Affordances: Properties, Actions, and
-      Events. A fourth Interaction Affordance is navigation, which
-      is already available on the Web through linking.</dd>
+      "dfn-interaction-affordance">交互自描述性</dfn></dt>
+      <dd>事物向消费者展示和描述可能选择的元数据，从而建议消费者可以与事物如何交互。这里有多种潜在的自描述性，但是 <abbr title="World Wide Web Consortium">W3C</abbr> WoT 定义了三种交互自描述性：属性，动作，和事件。
+        第四种交互自描述性是导航，它在 Web 上通过链接已经可以获得。</dd>
       <dt><dfn data-dfn-type="dfn" id=
-      "dfn-interaction-model">Interaction Model</dfn></dt>
-      <dd>An intermediate abstraction that formalizes and narrows
-      the mapping from application intent to concrete protocol
-      operations. In <abbr title=
-      "World Wide Web Consortium">W3C</abbr> WoT, the defined set
-      of Interaction Affordances constitutes the Interaction
-      Model.</dd>
+      "dfn-interaction-model">交互模型</dfn></dt>
+      <dd>形式化和缩小了从应用程序意图到具体的协议操作的映射的媒介抽象。在 <abbr title="World Wide Web Consortium">W3C</abbr> WoT 中，已定义的交互自描述性组成了交互模型。</dd>
       <dt><dfn data-dfn-type="dfn" data-plurals="intermediaries"
-      id="dfn-intermediary">Intermediary</dfn></dt>
-      <dd>An entity between Consumers and Things that can proxy,
-      augment, or compose Things and republish a WoT Thing
-      Description that points to the WoT Interface on the
-      Intermediary instead of the original Thing. For Consumers, an
-      Intermediary may be indistinguishable from a Thing, following
-      the Layered System constraint of REST.</dd>
+      id="dfn-intermediary">中介</dfn></dt>
+      <dd>消费者和事物之间的一个实体，可以代理、拓展和组成事物，并重新发布指向中介上的 WoT 接口（而不是原始事物）的 WoT 事物描述。对于消费者来说，遵循 REST 的分层系统约束，中介可能与事物没有区别。</dd>
       <dt><dfn data-dfn-type="dfn" data-plurals="iot platforms" id=
-      "dfn-iot-platform">IoT Platform</dfn></dt>
-      <dd>A specific IoT ecosystem such as OCF, oneM2M, or Mozilla
-      Project Things with its own specifications for
-      application-facing APIs, data model, and protocols or
-      protocol configurations.</dd>
+      "dfn-iot-platform">IoT 平台</dfn></dt>
+      <dd>特定的 IoT 生态系统，比如 OCF, oneM2M, 或 Mozilla Project Things 和它自己特定为应用层面的 APIs，数据模型，和协议或协议配置的规范。</dd>
       <dt><dfn data-dfn-type="dfn" id=
-      "dfn-metadata">Metadata</dfn></dt>
-      <dd>
-        Data that provides a description of an entity's abstract
-        characteristics. For example, a <a href=
-        "#dfn-thing-description" class="internalDFN"
-        data-link-type="dfn">Thing Description</a> is Metadata for
-        a <a href="#dfn-thing" class="internalDFN" data-link-type=
-        "dfn">Thing</a>.
+      "dfn-metadata">元数据</dfn></dt>
+      <dd>提供对实体抽象特征进行描述的数据。比如，<a href="#dfn-thing-description" class="internalDFN" data-link-type="dfn">事物描述</a>是一个<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">事物</a>的元数据。
       </dd>
       <dt><dfn data-lt=
       "Personally Identifiable Information|Personally Identifiable Information (PII)"
       data-dfn-type="dfn" id=
-      "dfn-personally-identifiable-information">Personally
-      Identifiable Information (PII)</dfn></dt>
-      <dd>Any information that can be used to identify the natural
-      person to whom such information relates, or is or might be
-      directly or indirectly linked to a natural person. We use the
-      same definition as [<cite><a class="bibref" data-link-type=
-      "biblio" href="#bib-iso-iec-29100" title=
-      "Information technology — Security techniques — Privacy framework">ISO-IEC-29100</a></cite>].</dd>
+      "dfn-personally-identifiable-information">个人身份信息(PII)</dfn></dt>
+      <dd>任何可以被用来识别一个自然人是谁的关联信息数据，或者是直接或间接与一个自然人关联的数据。我们与[<cite><a class="bibref" data-link-type="biblio" href="#bib-iso-iec-29100" title="Information technology — Security techniques — Privacy framework">ISO-IEC-29100</a></cite>]使用同样的定义。</dd>
       <dt><dfn data-dfn-type="dfn" id=
-      "dfn-privacy">Privacy</dfn></dt>
-      <dd>
-        Freedom from intrusion into the private life or affairs of
-        an individual when that intrusion results from undue or
-        illegal gathering and use of data about that individual. We
-        use the same definition as [<cite><a class="bibref"
-        data-link-type="biblio" href="#bib-iso-iec-2382" title=
-        "Information technology — Vocabulary">ISO-IEC-2382</a></cite>].
-        See also <a href="#dfn-personally-identifiable-information"
-        class="internalDFN" data-link-type="dfn">Personally
-        Identifiable Information</a> and <a href="#dfn-security"
-        class="internalDFN" data-link-type="dfn">Security</a>, as
-        well as other related definitions in [<cite><a class=
-        "bibref" data-link-type="biblio" href="#bib-iso-iec-29100"
-        title=
-        "Information technology — Security techniques — Privacy framework">ISO-IEC-29100</a></cite>].
+      "dfn-privacy">隐私</dfn></dt>
+      <dd>由于不适当或非法地收集和使用有关个人的资料而导致侵入个人生活或事务的自由。我们使用和[<cite><a class="bibref" data-link-type="biblio" href="#bib-iso-iec-2382" title="Information technology — Vocabulary">ISO-IEC-2382</a></cite>]一样的定义。另请参阅
+        <a href="#dfn-personally-identifiable-information" class="internalDFN" data-link-type="dfn">个人身份信息</a>和<a href="#dfn-security" class="internalDFN" data-link-type="dfn">安全</a>以及
+        [<cite><a class="bibref" data-link-type="biblio" href="#bib-iso-iec-29100" title="Information technology — Security techniques — Privacy framework">ISO-IEC-29100</a></cite>]中的其它相关定义。
       </dd>
       <dt><dfn data-dfn-type="dfn" id=
-      "dfn-private-security-data">Private Security Data</dfn></dt>
-      <dd>Private Security Data is that component of a Thing's
-      Security Configuration that is kept secret and is not shared
-      with other devices or users. An example would be private keys
-      in a PKI system. Ideally such data is stored in a separate
-      memory inaccessible to the application and is only used via
-      abstract operations, such as signing, that do not reveal the
-      secret information even to the application using it.</dd>
+      "dfn-private-security-data">私有安全数据</dfn></dt>
+      <dd>私有安全数据是事物安全配置的组成部分。它被保密并不被其他设备或用户分享。一个示例是 PKI系统中的私匙。
+        理想情况下，这些数据被存储在一个应用程序难以接近的单独内存中，仅通过抽象操作被使用，比如签名，这些抽象操作甚至不会向使用它的应用程序透露秘密信息。</dd>
       <dt><dfn data-dfn-type="dfn" data-plurals="properties" id=
-      "dfn-property">Property</dfn></dt>
-      <dd>An Interaction Affordance that exposes state of the
-      Thing. This state can then be retrieved (read) and optionally
-      updated (write). Things can also choose to make Properties
-      observable by pushing the new state after a change.</dd>
+      "dfn-property">属性</dfn></dt>
+      <dd>暴露事物的状态的交互自描述性。然后状态可以被取回（读）和选择性更新（写）。事物还可以选择通过在一个变化后推送新状态让属性被觉察。</dd>
       <dt><dfn data-lt="WoT Protocol Binding|Protocol Binding"
       data-dfn-type="dfn" data-plurals="protocol bindings" id=
-      "dfn-wot-protocol-binding">Protocol Binding</dfn></dt>
-      <dd>The mapping from an Interaction Affordance to concrete
-      messages of a specific protocol, thereby informing Consumers
-      how to activate the Interaction Affordance. <abbr title=
-      "World Wide Web Consortium">W3C</abbr> WoT serializes
-      Protocol Bindings as hypermedia controls.</dd>
+      "dfn-wot-protocol-binding">协议绑定</dfn></dt>
+      <dd>交互自描述性到特定协议的具体的消息的映射，从而，告知消费者如何对一个交互自描述性进行行动。
+        <abbr title="World Wide Web Consortium">W3C</abbr> WoT 将协议绑定序列化为超媒体控件。</dd>
       <dt><dfn data-dfn-type="dfn" id=
-      "dfn-public-security-metadata">Public Security
-      Metadata</dfn></dt>
-      <dd>Public Security Metadata is that component of a Thing's
-      Security Configuration which describes the security
-      mechanisms and access rights necessary to access a Thing. It
-      does not include any secret information or concrete data
-      (including public keys), and does not by itself, provide
-      access to the Thing. Instead, it describes the mechanisms by
-      which access may be obtained by authorized users, including
-      how they must authenticate themselves.</dd>
+      "dfn-public-security-metadata">公开安全元数据</dfn></dt>
+      <dd>公开安全元数据是事物安全配置的组成部分，它解释了安全机制和访问一个事物所需的访问权限。
+        它不包括任何安全信息或具体数据(包括公匙)，而且本身不提供对事物的访问。相反，它描述了授权用户获得访问的机制，包括他们必须如何进行身份验证。</dd>
       <dt><dfn data-dfn-type="dfn" id=
-      "dfn-security">Security</dfn></dt>
-      <dd>Preservation of the confidentiality, integrity and
-      availability of information. Properties such as authenticity,
-      accountability, non-repudiation, and reliability may also be
-      involved. This definition is adapted from the definition of
-      <i>Information Security</i> in [<cite><a class="bibref"
-      data-link-type="biblio" href="#bib-iso-iec-27000" title=
-      "Information technology — Security techniques — Information security management systems — Overview and vocabulary">ISO-IEC-27000</a></cite>],
-      which also includes additional definitions of each of the
-      more specific properties mentioned. Please refer to this
-      document for other related definitions. We additionally note
-      that it is desirable that these properties be maintained both
-      in normal operation and when the system is subject to
-      attack.</dd>
+      "dfn-security">安全</dfn></dt>
+      <dd>保持信息的机密性、完整性、可用性的机制。如真实性、责任性、不可否认性和可靠性之类的属性可能会被涉及到。
+      此定义改编自[<cite><a class="bibref" data-link-type="biblio" href="#bib-iso-iec-27000" title="Information technology — Security techniques — Information security management systems — Overview and vocabulary">ISO-IEC-27000</a></cite>]中信息安全的定义。
+      它还包含所提及到的每一个更具体属性的附加定义。请参考此文档中其它相关定义。我们还注意到，在正常操作和当系统被攻击的时候，这些属性都应该得到维持。</dd>
       <dt><dfn data-dfn-type="dfn" id=
-      "dfn-security-configuration">Security
-      Configuration</dfn></dt>
-      <dd>The combination of Public Security Metadata, Private
-      Security Data, and any other configuration information (such
-      as public keys) necessary to operationally configure the
-      security mechanisms of a Thing.</dd>
+      "dfn-security-configuration">安全配置</dfn></dt>
+      <dd>公开安全元数据，私有安全数据和任何其他操作一个事物的安全机制所必须的配置信息（比如公匙）的组合。</dd>
       <dt><dfn data-dfn-type="dfn" data-plurals="servients" id=
-      "dfn-servient">Servient</dfn></dt>
-      <dd>A software stack that implements the WoT building blocks.
-      A Servient can host and expose Things and/or host Consumers
-      that consume Things. Servients can support multiple Protocol
-      Bindings to enable interaction with different IoT
-      platforms.</dd>
+      "dfn-servient">服务方</dfn></dt>
+      <dd>实现 WoT 构建块的软件栈。服务方可以托管和暴露事物并/或托管消费者以消费事物。服务方支持多种协议绑定以便能够和其他 IoT 平台交互。</dd>
       <dt><dfn data-dfn-type="dfn" data-plurals="subprotocols" id=
-      "dfn-subprotocol">Subprotocol</dfn></dt>
-      <dd>An extension mechanism to a transfer protocol that must
-      be known to interact successfully. An example is long polling
-      for HTTP.</dd>
+      "dfn-subprotocol">子协议</dfn></dt>
+      <dd> 要成功地进行交互所必须知道的一个传输协议的拓展机制。比如HTTP长轮询。</dd>
       <dt><dfn data-dfn-type="dfn" data-plurals="tds" id=
       "dfn-td">TD</dfn></dt>
-      <dd>Short for WoT Thing Description.</dd>
-      <dt><dfn data-dfn-type="dfn" id="dfn-td-vocabulary">TD
-      Vocabulary</dfn></dt>
-      <dd>A controlled Linked Data vocabulary by <abbr title=
-      "World Wide Web Consortium">W3C</abbr> WoT to tag the
-      metadata of Things in the WoT Thing Description including
-      communication metadata of WoT Binding Templates.</dd>
+      <dd>WoT 事物描述的缩写。</dd>
+      <dt><dfn data-dfn-type="dfn" id="dfn-td-vocabulary">TD 词汇</dfn></dt>
+      <dd><abbr title="World Wide Web Consortium">W3C</abbr> WoT 在 WoT 事物描述中用于标记事物的元数据所受约束链接数据词汇，包括 WoT 绑定模板的通信元数据。</dd>
       <dt><dfn data-dfn-type="dfn" data-plurals="things" id=
-      "dfn-thing">Thing</dfn> or <dfn data-dfn-type="dfn" id=
-      "dfn-web-thing">Web Thing</dfn></dt>
-      <dd>An abstraction of a physical or a virtual entity whose
-      metadata and interfaces are described by a WoT Thing
-      Description, whereas a virtual entity is the composition of
-      one or more Things.</dd>
+      "dfn-thing">事物</dfn> 或 <dfn data-dfn-type="dfn" id=
+      "dfn-web-thing">网络事物</dfn></dt>
+      <dd>对真实物体或虚拟实体的抽象，其元数据和接口通过 WoT 事物描述被解释，然而一个虚拟实体是一个或多个事物的组合。</dd>
       <dt><dfn data-dfn-type="dfn" data-plurals="thing directories"
-      id="dfn-thing-directory">Thing Directory</dfn></dt>
-      <dd>A directory service for TDs that provides a Web interface
-      to register TDs (similar to [<cite><a class="bibref"
-      data-link-type="biblio" href="#bib-core-rd" title=
-      "CoRE Resource Directory">CoRE-RD</a></cite>]) and look them
-      up (e.g., using SPARQL queries or the CoRE RD lookup
-      interface [<cite><a class="bibref" data-link-type="biblio"
-      href="#bib-core-rd" title=
-      "CoRE Resource Directory">CoRE-RD</a></cite>]).</dd>
+      id="dfn-thing-directory">事物目录</dfn></dt>
+      <dd>事物描述的目录服务，提供一个网络接口以注册事物描述（类似to[<cite><a class="bibref" data-link-type="biblio" href="#bib-core-rd" title="CoRE Resource Directory">CoRE-RD</a></cite>]）和查找这些目录服务（比如，使用 SPARQL 查询或 CoRE RD 查找接口[<cite><a class="bibref" data-link-type="biblio" href="#bib-core-rd" title="CoRE Resource Directory">CoRE-RD</a></cite>]）。 </dd>
       <dt><dfn data-dfn-type="dfn" data-plurals=
-      "transfer protocols" id="dfn-transfer-protocol">Transfer
-      Protocol</dfn></dt>
-      <dd>The underlying, standardized application layer protocol
-      without application-specific requirements or constraints on
-      options or subprotocol mechanisms. Examples are HTTP, CoAP,
-      or MQTT.</dd>
-      <dt><dfn data-dfn-type="dfn" id="dfn-virtual-thing">Virtual
-      Thing</dfn></dt>
-      <dd>An instance of a Thing that represents a Thing that is
-      located on another system component.</dd>
-      <dt><dfn data-dfn-type="dfn" id="dfn-wot-interface">WoT
-      Interface</dfn></dt>
-      <dd>The network-facing interface of a Thing that is described
-      by a WoT Thing Description.</dd>
-      <dt><dfn data-dfn-type="dfn" id="dfn-wot-runtime">WoT
-      Runtime</dfn></dt>
-      <dd>A runtime system that maintains an execution environment
-      for applications, and is able to expose and/or consume
-      Things, to process WoT Thing Descriptions, to maintain
-      Security Configurations, and to interface with Protocol
-      Binding implementations. A WoT Runtime may have a custom API
-      or use the optional WoT Scripting API.</dd>
-      <dt><dfn data-dfn-type="dfn" id="dfn-wot-scripting-api">WoT
-      Scripting API</dfn></dt>
-      <dd>The application-facing programming interface provided by
-      a Servient in order to ease the implementation of behavior or
-      applications running in a WoT Runtime. It is comparable to
-      the Web browser APIs. The WoT Scripting API is an optional
-      building block for <abbr title=
-      "World Wide Web Consortium">W3C</abbr> WoT.</dd>
-      <dt><dfn data-dfn-type="dfn" id="dfn-wot-servient">WoT
-      Servient</dfn></dt>
-      <dd>Synonym for Servient.</dd>
+      "transfer protocols" id="dfn-transfer-protocol">传输协议</dfn></dt>
+      <dd>底层的，标准化的应用程序层协议，无特定应用程序需求或选项上的限制或子协议机制。例如 HTTP, CoAP, 或 MQTT。</dd>
+      <dt><dfn data-dfn-type="dfn" id="dfn-virtual-thing">虚拟的事物</dfn></dt>
+      <dd>事物的示例，描绘位于在其他系统组件中的事物。</dd>
+      <dt><dfn data-dfn-type="dfn" id="dfn-wot-interface">WoT 接口</dfn></dt>
+      <dd>一个事物面向网络的接口，通过 WoT 事物描述而描写。</dd>
+      <dt><dfn data-dfn-type="dfn" id="dfn-wot-runtime">WoT 运行时</dfn></dt>
+      <dd>运行时系统维持一个应用程序的执行环境，而且可以暴露和(或)消费事物，要处理 WoT 事物描述，要维护安全配置，和协议绑定实现的接口。
+      WoT 运行时可能有一个自定义的 API 或使用可选的 WoT 脚本 API。</dd>
+      <dt><dfn data-dfn-type="dfn" id="dfn-wot-scripting-api">WoT 脚本 API</dfn></dt>
+      <dd>由服务方提供的面向应用程序的编程接口，目标是让实现行为或在 WoT 运行时中运行应用程序更简单。
+      这类似 Web 浏览器 API。WoT 脚本 API 是 <abbr title="World Wide Web Consortium">W3C</abbr> WoT 的可选构建块。</dd>
+      <dt><dfn data-dfn-type="dfn" id="dfn-wot-servient">WoT 服务方</dfn></dt>
+      <dd>服务方的同义词。</dd>
       <dt><dfn data-dfn-type="dfn" data-plurals=
       "wot thing descriptions" id="dfn-wot-thing-description">WoT
-      Thing Description</dfn> or <dfn data-dfn-type="dfn"
+      事物描述</dfn> 或 <dfn data-dfn-type="dfn"
       data-plurals="thing descriptions" id=
-      "dfn-thing-description">Thing Description</dfn></dt>
-      <dd>Structured data describing a Thing. A WoT Thing
-      Description comprises general metadata, domain-specific
-      metadata, Interaction Affordances (which include the
-      supported Protocol Bindings), and links to related Things.
-      The WoT Thing Description format is the central building
-      block of <abbr title="World Wide Web Consortium">W3C</abbr>
-      WoT.</dd>
+      "dfn-thing-description">事物描述</dfn></dt>
+      <dd>描述事物的结构化数据。一个 WoT 事物描述包含常规元数据，特定域元数据，交互能力(包含支持的协议绑定)，以及与关联事物的链接。
+        WoT 事物描述格式是 <abbr title="World Wide Web Consortium">W3C</abbr> WoT 的核心组成部分。</dd>
     </dl>
   </section>
   <section id="sec-use-cases" class="informative">
-    <h2 id="x4-use-cases"><bdi class="secno">4.</bdi> Use
-    Cases<a class="self-link" aria-label="§" href=
+    <h2 id="x4-use-cases"><bdi class="secno">4.</bdi> 用例<a class="self-link" aria-label="§" href=
     "#sec-use-cases"></a></h2>
-    <p><em>This section is non-normative.</em></p>
-    <p>This section presents the application domains and use cases
-    targeted by the <abbr title=
-    "World Wide Web Consortium">W3C</abbr> WoT and which are used
-    to derive the abstract architecture discussed in <a href=
-    "#sec-building-blocks" class="sec-ref">§&nbsp;<bdi class=
-    "secno">7.</bdi> WoT Building Blocks</a>.</p>
-    <p>The Web of Things architecture does not put any limitations
-    on use cases and application domains. Various application
-    domains have been considered to collect common patterns that
-    have to be satisfied by the abstract architecture.</p>
-    <p>The following sections are not exhaustive. Rather they serve
-    as illustrations, where connected things can provide additional
-    benefit or enable new scenarios.</p>
+    <p><em>本章节是非标准的。</em></p>
+    <p>本章节介绍 <abbr title="World Wide Web Consortium">W3C</abbr> WoT所针对的应用域和用例，这些应用域和用例用于引导<a href= "#sec-building-blocks" class="sec-ref">§&nbsp;<bdi class="secno">7.</bdi> WoT 构建块</a>中的抽象架构讨论。</p>
+    <p>事物的万维网架构在用例和应用域上不进行任何限制。      
+    各种应用域已被考虑到，通过抽象架构已收集的常见模式都可以得到很好的满足。</p>
+    <p>下面的章节是不够详尽的。而它们充当例释，连接事物可以提供额外的益处或开启新的场景。</p>
     <section id="sec-application-domains">
       <h3 id="x4-1-application-domains"><bdi class=
-      "secno">4.1</bdi> Application Domains<a class="self-link"
+      "secno">4.1</bdi> 应用域<a class="self-link"
       aria-label="§" href="#sec-application-domains"></a></h3>
       <section id="consumer-use-cases">
         <h4 id="x4-1-1-consumer"><bdi class="secno">4.1.1</bdi>
-        Consumer<a class="self-link" aria-label="§" href=
+        消费者<a class="self-link" aria-label="§" href=
         "#consumer-use-cases"></a></h4>
-        <p>In the consumer space there are multiple assets that
-        benefit from being connected. Lights and air conditioners
-        can be turned off based on room occupancy. Window blinds
-        can be closed automatically based on weather conditions and
-        presence. Energy and other resource consumption can be
-        optimized based on usage patterns and predictions.</p>
-        <p>The consumer use cases in this section includes Smart
-        Home use case.</p>
+        <p>在消费者空间中有多个资产从连接中受益。灯和空气净化器可以根据房间占用情况而被关闭。
+        窗户百叶可以基于天气情况和场合自动地关闭。能源和其它资源消耗可以基于使用模式和预测而被充分利用。</p>
+        <p>本节中消费者使用案例包含智能家居使用案例。</p>
         <p><a href="#smart-home" class="fig-ref" title=
-        "Smart Home">Figure <bdi class="figno">1</bdi></a> shows an
-        example of a Smart Home. In this case, gateways are
-        connected to edge devices such as sensors, cameras and home
-        appliances through corresponding local communication
-        protocols such as KNX, ECHONET, ZigBee, DECT ULE and
-        Wi-SUN. Multiple gateways can exist in one home, while each
-        gateway can support multiple local protocols.</p>
-        <p>Gateways can be connected to the cloud through the
-        internet, while some appliances can be connected to the
-        cloud directly. Services running in the cloud collect data
-        from edge devices and analyze the data, then provide value
-        to users through the edge devices and other UX devices.</p>
+        "Smart Home">图 <bdi class="figno">1</bdi></a> 展示了一个智能家居的例子。在这个案例中，网关通过相应的本地通信协议（比如 KNX, ECHONET, ZigBee, DECT ULE 和 Wi-SUN）连接边缘设备，比如传感器，摄像机和家电。
+        多个网关可以存在于一个家庭中，每一个网关可以支持多个本地协议。</p>
+        <p>网关可以通过 internet 被连接到云端，而一些设备可以直接被连接到云端。
+        服务运行在云端，并从边缘设备上收集数据和分析数据，然后通过边缘设备和其它用户体验设备向用户提供价值。</p>
         <figure id="smart-home">
           <img src="images/wot-use-cases/smart-home.png" srcset=
           "images/wot-use-cases/smart-home.svg" class=
           "wot-arch-diagram" alt="smart home use case">
           <figcaption>
-            Figure <bdi class="figno">1</bdi> <span class=
-            "fig-title">Smart Home</span>
+            图<bdi class="figno">1</bdi> <span class=
+            "fig-title">智能家居</span>
           </figcaption>
         </figure>
-        <p>Smart home provides consumer benefits such as remote
-        access and control, voice control and home automation.
-        Smart home also enables device manufacturers to monitor and
-        maintain devices remotely. Smart home can realize value
-        added services such as energy management and security
-        surveillance.</p>
+        <p>智能家居为消费者带来利益，比如远程访问和控制，语音控制和家庭自动化。智能家居还可以使设备厂商监控和远程维护设备。
+        智能家居可以实现增值服务，比如能源管理和安全监护。</p>
       </section>
       <section id="industrial-iot-usecases">
         <h4 id="x4-1-2-industrial"><bdi class="secno">4.1.2</bdi>
-        Industrial<a class="self-link" aria-label="§" href=
+        产业<a class="self-link" aria-label="§" href=
         "#industrial-iot-usecases"></a></h4>
-        <p>The industrial use cases in this section are applicable
-        to different industry verticals.<br>
-        Due to the nature of overlaps in the application scenarios,
-        different verticals have similar use cases.</p>
+        <p>本节中的产业用例适用于不同垂直产业。<br>
+        由于应用场景的重叠性质，不同的垂直领域有相似的用例。</p>
         <section id="example-smart-factory">
           <h5 id="x4-1-2-1-example-smart-factory"><bdi class=
-          "secno">4.1.2.1</bdi> Example: Smart Factory<a class=
+          "secno">4.1.2.1</bdi> 例子: 智能工厂<a class=
           "self-link" aria-label="§" href=
           "#example-smart-factory"></a></h5>
           <p><a href="#smart-factory" class="fig-ref" title=
-          "Smart Factory">Figure <bdi class="figno">2</bdi></a>
-          shows an example of a Smart Factory. In this case,
-          field-level, cell and line controllers automate different
-          factory equipment based on industrial communication
-          protocols such as PROFINET, Modbus, OPC UA TSN, EtherCAT,
-          or CAN. An industrial edge device collects selected data
-          from various controllers and makes it available to a
-          cloud backend service, e.g., for remote monitoring via a
-          dashboard or analyzes it for preventive maintenance.</p>
+          "Smart Factory">图 <bdi class="figno">2</bdi></a>
+          展示了一个智能工厂的例子。在这个例子中，基于工业通信协议(比如，PROFINET, Modbus, OPC UA TSN, EtherCAT, 或 CAN)区域级，点和线控制器使不同的工厂设备自动化。
+          工业边缘设备从各种各样的控制器那里收集选中的数据，并让这些数据被云后端的服务可使用。例如，通过仪表盘进行远程监控或分析它以做预防型维护保养。</p>
           <figure id="smart-factory">
             <img src="images/wot-use-cases/smart_factory_new.png"
             srcset="images/wot-use-cases/smart_factory_new.svg"
             class="wot-arch-diagram" alt="smart factory use case">
             <figcaption>
-              Figure <bdi class="figno">2</bdi> <span class=
-              "fig-title">Smart Factory</span>
+              图<bdi class="figno">2</bdi> <span class=
+              "fig-title">智能工厂</span>
             </figcaption>
           </figure>
         </section>
-        <p>Smart factories require advanced monitoring of the
-        connected manufacturing equipment as well of the
-        manufactured products. They benefit from predictions of
-        machine failures and early discovery of anomalies to
-        prevent costly downtime and maintenance efforts.</p>
-        <p>Additionally, monitoring of connected manufacturing
-        equipment and the environment at the production facility
-        for the presence of poisonous gases, excessive noise or
-        heat increases the safety of the workers and reduces the
-        risks of incidents or accidents.</p>
-        <p>Real-time monitoring and KPI calculations of production
-        equipment helps to detect productivity problems and
-        optimize the supply chain.</p>
+        <p>智能工厂需要对连接的制造设备和制造的产品一样的高级监控。
+        他们受益于机器故障的预测和早期发现异常以防止昂贵的宕机时间和维护付出。</p>
+        <p>此外，监控连接的制造设备和生产设施环境中是否存在有毒气体，过度的噪音或高温，可以提高工人的安全性并降低发生事件或事故的风险。</p>
+        <p>实时监控和生产设备的 KPI 计算有助于发现产率问题和优化供应链。</p>
       </section>
       <section id="sec-transportationlogistics">
         <h4 id="transportationlogistics"><bdi class=
-        "secno">4.1.3</bdi> Transportation & Logistics<a class=
+        "secno">4.1.3</bdi> 物流与运输<a class=
         "self-link" aria-label="§" href=
         "#transportationlogistics"></a></h4>
-        <p>Monitoring of vehicles, fuel costs, maintenance needs
-        and assignments helps to optimize the full utilization of
-        the vehicle fleet.</p>
-        <p>Shipments can be tracked to be en-route to ensure
-        consistent quality and condition of the transported goods.
-        This is especially useful to assert the integrity of the
-        cold-chain from warehouses to refrigerated trucks to
-        delivery.</p>
-        <p>Centralized monitoring and management of stock in
-        warehouses and yards can prevent out of stock and excessive
-        stock situations.</p>
+        <p>监控车辆，燃料费用，维护需求和分配有助于优化车队的充分利用。</p>
+        <p>可以追踪运输途中的货物，以确保运输货物的品质及环境稳定。这对于维护从仓库到冷藏卡车再到交付的冷链的完整性特别有用。</p>
+        <p>集中监控和管理库存在仓库和货场可以预防缺货和过多库存的情况。</p>
       </section>
       <section id="sec-utilities">
         <h4 id="utilities"><bdi class="secno">4.1.4</bdi>
-        Utilities<a class="self-link" aria-label="§" href=
+        公共设备<a class="self-link" aria-label="§" href=
         "#utilities"></a></h4>
-        <p>Automated reading of residential and C&amp;I (Commercial
-        and Industrial) meters, and billing offers continuous
-        insights into resource consumption and potential
-        bottlenecks.</p>
-        <p>Monitoring the condition and output of distributed
-        renewable energy generation equipment enables optimization
-        of distributed energy resources.</p>
-        <p>Monitoring and remote-controlling of distribution
-        equipment helps to automate the distribution process.</p>
-        <p>Continuous monitoring of generation and distribution
-        infrastructure is improving safety of utilities crew in the
-        field.</p>
+        <p>自动读取住宅和 C&amp;I (商业和工业) 电表，并进行计费，可以不断了解资源消耗和潜在瓶颈。</p>
+        <p>监视分布式可再生能源发电设备的状况和输出可优化分布式能源。</p>
+        <p>监视和远程控制分配设备有助于自动化分配过程。</p>
+        <p>对发电和配电基础设施的持续监控正在改善现场公用事业人员的安全。</p>
       </section>
       <section id="sec-oilandgas">
-        <h4 id="oilandgas"><bdi class="secno">4.1.5</bdi> Oil and
-        Gas<a class="self-link" aria-label="§" href=
+        <h4 id="oilandgas"><bdi class="secno">4.1.5</bdi> 油和气<a class="self-link" aria-label="§" href=
         "#oilandgas"></a></h4>
-        <p>Offshore platform monitoring, leakage detection and
-        prediction of pipelines as well as monitoring and
-        controlling the levels in tanks and reservoirs helps to
-        improve the industrial safety for the workforce as well as
-        for the environment.</p>
-        <p>Automated calculation of a distributed stock through
-        various storage tanks and delivery pipes/trucks allows for
-        improved planning and resource optimization.</p>
+        <p>海洋平台的监测，管道的泄漏检测和预测以及储罐和水库中的液位监测和控制，有助于提高劳动者和环境的工业安全性。</p>
+        <p>通过各种储罐和输送管道/卡车自动计算分布式库存，可以改善计划和资源优化。</p>
       </section>
       <section id="sec-insurance">
         <h4 id="insurance"><bdi class="secno">4.1.6</bdi>
-        Insurance<a class="self-link" aria-label="§" href=
+        保险<a class="self-link" aria-label="§" href=
         "#insurance"></a></h4>
-        <p>Proactive Asset Monitoring of high value assets such as
-        connected structures, fleet vehicles, etc. mitigates the
-        risk of severe damage and high costs due to predictions and
-        early detection of incidents.</p>
-        <p>Usage based insurance can be offered with usage tracking
-        and customized insurance policies.</p>
-        <p>Predictive weather monitoring and re-routing fleet
-        vehicles to covered garages can limit loss due to hail
-        damage, tree damage.</p>
+        <p>对高价值资产（如互连结构，车队车辆等）进行主动性资产监控，可以降低由于预测和事件早期侦测不足而造成的严重破坏和高成本的风险。</p>
+        <p>通过使用追踪和自定义保险策略可以提供基于使用情况的保险。</p>
+        <p>预测性天气监控并将车队车辆重新编排到车库，可以降低由于冰雹，树木倾倒而造成的损失。</p>
       </section>
       <section id="sec-engineering-and-construction">
         <h4 id="engineering-and-construction"><bdi class=
-        "secno">4.1.7</bdi> Engineering and Construction<a class=
+        "secno">4.1.7</bdi> 工程建设<a class=
         "self-link" aria-label="§" href=
         "#engineering-and-construction"></a></h4>
-        <p>Monitoring for industrial safety reduces the risks of
-        security hazards. Monitoring of assets at construction site
-        can prevent damage and loss.</p>
+        <p>监控工业安全可降低安全隐患的风险。在施工现场进行资产监控可以放松损坏和丢失。</p>
       </section>
       <section id="sec-agriculture">
         <h4 id="agriculture"><bdi class="secno">4.1.8</bdi>
-        Agriculture<a class="self-link" aria-label="§" href=
+        农业<a class="self-link" aria-label="§" href=
         "#agriculture"></a></h4>
-        <p>Soil condition monitoring and creating optimal plans for
-        watering, fertilizing as well as monitoring the produce
-        conditions optimize the quality and output of agricultural
-        produce.</p>
+        <p>土壤状况监测并为浇水，施肥以及监测农产品状况制定最佳计划，可以优化农产品的质量和产量。</p>
       </section>
       <section id="sec-healthcare">
         <h4 id="healthcare"><bdi class="secno">4.1.9</bdi>
-        Healthcare<a class="self-link" aria-label="§" href=
+        健康服务<a class="self-link" aria-label="§" href=
         "#healthcare"></a></h4>
-        <p>Data collection and analytics of clinical trial data
-        helps to gain insights into new areas.</p>
-        <p>Remote patient monitoring mitigates the risk of
-        undetected critical situations for elderly people and
-        patients after hospitalization.</p>
+        <p>临床试验数据的收集和分析有助于获取对新领域的见解。</p>
+        <p>远程患者监视可降低老年人和住院后患者受到未检测到的危险情况的风险。</p>
       </section>
       <section id="sec-environmentmonitoring">
         <h4 id="environmentmonitoring"><bdi class=
-        "secno">4.1.10</bdi> Environment Monitoring<a class=
+        "secno">4.1.10</bdi> 环境监测<a class=
         "self-link" aria-label="§" href=
         "#environmentmonitoring"></a></h4>
-        <p>Environment monitoring typically relies on a lot of
-        distributed sensors that send their measurement data to
-        common gateways, edge devices and cloud services.</p>
-        <p>Monitoring of air pollution, water pollution and other
-        environmental risk factors such as fine dust, ozone,
-        volatile organic compound, radioactivity, temperature,
-        humidity to detect critical environment conditions can
-        prevent unrecoverable health or environment damages.</p>
+        <p>环境监视通常依赖于许多分布式传感器，这些传感器将其测量数据发送到公共网关，边缘设备和云服务。</p>
+        <p>监测空气污染，水污染和其他环境风险因素（例如细尘，臭氧，挥发性有机化合物，放射性，温度，湿度）以检测关键的环境状况可以防止无法恢复的健康或环境破坏。</p>
       </section>
       <section id="sec-smart-cities">
-        <h4 id="smartcities"><bdi class="secno">4.1.11</bdi> Smart
-        Cities<a class="self-link" aria-label="§" href=
+        <h4 id="smartcities"><bdi class="secno">4.1.11</bdi> 智慧城市<a class="self-link" aria-label="§" href=
         "#smartcities"></a></h4>
-        <p>Monitoring of Bridges, Dams, Levees, Canals for material
-        condition, deterioration, vibrations discovers maintenance
-        repair work and prevents significant damage. Monitoring of
-        highways and providing appropriate signage ensures
-        optimized traffic flow.</p>
-        <p>Smart Parking is optimizing and tracking the usage and
-        availability of parking spaces and automates
-        billing/reservations.</p>
-        <p>Smart control of street lights based on presence
-        detection, weather predictions, etc. reduces cost.</p>
-        <p>Garbage containers can be monitored to optimize the
-        waste management and the trash collection route.</p>
+        <p>监测桥梁，水坝，防洪堤，隧道的材料状况，劣化，振动可发现维修工作并防止重大损坏。监控高速公路并提供适当的路标，可确保优化交通流量。</p>
+        <p>智能停车可以优化并跟踪停车位的使用情况和可用性，并自动进行计费/预订。</p>
+        <p>基于存在检测，天气预报等对路灯的智能控制可降低成本。</p>
+        <p>可以监视垃圾容器以优化废物管理和垃圾收集路线。</p>
       </section>
       <section id="sec-smart-buildings">
         <h4 id="smartbuildings"><bdi class="secno">4.1.12</bdi>
-        Smart Buildings<a class="self-link" aria-label="§" href=
+        智慧建筑<a class="self-link" aria-label="§" href=
         "#smartbuildings"></a></h4>
-        <p>Monitoring the energy usage throughout the building
-        helps to optimize resource consumption and reduce
-        waste.</p>
-        <p>Monitoring the equipment in the buildings such as HVAC,
-        Elevators, etc. and fixing problems early improves the
-        satisfaction of occupants.</p>
+        <p>监控整个建筑物的能源使用有助于优化资源消耗并减少浪费。</p>
+        <p>监视建筑物中的设备，如HVAC，电梯等，及早解决问题，可提高居住者的满意度。</p>
       </section>
       <section id="sec-connected-car">
         <h4 id="connectedcar"><bdi class="secno">4.1.13</bdi>
-        Connected Car<a class="self-link" aria-label="§" href=
+        联网汽车<a class="self-link" aria-label="§" href=
         "#connectedcar"></a></h4>
-        <p>Monitoring of operation status, prediction of service
-        needs optimizes maintenance needs and costs. Driver safety
-        is enhanced with notifications of an early warning system
-        for critical road and traffic conditions.</p>
+        <p>监视操作状态，预测服务需求可优化维护需求和成本。通过通知紧急道路和交通状况的预警系统，可以提高驾驶员的安全性。</p>
         <section id="connected-car-example">
           <h5 id="connectedcar-example"><bdi class=
-          "secno">4.1.13.1</bdi> Connected Car Example<a class=
+          "secno">4.1.13.1</bdi> 联网汽车示例<a class=
           "self-link" aria-label="§" href=
           "#connectedcar-example"></a></h5>
           <p><a href="#connected-car" class="fig-ref" title=
-          "Connected Car">Figure <bdi class="figno">3</bdi></a>
-          shows an example of a Connected Car. In this case, a
-          gateway connects to car components through CAN and to the
-          car navigation system through a proprietary interface.
-          Services running in the cloud collect data pushed from
-          car components and analyze the data from multiple cars to
-          determine traffic patterns. The gateway can also consume
-          cloud services, in this case, to get traffic data and
-          show it to the driver through the car navigation
-          system.</p>
+          "Connected Car">图 <bdi class="figno">3</bdi></a>
+          展示了一个联网汽车的示例。在这种情况下，网关通过CAN连接到汽车部件，并通过专有接口连接到汽车导航系统。云中运行的服务收集从汽车部件推送的数据，并分析来自多辆汽车的数据以确定交通模式。在这种情况下，网关还可以使用云服务来获取交通数据并将其通过汽车导航系统显示给驾驶员。</p>
           <figure id="connected-car">
             <img src="images/wot-use-cases/connected-car.png"
             srcset="images/wot-use-cases/connected-car.svg" class=
             "wot-arch-diagram" alt="connected car use case">
             <figcaption>
-              Figure <bdi class="figno">3</bdi> <span class=
-              "fig-title">Connected Car</span>
+              图<bdi class="figno">3</bdi> <span class=
+              "fig-title">联网汽车</span>
             </figcaption>
           </figure>
         </section>
@@ -3174,204 +2730,126 @@
     </section>
     <section id="sec-common-usecase-patterns">
       <h3 id="x4-2-common-patterns"><bdi class="secno">4.2</bdi>
-      Common Patterns<a class="self-link" aria-label="§" href=
+      常见模式<a class="self-link" aria-label="§" href=
       "#sec-common-usecase-patterns"></a></h3>
-      <p>This section introduces common use case patterns that
-      illustrate how devices/things interact with controllers,
-      other devices, agents and servers. In this section, we use
-      the term <em>client role</em> as an initiator of a transport
-      protocol, and the term server role as a passive component of
-      a transport protocol. This does not imply prescribing a
-      specific role on any system component. A device can be in a
-      <em>client</em> and <em>server</em> role simultaneously.</p>
-      <p>One example of this dual role is a sensor, that registers
-      itself with a cloud service and regularly sends sensor
-      readings to the cloud. In the response messages the cloud can
-      adjust the transmission rate of the sensor's messages or
-      select specific sensor attributes, that are to be transmitted
-      in future messages. Since the sensor registers itself with
-      the cloud and initiates connections, it is in the 'client'
-      role. However, since it also reacts to requests, that are
-      transmitted in response messages, it also fulfills a 'server'
-      role.</p>
-      <p>The following sections illustrate the roles, tasks, and
-      use case patterns with increasing complexity. They are not
-      exhaustive and are presented to motivate for the WoT
-      architecture and building blocks that are defined in later
-      sections of this specification.</p>
+      <p>本节介绍了常见的用例模式，这些模式说明了设备/事物是如何与其它控制器，其它设备，代理和服务器进行交互。
+      在本节中，我们使用术语 <em>客户端角色</em> 作为传输协议的发起者，并将术语 <em>服务器角色</em> 作为传输协议的被动组件。
+      这不意味着在任何系统组件上都规定了特定的角色。一个设备可以同时担任 <em>客户端</em> 和 <em>服务器</em> 角色。</p>
+      <p>这种双重角色的一个例子是传感器，它注册它自己到云服务上并定义发送传感读数到云端。
+      在响应消息中，云可以调整传感器消息的传输速率，或选择要在将来的消息中传输特定的传感器属性。
+      由于传感器将自身注册到云中并启动连接，这是 '客户端' 角色。但是，由于它还对在响应消息中传输的请求进行响应，因此它还扮演着 '服务器' 的角色。</p>
+      <p>下面的章节描述角色，任务和越来越复杂的用例模式。它们是不够详尽的，仅是出于本规范后面各节中定义的WoT体系结构和构建基块的作用而提出的。</p>
       <section id="device-controllers">
         <h4 id="x4-2-1-device-controllers"><bdi class=
-        "secno">4.2.1</bdi> Device Controllers<a class="self-link"
+        "secno">4.2.1</bdi> 设备控制器<a class="self-link"
         aria-label="§" href="#device-controllers"></a></h4>
-        <p>The first use case is a local device controlled by a
-        user-operated remote controller as depicted in <a href=
-        "#smart-home-device" class="fig-ref" title=
-        "Device Control">Figure <bdi class="figno">4</bdi></a>. A
-        remote controller can access an electronic appliance
-        through the local home network directly. In this case, the
-        remote controller can be implemented by a browser or native
-        application.</p>
-        <p>In this pattern, at least one device like the electronic
-        appliance has a server role that can accept a request from
-        the other devices and responds to them, and sometimes
-        initiates a mechanical action. The other device like the
-        remote controller has a client role that can send a message
-        with a request, like to read a sensor value or to turn on
-        the device. Moreover, to emit a current state or event
-        notification of a device, the device may have a client role
-        that can send a message to another device, which has server
-        roles.</p>
+        <p>
+          第一个用例是一个本地设备被一个用户操作远程控制器控制，如<a href="#smart-home-device" class="fig-ref" title="Device Control">图<bdi class="figno">4</bdi></a> 描述。
+          一个远端控制器可以直接通过本地家庭网络访问电子设备。在本案例中，远端控制器可以通过浏览器或原生应用程序来实现。</p>
+        <p>在这种模式下，至少一个设备（如电子设备）具有服务器角色，该服务器角色可以接受来自其他设备的请求并对其进行响应，有时还启动机器操作。
+          其他设备（与远程控制器类似）具有客户端角色，该角色可以发送带有请求的消息，比如读取传感器值或者打开设备。而且，为了发送一个设备的当前状态和事件通知，
+          该设备可能具有客户端角色，可以发送消息给其他设备，它同时还拥有服务器角色。</p>
         <figure id="smart-home-device">
           <img src="images/wot-use-cases/smart-home-device.png"
           srcset="images/wot-use-cases/smart-home-device.svg"
           class="wot-arch-diagram" alt=
           "smart home device use case">
           <figcaption>
-            Figure <bdi class="figno">4</bdi> <span class=
-            "fig-title">Device Control</span>
+            图<bdi class="figno">4</bdi> <span class=
+            "fig-title">设备控制</span>
           </figcaption>
         </figure>
       </section>
       <section id="thing-to-thing">
         <h4 id="x4-2-2-thing-to-thing"><bdi class=
-        "secno">4.2.2</bdi> Thing-to-Thing<a class="self-link"
+        "secno">4.2.2</bdi> 物到物<a class="self-link"
         aria-label="§" href="#thing-to-thing"></a></h4>
         <p><a href="#smart-home-t2t" class="fig-ref" title=
-        "Control Agent">Figure <bdi class="figno">5</bdi></a> shows
-        an example of a direct Thing-to-Thing interaction. The
-        scenario is as follows: a sensor detects a change of the
-        room condition, for example the temperature exceeding a
-        threshold, and issues a control message like "turn on" to
-        the electronic appliance. The sensor unit can issue some
-        trigger messages to other devices.</p>
-        <p>In this case, when two devices that have server roles
-        are connected, at least one device must have also a client
-        role that issues a message to the other to actuate or
-        notify.</p>
+        "Control Agent">图<bdi class="figno">5</bdi></a> 展示了一个直接物到物的交互案例。
+        场景如下：传感器检测到房间环境的变化，如文档超过阀值，并发送一个诸如“打开”的控制消息到电器。传感器单元可以发送一些触发消息到其他设备。</p>
+        <p>在这个案例中，当两个具有服务器角色的设备连接时，至少一个设备还必须具有一个客户端角色来发送消息给其他设备以激活或通知。</p>
         <figure id="smart-home-t2t">
           <img src="images/wot-use-cases/smart-home-t2t.png"
           srcset="images/wot-use-cases/smart-home-t2t.svg" class=
           "wot-arch-diagram" alt="smart home t2t use case">
           <figcaption>
-            Figure <bdi class="figno">5</bdi> <span class=
-            "fig-title">Control Agent</span>
+            图<bdi class="figno">5</bdi> <span class=
+            "fig-title">控制代理</span>
           </figcaption>
         </figure>
       </section>
       <section id="remote-access">
         <h4 id="x4-2-3-remote-access"><bdi class=
-        "secno">4.2.3</bdi> Remote Access<a class="self-link"
+        "secno">4.2.3</bdi> 远程访问<a class="self-link"
         aria-label="§" href="#remote-access"></a></h4>
-        <p>This use case contains a mobile remote controller (e.g.,
-        on a smartphone) as shown in <a href="#smart-home-multi"
-        class="fig-ref" title="Multiple Network Interfaces">Figure
-        <bdi class="figno">6</bdi></a>. The remote controller can
-        switch between different network connections and protocols,
-        e.g., between a cellular network and a home network, which
-        is using protocols such as Wi-Fi and Bluetooth. When the
-        controller is in the home network it is a trusted device
-        and no additional security or access control is required.
-        When it is outside of the trusted network, additional
-        access control and security mechanisms must be applied to
-        ensure a trusted relationship. Note that in this scenario
-        the network connectivity may change due to switching
-        between different network access points or cellular base
-        stations.</p>
-        <p>In this pattern, the remote controller and the
-        electronic appliance have a client and a server role as in
-        the related scenario in <a href="#smart-home-device" class=
-        "fig-ref" title="Device Control">Figure <bdi class=
-        "figno">4</bdi></a>.</p>
+        <p>这个用例包含如<a href="#smart-home-multi" class="fig-ref" title="Multiple Network Interfaces">图<bdi class="figno">6</bdi></a> 所示的一个移动远程控制器（比如，在智能手机上）。远程控制器可以在不同的网络连接和协议中进行切换，比如，在移动网络和家庭网络中，使用的协议比如 Wi-Fi 和蓝牙。          
+          当控制器在家庭网络时，它是一个被信任的设备，不需要额外的安全性或访问控制。当它在被信任的网络的外面时，额外的访问控制和安全机制必须被应用以确保信任关系。
+          注意，在这种情况下，网络连接可能会在不同的网络访问点或蜂窝基站之间切换而改变。</p>
+        <p>在这种模式下，远程控制器和电子设备具有客户端和服务器角色，如<a href="#smart-home-device" class="fig-ref" title="Device Control">图<bdi class="figno">4</bdi></a>中相关场景所示。</p>
         <figure id="smart-home-multi">
           <img src="images/wot-use-cases/smart-home-multi.png"
           srcset="images/wot-use-cases/smart-home-multi.svg" class=
           "wot-arch-diagram" alt="smart home multi use case">
           <figcaption>
-            Figure <bdi class="figno">6</bdi> <span class=
-            "fig-title">Multiple Network Interfaces</span>
+            图<bdi class="figno">6</bdi> <span class=
+            "fig-title">多网络接口</span>
           </figcaption>
         </figure>
       </section>
       <section id="smart-home-gateways">
         <h4 id="x4-2-4-smart-home-gateways"><bdi class=
-        "secno">4.2.4</bdi> Smart Home Gateways<a class="self-link"
+        "secno">4.2.4</bdi> 智能家居网关<a class="self-link"
         aria-label="§" href="#smart-home-gateways"></a></h4>
         <p><a href="#smart-home-gateway" class="fig-ref" title=
-        "Smart Home Gateway">Figure <bdi class="figno">7</bdi></a>
-        shows a use case using a Smart Home Gateway. The gateway is
-        placed between a home network and the Internet. It manages
-        electronic appliances inside the house and can receive
-        commands from a remote controller over the Internet, e.g.,
-        from a smartphone as in the previous use case. It is also
-        is a virtual representation of a device. The Smart Home
-        Gateway typically offers proxy and firewall
-        functionality.</p>
-        <p>In this pattern, the home gateway has both a client and
-        a server role. When the remote controller actuates the
-        electronic appliance, it can connect to the electronic
-        appliance in the client role and to the remote controller
-        with the server role. When the electronic appliance emits a
-        message to the remote controller, the gateway act as server
-        roles for the electric appliance, and it act as client
-        roles for the remote controller.</p>
+        "Smart Home Gateway">图 <bdi class="figno">7</bdi></a>
+        展示了一个使用智能家居网关的用例。网关位于家庭网络和 Internet 之间。它管理房间内的电器，并能够通过 Internet 从远端控制器接受命令，比如，从上一个用例中所示的智能手机。
+        它也是设备的虚拟表示。智能家居网关通常还提供代理和防火墙功能。</p>
+        <p>在这种模式下，家庭网关同时有客户端和服务器角色。当远程控制器启动电子设备时，它可以以客户端角色连接到电子设备，并以服务器角色连接到远程控制器。
+          当电子设备向远程控制器发出消息时，网关相对于电子设备扮演着服务器角色，并且充当远端控制器的客户端角色。</p>
         <figure id="smart-home-gateway">
           <img src="images/wot-use-cases/smart-home-gateway.png"
           srcset="images/wot-use-cases/smart-home-gateway.svg"
           class="wot-arch-diagram" alt=
           "smart home gateway use case">
           <figcaption>
-            Figure <bdi class="figno">7</bdi> <span class=
-            "fig-title">Smart Home Gateway</span>
+            图<bdi class="figno">7</bdi> <span class=
+            "fig-title">智能家居网关</span>
           </figcaption>
         </figure>
       </section>
       <section id="edge-devices">
         <h4 id="x4-2-5-edge-devices"><bdi class="secno">4.2.5</bdi>
-        Edge Devices<a class="self-link" aria-label="§" href=
+        边缘设备<a class="self-link" aria-label="§" href=
         "#edge-devices"></a></h4>
-        <p>An Edge Device or Edge Gateway is similar to a Smart
-        Home Gateway. We use the term to indicate additional tasks
-        that are carried out by the edge gateway. Whereas the home
-        gateway in <a href="#edge-device" class="fig-ref" title=
-        "Edge device">Figure <bdi class="figno">8</bdi></a>
-        primarily just bridges between the public and the trusted
-        network, the edge device has local compute capabilities and
-        typically bridges between different protocols. Edge devices
-        are typically used in industrial solutions, where they can
-        provide preprocessing, filtering and aggregation of data
-        provided by connected devices and sensors.</p>
+        <p>边缘设备或边缘网关类似于智能家居网关。我们使用该术语表示边缘网关执行的其他任务。
+        然而，在<a href="#edge-device" class="fig-ref" title="Edge device">图 <bdi class="figno">8</bdi></a>中的家庭网关主要是在公有网络和可信任网络直接建立桥接，边缘设备拥有本地计算能力，
+        并且通常在不同协议之间进行桥接。边缘设备通常被用在工业解决方案中，其中它们可以对连接的设备和传感器提供的数据进行预处理，过滤和聚合。</p>
         <figure id="edge-device">
           <img src="images/wot-use-cases/edge-device.png" srcset=
           "images/wot-use-cases/edge-device.svg" class=
           "wot-arch-diagram" alt="edge device use case">
           <figcaption>
-            Figure <bdi class="figno">8</bdi> <span class=
-            "fig-title">Edge device</span>
+            图<bdi class="figno">8</bdi> <span class=
+            "fig-title">边缘设备</span>
           </figcaption>
         </figure>
       </section>
       <section id="digital-twins">
         <h4 id="x4-2-6-digital-twins"><bdi class=
-        "secno">4.2.6</bdi> Digital Twins<a class="self-link"
+        "secno">4.2.6</bdi> 数字孪生<a class="self-link"
         aria-label="§" href="#digital-twins"></a></h4>
-        <p>A digital twin is a virtual representation, i.e. a model
-        of a device or a group of devices that resides on a cloud
-        server or edge device. It can be used to represent
-        real-world devices which may not be continuously online, or
-        to run simulations of new applications and services, before
-        they get deployed to the real devices.</p>
+        <p>数字孪生是一种虚拟表示法，即存在于云服务器或边缘设备上的一个设备或者一组设备的模型。它可以用来表示可能不连续在线的真实设备，
+        或者在将新应用程序和服务器部署到真实设备之前对其进行仿真。</p>
         <figure id="digital-twin">
           <img src="images/wot-use-cases/digital-twin.png" srcset=
           "images/wot-use-cases/digital-twin.svg" class=
           "wot-arch-diagram" alt="digital twin use case">
           <figcaption>
-            Figure <bdi class="figno">9</bdi> <span class=
-            "fig-title">Digital Twin</span>
+            图<bdi class="figno">9</bdi> <span class=
+            "fig-title">数字孪生</span>
           </figcaption>
         </figure>
-        <p>Digital twins can model a single device, or they can
-        aggregate multiple devices in a virtual representation of
-        the combined devices.</p>
+        <p>数字孪生可以对单个设备建模，或者可以以组合设备的虚拟表示形式聚合多个设备。</p>
         <figure id="digital-twin-multiple-devices">
           <img src=
           "images/wot-use-cases/digital-twin-multiple-devices.png"
@@ -3380,122 +2858,77 @@
           class="wot-arch-diagram" alt=
           "digital twin multiple devices use case">
           <figcaption>
-            Figure <bdi class="figno">10</bdi> <span class=
-            "fig-title">Digital Twin for Multiple Devices</span>
+            图<bdi class="figno">10</bdi> <span class=
+            "fig-title">多个设备的数字孪生</span>
           </figcaption>
         </figure>
-        <p>Digital twins can be realized in different ways,
-        depending on whether a device is already connected to the
-        cloud, or whether it is connected to a gateway, which
-        itself is connected to the cloud.</p>
+        <p>数字孪生可以被以不同的方式来实现，具体取决于是被是否已经连接到云，或者是否连接到网关（网关本身已经连接到云）。</p>
         <section id="cloud-ready-devices">
           <h5 id="x4-2-6-1-cloud-ready-devices"><bdi class=
-          "secno">4.2.6.1</bdi> Cloud-ready Devices<a class=
+          "secno">4.2.6.1</bdi> 云端设备<a class=
           "self-link" aria-label="§" href=
           "#cloud-ready-devices"></a></h5>
           <p><a href="#smart-home-cloud1" class="fig-ref" title=
-          "Appliance twin for a Cloud-ready Devices">Figure
-          <bdi class="figno">11</bdi></a> shows an example where
-          electronic appliances are connected directly to the
-          cloud. The cloud mirrors the appliances and, acting as a
-          digital twin, can receive commands from remote
-          controllers (e.g., a smartphone). Authorized controllers
-          can be located anywhere, as the digital twin is globally
-          reachable.</p>
+          "Appliance twin for a Cloud-ready Devices">图
+          <bdi class="figno">11</bdi></a> 展示了一个电子设备直接连接到云的例子。云镜像了设备，并扮演着数字孪生，可以从远端控制器（比如，智能手机）接受命令。
+          经授权的控制器可以放在任何地方，因为数字孪生是全球可触达的。</p>
           <figure id="smart-home-cloud1">
             <img src="images/wot-use-cases/smart-home-cloud1a.png"
             srcset="images/wot-use-cases/smart-home-cloud1a.svg"
             class="wot-arch-diagram" alt=
             "smart home cloud use case 1">
             <figcaption>
-              Figure <bdi class="figno">11</bdi> <span class=
-              "fig-title">Appliance twin for a Cloud-ready
-              Devices</span>
+              图<bdi class="figno">11</bdi> <span class=
+              "fig-title">云端设备的器械孪生</span>
             </figcaption>
           </figure>
         </section>
         <section id="legacy-devices">
           <h5 id="x4-2-6-2-legacy-devices"><bdi class=
-          "secno">4.2.6.2</bdi> Legacy Devices<a class="self-link"
+          "secno">4.2.6.2</bdi> 传统设备<a class="self-link"
           aria-label="§" href="#legacy-devices"></a></h5>
           <p><a href="#smart-home-cloud2" class="fig-ref" title=
-          "A Digital Twin for a Legacy Device">Figure <bdi class=
-          "figno">12</bdi></a> shows an example where legacy
-          electronic appliances cannot directly connect to the
-          cloud. Here, a gateway is needed to relay the connection.
-          The gateway works as:</p>
+          "A Digital Twin for a Legacy Device">图<bdi class=
+          "figno">12</bdi></a>展示了一个传统电子设备不能直接连接到云的案例。在这里，需要一个网关来中继连接。网关工作如下：</p>
           <ul>
-            <li>integrator of a variety of legacy communication
-            protocols both in the physical and logical view</li>
-            <li>firewall toward the Internet</li>
-            <li>privacy filter which substitutes real image and/or
-            speech, and logs data locally</li>
-            <li>local agent in case the network connection is
-            interrupted</li>
-            <li>emergency services running locally when fire alarms
-            and similar events occur</li>
+            <li>物理和逻辑视图中各种传统通信协议的集成商</li>
+            <li>通往 Internet 的防火墙</li>
+            <li>隐私过滤器，可以替代真实的图像和/或语音，并在本地记录数据</li>
+            <li>本地代理，以防网络连接中断</li>
+            <li>发生火灾警报和类似事件时再本地运行的紧急服务</li>
           </ul>
-          <p>The cloud mirrors the gateway with all connected
-          appliances and acts as a digital twin that manages them
-          in the cloud in conjunction with the gateway.
-          Furthermore, the cloud can receive commands from remote
-          controllers (e.g., a smartphone), which can be located
-          anywhere.</p>
+          <p>云镜像了网关和所有已连接的设备，并扮演数字孪生，与网关一起在云中管理它们。此外，云可以接收从位于任何地方的远程控制器（比如，智能手机）发出的命令。</p>
           <figure id="smart-home-cloud2">
             <img src="images/wot-use-cases/smart-home-cloud2.png"
             srcset="images/wot-use-cases/smart-home-cloud2.svg"
             class="wot-arch-diagram" alt=
             "smart home cloud use case 2">
             <figcaption>
-              Figure <bdi class="figno">12</bdi> <span class=
-              "fig-title">A Digital Twin for a Legacy Device</span>
+              图 <bdi class="figno">12</bdi> <span class=
+              "fig-title">传统设备的数字孪生</span>
             </figcaption>
           </figure>
         </section>
       </section>
       <section id="multi-cloud">
-        <h4 id="x4-2-7-multi-cloud"><bdi class="secno">4.2.7</bdi>
-        Multi-Cloud<a class="self-link" aria-label="§" href=
+        <h4 id="x4-2-7-multi-cloud"><bdi class="secno">4.2.7</bdi> 多云<a class="self-link" aria-label="§" href=
         "#multi-cloud"></a></h4>
-        <p>Typical IoT deployments consist of multiple (thousands)
-        of devices. Without a standardized mechanism, the
-        management of firmware updates for specific clouds require
-        a lot of effort and hinders wider scale IoT adoption.</p>
-        <p>The primary benefit of a standardized mechanism for
-        describing devices and device types is the capability of
-        deploying devices to different cloud environments without
-        the need of doing customization at device software /
-        firmware level, i.e., installing cloud specific code to a
-        device. This implies that the solution is flexible enough
-        to describe devices in a way that allows on-boarding and
-        using devices in multiple IoT cloud environments.</p>
-        <p>This drives adoption of Web of Things devices, since it
-        enables easy usage of new devices in an existing
-        deployment, as well as migration of existing devices from
-        one cloud to the other.</p>
+        <p>典型的物联网部署包含许多设备(数千)。没有一个标准化的机制，针对特定云的固件更新管理将需要大量工作，并阻碍了物联网的更广泛应用。</p>
+        <p>用于描述设备和设备类型的标准化机制的主要好处是能够将设备部署到不同的云环境，而无需在设备软件/固件级别进行自定义，即将云特定代码安装到设备。
+        这意味着该解决方案足够灵活，能够以允许在多种 IoT 云环境中启动和使用设备的方式描述设备。</p>
+        <p>这推动了物联网设备的采用，因为它可以轻松使用现有部署中的设备，以及将现有设备从一个云迁移到另一个云。</p>
       </section>
       <section id="cross-domain-collaboration">
         <h4 id="x4-2-8-cross-domain-collaboration"><bdi class=
-        "secno">4.2.8</bdi> Cross-domain Collaboration<a class=
+        "secno">4.2.8</bdi> 跨域协作<a class=
         "self-link" aria-label="§" href=
         "#cross-domain-collaboration"></a></h4>
         <p><a href="#cross-domain" class="fig-ref" title=
-        "Cross-domain collaboration">Figure <bdi class=
-        "figno">13</bdi></a> show an example of a cross-domain
-        collaboration. In this case, each system involves other
-        systems in other domains, such as Smart Factory with Smart
-        City, Smart City with Smart Home. This type of system is
-        called "Symbiotic" ecosystem, as shown in [<cite><a class=
-        "bibref" data-link-type="biblio" href="#bib-iec-fotf"
-        title="Factory of the future">IEC-FOTF</a></cite>]. There
-        are two collaboration models: direct collaboration and
-        indirect collaboration. In the direct collaboration model,
-        systems exchange information directly with each other in a
-        peer-to-peer manner. In the indirect collaboration, systems
-        exchange information via some collaboration platform. In
-        order to maintain and continue this collaboration, each
-        system provides the metadata of their capabilities and
-        interfaces and adapts itself to others.</p>
+        "Cross-domain collaboration">图 <bdi class=
+        "figno">13</bdi></a> 展示了一个跨域协作的案例。在这种情况下，每个系统都涉及其他域中的其他系统，比如智慧工厂和智慧城市一起，智慧城市和智慧家居一起。这种系统类型被叫做“共生”生态系统，
+        如[<cite><a class="bibref" data-link-type="biblio" href="#bib-iec-fotf" title="Factory of the future">IEC-FOTF</a></cite>] 中所示。
+        有两种协作模式：直接协作和间接协作。在直接协作模式中，系统和其他系统以端对端的方式直接交换信息。在间接协作模式中，
+        系统通过一些协作平台交换信息。为了维护和迹象这种协作，每个系统提供其功能和接口的元数据，并让自己适配于其他系统。</p>
         <figure id="cross-domain">
           <img src="images/wot-use-cases/cross-domain-direct.png"
           srcset="images/wot-use-cases/cross-domain-direct.svg"
@@ -3505,600 +2938,321 @@
           "images/wot-use-cases/cross-domain-indirect.svg" class=
           "wot-arch-diagram" alt="cross domain indirect use case">
           <figcaption>
-            Figure <bdi class="figno">13</bdi> <span class=
-            "fig-title">Cross-domain collaboration</span>
+            图<bdi class="figno">13</bdi> <span class=
+            "fig-title">跨域协作</span>
           </figcaption>
         </figure>
       </section>
     </section>
     <section id="sec-use-case-summary">
       <h3 id="x4-3-summary"><bdi class="secno">4.3</bdi>
-      Summary<a class="self-link" aria-label="§" href=
+      总结<a class="self-link" aria-label="§" href=
       "#sec-use-case-summary"></a></h3>
-      <p>The previous section described various architecture
-      patterns. In these patterns, some functional entities such as
-      the devices including the legacy devices, controllers,
-      gateways and cloud servers are located at physical locations
-      such as inside building, outside buildings, and data centers.
-      <a href="#usecase-overview" class="fig-ref" title=
-      "Use Case Overview">Figure <bdi class="figno">14</bdi></a> is
-      an overview that shows the combinations and communication
-      paths of these entities.</p>
-      <p>In a transport protocol layer, each entity arbitrarily
-      selects a suitable role for communications. For example, a
-      device may act as a server when the device provides a service
-      to indefinite number of applications. On the other hand, if a
-      device has limited or intermittent network connectivity, they
-      may act as a client and actively send message to an
-      application when network is available. Regardless of this, in
-      application layer, an application sees that a device provides
-      abstract interfaces to interact and the application can
-      interact with the device using their abstract interfaces.</p>
+      <p>前面的章节解释了各自架构模式。在这些模式中，某些功能实体（如包含传统设备的设备，控制器，网关和云服务器）被放置在诸如内部建筑，外部建筑，数据中心等物理位置。
+      <a href="#usecase-overview" class="fig-ref" title="Use Case Overview">Figure <bdi class="figno">14</bdi></a> 是一个展示这些实体的组合和通信路径的概览。</p>
+      <p>在协议传输层，每个实体任意选择合适的角色进行通信。比如，一个设备在当设备提供服务给不确定数目的应用程序提供服务时扮演服务器角色。
+      另一方面，如果设备受到限制或者间歇性联网，它们可能扮演客户端并在网络可用时主动向应用程序发送消息。不管怎样，在应用程序层，应用程序看到设备提供了交互的抽象接口，
+      并且应用程序可以试验其抽象接口与该设备进行交互。</p>
       <figure id="usecase-overview">
         <img src="images/wot-use-cases/use-case-summary.png"
         srcset="images/wot-use-cases/use-case-summary.svg" class=
         "wot-arch-diagram" alt="use case summary">
         <figcaption>
-          Figure <bdi class="figno">14</bdi> <span class=
-          "fig-title">Use Case Overview</span>
+          图<bdi class="figno">14</bdi> <span class=
+          "fig-title">用例概览</span>
         </figcaption>
       </figure>
     </section>
   </section>
   <section id="sec-requirements" class="normative">
     <h2 id="x5-requirements"><bdi class="secno">5.</bdi>
-    Requirements<a class="self-link" aria-label="§" href=
+    需求<a class="self-link" aria-label="§" href=
     "#sec-requirements"></a></h2>
-    <p><em>This section is normative.</em></p>
+    <p><em>本章节是标准的。</em></p>
     <section id="sec-functional-requirement">
       <h3 id="x5-1-functional-requirements"><bdi class=
-      "secno">5.1</bdi> Functional Requirements<a class="self-link"
+      "secno">5.1</bdi> 功能需求<a class="self-link"
       aria-label="§" href="#sec-functional-requirement"></a></h3>
-      <p>This section defines the properties required in an
-      abstract Web of Things (WoT) architecture.</p>
+      <p>本章节定义了抽象的 Web of Things(WoT)架构所需的属性。</p>
       <section id="sec-requirements-principles">
         <h4 id="x5-1-1-common-principles"><bdi class=
-        "secno">5.1.1</bdi> Common Principles<a class="self-link"
+        "secno">5.1.1</bdi> 通用原则<a class="self-link"
         aria-label="§" href=
         "#sec-requirements-principles"></a></h4>
         <ul>
-          <li>WoT architecture should enable mutual interworking of
-          different eco-systems using web technology.</li>
-          <li>WoT architecture should be based on the web
-          architecture using RESTful APIs.</li>
-          <li>WoT architecture should allow to use multiple payload
-          formats which are commonly used in the web.</li>
-          <li>WoT architecture must enable different device
-          architectures and must not force a client or server
-          implementation of system components.</li>
-          <li>Flexibility
-            <p>There are a wide variety of physical device
-            configurations for WoT implementations. The WoT
-            abstract architecture should be able to be mapped to
-            and cover all of the variations.</p>
+          <li>WoT 架构应该能够使用 Web 技术实现不同的生态系统可以彼此互通。</li>
+          <li>WoT 架构应该基于使用 RESTful APIs 的 Web 架构。</li>
+          <li>WoT 架构应该允许使用网络中常用的多种负载格式。</li>
+          <li>WoT 架构必须使不同的设备架构成为可能，并不得强制客户端或服务器实现系统组件。</li>
+          <li>灵活性
+            <p>用于 WoT 实现的物理设备配置多种多样。WoT 抽象架构应该能够映射到所涵盖的所有变体。</p>
           </li>
-          <li>Compatibility
-            <p>There are already many existing IoT solutions and
-            ongoing IoT standardization activities in many business
-            fields. The WoT should provide a bridge between these
-            existing and developing IoT solutions and Web
-            technology based on WoT concepts. The WoT should be
-            upwards compatible with existing IoT solutions and
-            current standards.</p>
+          <li>兼容性
+            <p>在很多商业领域已经有很多现存的物联网解决方案和正在进行的物联网标准化活动。
+            WoT 应该提供这些现存的和开发中的物联网解决方案和基于 WoT 概念的 Web技术之间的一个桥接。
+            WoT 应该对已经存在的物联网解决方案和当前标准保持向上兼容。</p>
           </li>
-          <li>Scalability
-            <p>WoT must be able to scale for IoT solutions that
-            incorporate thousands to millions of devices. These
-            devices may offer the same capabilities even though
-            they are created by different manufacturers.</p>
+          <li>可拓展性
+            <p>WoT 必须能够拓展到包含数千到数百万个设备的物联网解决方案。即使这些设备由不同制造商创建，而它们可能提供一样的功能。</p>
           </li>
-          <li>Interoperability
-            <p>WoT must provide interoperability across device and
-            cloud manufacturers. It must be possible to take a WoT
-            enabled device and connect it with a cloud service from
-            different manufacturers out of the box.</p>
+          <li>互操作性
+            <p>WoT 必须提供跨设备和云厂商的互操作能力。必须能够立即使用启用了WoT的设备并将其与来自不同厂商的云服务连接。</p>
           </li>
         </ul>
       </section>
       <section id="sec-requirements-thing-functionalities">
         <h4 id="x5-1-2-thing-functionalities"><bdi class=
-        "secno">5.1.2</bdi> Thing Functionalities<a class=
+        "secno">5.1.2</bdi> 事物功能<a class=
         "self-link" aria-label="§" href=
         "#sec-requirements-thing-functionalities"></a></h4>
         <ul>
-          <li>WoT architecture should allow things to have
-          functionalities such as
+          <li>WoT 架构应该允许事物拥有以下功能：
             <ul>
-              <li>reading thing's status information</li>
-              <li>updating thing's status information which might
-              cause actuation</li>
-              <li>subscribing to, receiving and unsubscribing to
-              notifications of changes of the thing's status
-              information.</li>
-              <li>invoking functions with input and output
-              parameters which would cause certain actuation or
-              calculation.</li>
-              <li>subscribing to, receiving and unsubscribing to
-              event notifications that are more general than just
-              reports of state transitions.</li>
+              <li>读取事物的状态信息</li>
+              <li>更新事物的状态信息可能产生动作</li>
+              <li>订阅，接收和取消订阅事物状态信息的改变通知。</li>
+              <li>调用具有输入和输出参数的函数会引起某些动作或计算。</li>
+              <li>订阅，接收和取消订阅事件通知，而不仅仅是报告状态转换。</li>
             </ul>
           </li>
         </ul>
       </section>
       <section id="sec-requirements-search-and-discovery">
         <h4 id="x5-1-3-search-and-discovery"><bdi class=
-        "secno">5.1.3</bdi> Search and Discovery<a class=
+        "secno">5.1.3</bdi> 搜索和发现<a class=
         "self-link" aria-label="§" href=
         "#sec-requirements-search-and-discovery"></a></h4>
         <ul>
-          <li>WoT architecture should allow clients to know thing's
-          attributes, functionalities and their access points,
-          prior to access to the thing itself.</li>
-          <li>WoT architecture should allow clients to search
-          things by its attributes and functionalities.</li>
-          <li>WoT architecture should allow semantic search of
-          things providing required functionalities based on a
-          unified vocabulary, regardless of naming of the
-          functionalities.</li>
+          <li>WoT 架构应该允许客户端在访问事物之前知道事物的属性，功能和它们的访问点。</li>
+          <li>WoT 架构应该允许客户端通过事物的属性和功能来搜索事物。</li>
+          <li>WoT 架构应允许基于统一词汇表对提供所需功能的事物进行语义搜索，而不管功能的命名如何。</li>
         </ul>
       </section>
       <section id="sec-requirements-description-mechanism">
         <h4 id="x5-1-4-description-mechanism"><bdi class=
-        "secno">5.1.4</bdi> Description Mechanism<a class=
+        "secno">5.1.4</bdi> 描述机制<a class=
         "self-link" aria-label="§" href=
         "#sec-requirements-description-mechanism"></a></h4>
         <ul>
-          <li>WoT architecture should support a common description
-          mechanism which enables describing things and their
-          functions.</li>
-          <li>Such descriptions should be not only human-readable,
-          but also machine-readable.</li>
-          <li>Such descriptions should allow semantic annotation of
-          its structure and described contents.</li>
-          <li>Such description should be able to be exchanged using
-          multiple formats which are commonly used in the web.</li>
+          <li>WoT 架构应该支持一种可以描述事物及其功能的通用描述机制。</li>
+          <li>这种描述应该不仅人力可读，而且还要机器可读。</li>
+          <li>这种描述应该允许对其结构和描述内容进行语义注释。</li>
+          <li>这种描述应该能够使用Web 中常用的各种格式进行交换。</li>
         </ul>
       </section>
       <section id="sec-requirements-description-of-attributes">
         <h4 id="x5-1-5-description-of-attributes"><bdi class=
-        "secno">5.1.5</bdi> Description of Attributes<a class=
+        "secno">5.1.5</bdi> 属性的描述<a class=
         "self-link" aria-label="§" href=
         "#sec-requirements-description-of-attributes"></a></h4>
         <ul>
-          <li>WoT architecture should allow describing thing's
-          attributes such as
+          <li>WoT 架构应该允许描述事物的属性，比如：
             <ul>
-              <li>name</li>
-              <li>explanation</li>
-              <li>version of spec, format and description
-              itself</li>
-              <li>links to other related things and metadata
-              information</li>
+              <li>名字</li>
+              <li>解释</li>
+              <li>说明书，格式的版本和解释它自身</li>
+              <li>链接到其他关联事物和元数据信息</li>
             </ul>
           </li>
-          <li>Such descriptions should support
-          internationalization.</li>
+          <li>这些描述应该支持国际化。</li>
         </ul>
       </section>
       <section id=
       "sec-requirements-description-of-functionalities">
         <h4 id="x5-1-6-description-of-functionalities"><bdi class=
-        "secno">5.1.6</bdi> Description of Functionalities<a class=
+        "secno">5.1.6</bdi> 功能描述<a class=
         "self-link" aria-label="§" href=
         "#sec-requirements-description-of-functionalities"></a></h4>
         <ul>
-          <li>WoT architecture should allow describing thing's
-          functionalities which is shown in <a href=
-          "#sec-requirements-thing-functionalities" class=
-          "sec-ref">§&nbsp;<bdi class="secno">5.1.2</bdi> Thing
-          Functionalities</a>
+          <li>WoT 架构应该允许描述事物的功能，如<a href="#sec-requirements-thing-functionalities" class="sec-ref">§&nbsp;<bdi class="secno">5.1.2</bdi> 事物功能</a> 中所示
           </li>
         </ul>
       </section>
       <section id="sec-requirements-network">
         <h4 id="x5-1-7-network"><bdi class="secno">5.1.7</bdi>
-        Network<a class="self-link" aria-label="§" href=
+        网络<a class="self-link" aria-label="§" href=
         "#sec-requirements-network"></a></h4>
         <ul>
-          <li>WoT architecture should support multiple web
-          protocols which are commonly used.</li>
-          <li>Such protocols include
+          <li>WoT 架构应该支持多种常用的 Web 协议。</li>
+          <li>这些协议包含：
             <ol>
-              <li>protocols commonly used in the internet and</li>
-              <li>protocols commonly used in the local area
-              network</li>
+              <li>在 internet 中常用的协议</li>
+              <li>在本地局域网络中常用的协议</li>
             </ol>
           </li>
-          <li>WoT architecture should allow using multiple web
-          protocols to access to the same functionality.</li>
-          <li>WoT architecture should allow using a combination of
-          multiple protocols to the functionalities of the same
-          thing (e.g., HTTP and WebSocket).</li>
+          <li>WoT 架构应该允许使用多种 Web 协议来访问同一功能。</li>
+          <li>WoT 架构应该允许使用多种协议的组合用于同一事物的功能（比如，HTTP 和 WebSocket）。</li>
         </ul>
       </section>
       <section id="sec-requirements-deployment">
         <h4 id="x5-1-8-deployment"><bdi class="secno">5.1.8</bdi>
-        Deployment<a class="self-link" aria-label="§" href=
+        部署<a class="self-link" aria-label="§" href=
         "#sec-requirements-deployment"></a></h4>
         <ul>
-          <li>WoT architecture should support a wide variety of
-          thing capabilities such as edge devices with resource
-          restrictions and virtual things on the cloud, based on
-          the same model.</li>
-          <li>WoT architecture should support multiple levels of
-          thing hierarchy with intermediate entities such as
-          gateways and proxies.</li>
-          <li>WoT architecture should support accessing things in
-          the local network from the outside of the local network
-          (the internet or another local network), considering
-          network address translation.</li>
+          <li>WoT 架构应该支持多种事物能力，比如，基于同一模型，具有资源限制的编写设备和云上的虚拟事物。</li>
+          <li>WoT 架构应该支持拥有中介实体的事物（比如，网关和代理）层级的多层阶。</li>
+          <li>考虑到网络地址转换，WoT 架构应该支持从本地网络外部（internet 或其他本地网络）访问本地网络的事物。</li>
         </ul>
       </section>
       <section id="sec-requirements-application">
         <h4 id="x5-1-9-application"><bdi class="secno">5.1.9</bdi>
-        Application<a class="self-link" aria-label="§" href=
+        应用程序<a class="self-link" aria-label="§" href=
         "#sec-requirements-application"></a></h4>
         <ul>
-          <li>WoT architecture should allow describing applications
-          for a wide variety of things such as edge device,
-          gateway, cloud and UI/UX device, using web standard
-          technology based on the same model.</li>
+          <li>WoT 架构应该允许使用基于同一模型的 Web 标准技术为各种各样的事物（比如边缘设备，网关，云和 UI/UX 设备）描述应用程序。</li>
         </ul>
       </section>
       <section id="sec-requirements-legacy-adoption">
         <h4 id="x5-1-10-legacy-adoption"><bdi class=
-        "secno">5.1.10</bdi> Legacy Adoption<a class="self-link"
+        "secno">5.1.10</bdi> 接纳传统<a class="self-link"
         aria-label="§" href=
         "#sec-requirements-legacy-adoption"></a></h4>
         <ul>
-          <li>WoT architecture should allow mapping of legacy IP
-          and non-IP protocols to web protocols, supporting various
-          topologies, where such legacy protocols are terminated
-          and translated.</li>
-          <li>WoT architecture should allow transparent use of
-          existing IP protocols without translation, which follow
-          RESTful architecture.</li>
-          <li>WoT architecture must not enforce client or server
-          roles on devices and services. An IoT device can be
-          either a client or a server, or both, depending on the
-          system architecture; the same is true of edge and cloud
-          services.</li>
+          <li>WoT 架构应该允许映射传统 IP 和 非-IP 协议到 Web 协议，支持各种拓扑，在这些拓扑中终止并转换这些传统协议。</li>
+          <li>WoT 架构应该允许遵循 RESTful 架构无需转换即可透明使用现有 IP 协议。</li>
+          <li>WoT 架构不得在设备和服务上强制执行客户端或服务器角色。一个物联网设备可以是客户端或服务器，或者两者都是，依赖于系统架构；边缘和云服务器也是如此。</li>
         </ul>
       </section>
     </section>
     <section id="sec-technical-requirements">
       <h3 id="x5-2-technical-requirements"><bdi class=
-      "secno">5.2</bdi> Technical Requirements<a class="self-link"
+      "secno">5.2</bdi> 技术需求<a class="self-link"
       aria-label="§" href="#sec-technical-requirements"></a></h3>
       <p><a href="#sec-common-usecase-patterns" class=
-      "sec-ref">§&nbsp;<bdi class="secno">4.2</bdi> Common
-      Patterns</a> defines the Web of Things abstract architecture
-      by showing various use cases and enumerating patterns for
-      combining architectural components. This section describes
-      technical requirements derived from the abstract
-      architecture.</p>
+      "sec-ref">§&nbsp;<bdi class="secno">4.2</bdi> 常见模式</a> 通过各种用例和列举组合架构组件的模式定义了事物的万维网的抽象架构。
+      本章节描述描述了从抽象架构派生的技术需求。</p>
       <section id=
       "components-in-the-web-of-things-and-the-web-of-things-architecture">
         <h4 id=
         "x5-2-1-components-in-the-web-of-things-and-the-web-of-things-architecture">
-        <bdi class="secno">5.2.1</bdi> Components in the Web of
-        Things and the Web of Things Architecture<a class=
+        <bdi class="secno">5.2.1</bdi> WoT 中的组件和 WoT 架构<a class=
         "self-link" aria-label="§" href=
         "#components-in-the-web-of-things-and-the-web-of-things-architecture"></a></h4>
-        <p>The use cases help to identify basic components such as
-        devices and applications, that access and control those
-        devices, proxies (i.e., gateways and edge devices) that are
-        located between devices. An additional component useful in
-        some use cases is the directory, which assists with
-        discovery.</p>
-        <p>Those components are connected to the internet or field
-        networks in offices, factories or other facilities. Note
-        that all components involved may be connected to a single
-        network in some cases, however, in general components can
-        be deployed across multiple networks.</p>
+        <p>用例有助于识别诸如设备和应用程序之类的基本组件，这些基本组件访问和控制位于设备之间的那些设备，代理（比如，网关和边缘设备）。
+        在一些用例中有用的附件组件是目录，它有助于发现。</p>
+        <p>这些组件在办公室，工厂或其他设置中被连接到 internet 或区域网络中。
+        注意，在某些情况下，所有涉及的组件可能都连接到单个网络，但是，通常组件可以跨多个网络部署。</p>
       </section>
       <section id="devices">
         <h4 id="x5-2-2-devices"><bdi class="secno">5.2.2</bdi>
-        Devices<a class="self-link" aria-label="§" href=
-        "#devices"></a></h4>
-        <p>Access to devices is made using a description of their
-        functions and interfaces. This description is called
-        <em>Thing Description (TD)</em>. A <em>Thing
-        Description</em> includes a general metadata about the
-        device, information models representing functions,
-        transport protocol description for operating on information
-        models, and security information.</p>
-        <p>General metadata contains device identifiers (URI),
-        device information such as serial number, production date,
-        location and other human readable information.</p>
-        <p>Information models defines device attributes, and
-        represent device’s internal settings, control functionality
-        and notification functionality. Devices that have the same
-        functionality have the same information model regardless of
-        the transport protocols used.</p>
-        <p>Because many systems based on Web of Things architecture
-        are crossing system Domains, vocabularies and meta data
-        (e.g., ontologies) used in information models should be
-        commonly understood by involved parties. In addition to
-        REST transports, PubSub transports are also supported.</p>
-        <p>Security information includes descriptions about
-        authentication, authorization and secure communications.
-        Devices are required to put TDs either inside them or at
-        locations external to the devices, and to make TDs
-        accessible so that other components can find and access
-        them.</p>
+        设备<a class="self-link" aria-label="§" href="#devices"></a></h4>
+        <p>使用设备功能和接口的描述可以访问设备。这种描述叫做<em>事物描述(TD)</em>。
+        <em>事物描述</em>包含关于设备的通用元数据，表示功能的信息模型，在信息模型上进行操作的传输协议描述，和安全信息。</p>
+        <p>普遍元数据包含设备身份标识(URI)，设备信息（如，序列号，生产日期，位置和其他人类可读的信息）。</p>
+        <p>信息模型定义了设备属性，并描绘设备的内部设置，控制功能和通知功能。具有相同功能的设备具有相同的信息模型，而与使用的传输协议无关。</p>
+        <p>因为很多基于 WoT 架构的系统是跨系统域，在信息模型中使用的词汇和元数据（比如，本体）应该由参与方共同理解。
+        除 REST 传输外，还支持 PubSub 传输。</p>
+        <p>安全信息包括有关身份认证，授权和安全通信的描述。设备被要求将其事物描述放在内部或者设备的外部，并事物描述易于访问，以便其他组件可以找到和访问他们。</p>
       </section>
       <section id="applications">
         <h4 id="x5-2-3-applications"><bdi class="secno">5.2.3</bdi>
-        Applications<a class="self-link" aria-label="§" href=
+        应用程序<a class="self-link" aria-label="§" href=
         "#applications"></a></h4>
-        <p>Applications need to be able to generate and use network
-        and program interfaces based on metadata
-        (descriptions).</p>
-        <p>Applications have to be able to obtain these
-        descriptions through the network, therefore, need to be
-        able to conduct search operations and acquire the necessary
-        descriptions over the network.</p>
+        <p>应用程序必须能够基于元数据（描述）生成和使用网络和程序接口。</p>
+        <p>应用程序必须能够通过网络获得这些描述，因此，需要能够进行搜索操作并通过网络获取必要的描述。</p>
       </section>
       <section id="digital-twins-0">
         <h4 id="x5-2-4-digital-twins"><bdi class=
-        "secno">5.2.4</bdi> Digital Twins<a class="self-link"
+        "secno">5.2.4</bdi> 数字孪生<a class="self-link"
         aria-label="§" href="#digital-twins-0"></a></h4>
-        <p>Digital Twins need to generate program interfaces
-        internally based on metadata (descriptions), and to
-        represent virtual devices by using those program
-        interfaces. A twin has to produce a description for the
-        virtual device and make it externally available.</p>
-        <p>Identifiers of virtual devices need to be newly
-        assigned, therefore, are different from the original
-        devices. This makes sure that virtual devices and the
-        original devices are clearly recognized as separate
-        entities. Transport and security mechanisms and settings of
-        the virtual devices can be different from original devices
-        if necessary. Virtual devices are required to have
-        descriptions provided either directly by the twin or to
-        have them available at external locations. In either case
-        it is required to make the descriptions available so that
-        other components can find and use the devices associated
-        with them.</p>
+        <p>数字孪生需要基于元数据（描述）在内部生成程序接口，并通过使用这些程序接口来表示虚拟设备。孪生必须为虚拟设备提供描述，并使其在外部可用。</p>
+        <p>虚拟设备的标识符需要重新分配，因此与原始设备不同。这样可以确保将虚拟设备和原始设备清楚地识别为单独的实体。
+        如果有必要，虚拟设备的传输和安全机制以及设置可以与原始设备不同。虚拟设备必须由孪生直接提供描述，或在外部位置提供它们。
+        在任何一种情况下，都需要使描述可用，以便其他组件可以找到并使用与它们关联的设备。</p>
       </section>
       <section id="discovery">
         <h4 id="x5-2-5-discovery"><bdi class="secno">5.2.5</bdi>
-        Discovery<a class="self-link" aria-label="§" href=
+        发现<a class="self-link" aria-label="§" href=
         "#discovery"></a></h4>
-        <p>For TDs of devices and virtual devices to be accessible
-        from devices, applications and twins, there needs to be a
-        common way to share TDs. Directories can serve this
-        requirement by providing functionalities to allow devices
-        and twins themselves automatically or the users to manually
-        register the descriptions.</p>
-        <p>Descriptions of the devices and virtual devices need to
-        be searchable by external entities. Directories have to be
-        able to process search operations with search keys such as
-        keywords from the general description in the device
-        description or information models.</p>
+        <p>为了使设备的事物描述和虚拟设备从设备，应用程序和孪生中可被访问，需要有以一种通用的方式来分享事物描述。
+        目录可以通过提供允许设备和孪生自身自动地或用户手动地注册描述的功能来满足这个需求。</p>
+        <p>设备和虚拟设备的描述需要被外部实体搜索到。目录必须能够处理带有搜索关键词的搜索操作，比如在设备描述或信息模型中的一般描述的关键词。</p>
       </section>
       <section id="security">
         <h4 id="x5-2-6-security"><bdi class="secno">5.2.6</bdi>
-        Security<a class="self-link" aria-label="§" href=
+        安全<a class="self-link" aria-label="§" href=
         "#security"></a></h4>
-        <p>Security information related to devices and virtual
-        devices needs to be described in device descriptions. This
-        includes information for authentication/authorization and
-        payload encryption.</p>
-        <p>WoT architecture should support multiple security
-        mechanism commonly used in the web, such as Basic, Digest,
-        Bearer and OAuth2.0.</p>
+        <p>与设备和虚拟设备有关的安全信息需要在设备描述中被描述到。
+        这包含用于身份验证/授权和有效加密的信息。</p>
+        <p>WoT 架构应该支持通常运用在 Web 中的多种安全机制，比如Basic, Digest, Bearer 和 OAuth2.0。</p>
       </section>
       <section id="accessibility">
         <h4 id="x5-2-7-accessibility"><bdi class=
-        "secno">5.2.7</bdi> Accessibility<a class="self-link"
+        "secno">5.2.7</bdi> 可访问性<a class="self-link"
         aria-label="§" href="#accessibility"></a></h4>
-        <p>The Web of Things primarily targets machine-to-machine
-        communication. The humans involved are usually developers
-        that integrate Things into applications. End-users will be
-        faced with the front-ends of the applications or the
-        physical user interfaces provided by devices themselves.
-        Both are out of scope of the <abbr title=
-        "World Wide Web Consortium">W3C</abbr> WoT specifications.
-        Given the focus on IoT instead of users, accessibility is
-        not a direct requirement, and hence is not addressed within
-        this specification.</p>
-        <p>There is, however, an interesting aspect on
-        accessibility: Fulfilling the requirements above enables
-        machines to understand the network-facing API of devices.
-        This can be utilized by accessibility tools to provide user
-        interfaces of different modality, thereby removing barriers
-        to using physical devices and IoT-related applications.</p>
+        <p>WoT 的主要目标是机器对机器的通信。涉及的人员通常是将事物集成到应用程序中的开发人员。
+        最终用户将会面对应用程序的前端或者设备本身提供的物理用户界面。这两者都不在 <abbr title="World Wide Web Consortium">W3C</abbr> WoT 标准的范围之内。</p>
+        <p>但是，可访问性是一个有趣的方向：满足上述需求可以使机器去理解设备网络面的 API。 可以利用访问工具来提供不同形态的用户界面，从而消除物理设备和物联网相关应用程序的障碍。</p>
       </section>
     </section>
   </section>
   <section id="sec-wot-architecture">
     <h2 id="x6-wot-architecture"><bdi class="secno">6.</bdi> WoT
-    Architecture<a class="self-link" aria-label="§" href=
+    架构<a class="self-link" aria-label="§" href=
     "#sec-wot-architecture"></a></h2>
-    <p><em>This section is normative.</em></p>
-    <p>To address the use cases in Section 4 and fulfill the
-    requirements in Section 5, the Web of Things (WoT) builds on
-    top of the concept of Web Things – usually simply called
-    <a href="#dfn-thing" class="internalDFN" data-link-type=
-    "dfn">Things</a> – that can be used by so-called <a href=
-    "#dfn-consumer" class="internalDFN" data-link-type=
-    "dfn">Consumers</a>. This section provides the background and
-    normative assertions to define the overall <abbr title=
-    "World Wide Web Consortium">W3C</abbr> Web of Things
-    architecture. As the Web of Things addresses stakeholders from
-    different domains, certain aspects of Web technology are
-    explained in more detail, in particular the concept of
-    hypermedia.</p>
+    <p><em>本章节是标准的。</em></p>
+    <p>为了解决第 4 章节的用例并满足第 5 章节的需求，Web of Things(WoT)构建于 Web Things 的概念之上 - 
+    通常简称为<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">Things</a> - 可以被所谓的<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">消费者</a>使用它。
+    本章节提供背景和规范性断言以定义全部的 <abbr title="World Wide Web Consortium">W3C</abbr> Web ot Things 架构。
+    当 Web of Things 遇到不同领域的利益相关者时，某些方面的 Web 技术将被解释的更具体，特别是超媒体的概念。</p>
     <section id="sec-architecture-overview">
       <h3 id="x6-1-overview"><bdi class="secno">6.1</bdi>
-      Overview<a class="self-link" aria-label="§" href=
+      概览<a class="self-link" aria-label="§" href=
       "#sec-architecture-overview"></a></h3>
-      <p>A <a href="#dfn-thing" class="internalDFN" data-link-type=
-      "dfn">Thing</a> is the abstraction of a physical or virtual
-      entity (e.g., a device or a room) and is described by
-      standardized metadata. <span class="rfc2119-assertion" id=
-      "arch-td-metadata">In <abbr title=
-      "World Wide Web Consortium">W3C</abbr> WoT, the description
-      metadata <em class="rfc2119" title="MUST">MUST</em> be a WoT
-      Thing Description (TD) [<cite><a class="bibref"
-      data-link-type="biblio" href="#bib-wot-thing-description"
-      title=
-      "Web of Things (WoT) Thing Description">WOT-THING-DESCRIPTION</a></cite>].</span>
-      <span class="rfc2119-assertion" id=
-      "arch-td-consumers-process"><a href="#dfn-consumer" class=
-      "internalDFN" data-link-type="dfn">Consumers</a> <em class=
-      "rfc2119" title="MUST">MUST</em> be able to parse and process
-      the <a href="#dfn-td" class="internalDFN" data-link-type=
-      "dfn">TD</a> representation format, which is based on JSON
-      [<cite><a class="bibref" data-link-type="biblio" href=
-      "#bib-rfc8259" title=
-      "The JavaScript Object Notation (JSON) Data Interchange Format">RFC8259</a></cite>].</span>
-      The format can be processed either through classic JSON
-      libraries or a JSON-LD processor, as the underlying
-      information model is graph-based and its serialization
-      compatible with JSON-LD 1.1 [<cite><a class="bibref"
-      data-link-type="biblio" href="#bib-json-ld11" title=
-      "JSON-LD 1.1">JSON-LD11</a></cite>]. The use of a JSON-LD
-      processor for processing a TD additionally enables semantic
-      processing including transformation to RDF triples, semantic
-      inference and accomplishing tasks given based on ontological
-      terms, which would make <a href="#dfn-consumer" class=
-      "internalDFN" data-link-type="dfn">Consumers</a> behave more
-      autonomous. A <a href="#dfn-td" class="internalDFN"
-      data-link-type="dfn">TD</a> is instance-specific (i.e.,
-      describes an individual Thing, not types of Things) and is
-      the default external, textual (Web) representation of a
-      <a href="#dfn-thing" class="internalDFN" data-link-type=
-      "dfn">Thing</a>. <span class="rfc2119-assertion" id=
-      "arch-other-thing-representations">There <em class="rfc2119"
-      title="MAY">MAY</em> be other representations of a <a href=
-      "#dfn-thing" class="internalDFN" data-link-type=
-      "dfn">Thing</a> such as an HTML-based user interface, simply
-      an image of the physical entity, or even non-Web
-      representations in closed systems.</span></p>
-      <p><span class="rfc2119-assertion" id="arch-td-mandatory">To
-      be a <a href="#dfn-thing" class="internalDFN" data-link-type=
-      "dfn">Thing</a>, however, at least one <a href="#dfn-td"
-      class="internalDFN" data-link-type="dfn">TD</a>
-      representation <em class="rfc2119" title="MUST">MUST</em> be
-      available.</span> The <a href="#dfn-wot-thing-description"
-      class="internalDFN" data-link-type="dfn">WoT Thing
-      Description</a> is a standardized, machine-understandable
-      representation format that allows <a href="#dfn-consumer"
-      class="internalDFN" data-link-type="dfn">Consumers</a> to
-      discover and interpret the capabilities of a <a href=
-      "#dfn-thing" class="internalDFN" data-link-type=
-      "dfn">Thing</a> (through semantic annotations) and to adapt
-      to different implementations (e.g., different protocols or
-      data structures) when interacting with a Thing, thereby
-      enabling interoperability across different <a href=
-      "#dfn-iot-platform" class="internalDFN" data-link-type=
-      "dfn">IoT platforms</a>, i.e., different ecosystems and
-      standards.</p>
+      <p><a href="#dfn-thing" class="internalDFN" data-link-type="dfn">事物</a>是物理或虚拟实体（比如，设备或房间）的抽象，并通过标准化的元数据进行描述。
+      <span class="rfc2119-assertion" id="arch-td-metadata">在 <abbr title="World Wide Web Consortium">W3C</abbr> WoT 中，
+      描述性元数据<em class="rfc2119" title="MUST">必须</em> 是一个 WoT 事物描述（TD)[<cite><a class="bibref" data-link-type="biblio" href="#bib-wot-thing-description" title="Web of Things (WoT) Thing Description">WOT-THING-DESCRIPTION</a></cite>]</span>。
+      <span class="rfc2119-assertion" id="arch-td-consumers-process"><a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">消费者</a><em class="rfc2119" title="MUST">必须</em> 能够解析和处理基于 JSON[<cite><a class="bibref" data-link-type="biblio" href="#bib-rfc8259" title="The JavaScript Object Notation (JSON) Data Interchange Format">RFC8259</a></cite>] 的 <a href="#dfn-td" class="internalDFN" data-link-type="dfn">TD</a> 描述格式。</span>
+      格式可以通过经典的 JSON 库或者 JSON-LD 处理器进行处理，因为底层的信息模型是基于图，并且其序列化与JSON-LD 1.1 [<cite><a class="bibref" data-link-type="biblio" href="#bib-json-ld11" title="JSON-LD 1.1">JSON-LD11</a></cite>]兼容。
+      使用 JSON-LD 处理器处理 TD 还可以进行语义处理，包括转换为 RDF 三元组，语义推理以及完成基于本体术语指定的任务，这将使<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">消费者</a>的行为更加自治。
+      一个 <a href="#dfn-td" class="internalDFN" data-link-type="dfn">TD</a> 是特定实例（即描述独特的事物，而不是类型的事物），并且是默认的外部，文字（网站）表示的<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">事物</a>。
+      <span class="rfc2119-assertion" id="arch-other-thing-representations"><a href="#dfn-thing" class="internalDFN" data-link-type="dfn">事物</a><em class="rfc2119" title="MAY">可能</em> 还有其他表示形式，
+      例如基于HTML的用户界面，仅仅是物理实体的图像，甚至是封闭系统中的非Web表示形式。</span></p>
+      <p><span class="rfc2119-assertion" id="arch-td-mandatory">但是，要成为一件<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">事物</a>，至少<em class="rfc2119" title="MUST">必须</em> 有一个<a href="#dfn-td" class="internalDFN" data-link-type="dfn">TD</a> 表示是可找到的。</span>
+      <a href="#dfn-wot-thing-description" class="internalDFN" data-link-type="dfn">WoT 事物描述</a>是一个标准化的，机器可理解的表示格式，
+      其允许<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">消费者</a>发现和解释<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">事物</a>的能力（通过语义注释）
+      并在与事物进行交互时适应不同的实现（例如，不同的协议或数据结构）从而实现跨不同<a href="#dfn-iot-platform" class="internalDFN" data-link-type="dfn">物联网平台</a>（即不同生态系统和标准）的互操作性。</p>
       <figure id="consumer-thing">
         <img src="images/architecture/consumer-thing.png" srcset=
         "images/architecture/consumer-thing.svg" class=
         "wot-arch-diagram" alt="consumer thing">
         <figcaption>
-          Figure <bdi class="figno">15</bdi> <span class=
-          "fig-title">Consumer-Thing interaction</span>
+          图<bdi class="figno">15</bdi> <span class=
+          "fig-title">消费者-事物 互动</span>
         </figcaption>
       </figure>
-      <p>A <a href="#dfn-thing" class="internalDFN" data-link-type=
-      "dfn">Thing</a> can also be the abstraction of a virtual
-      entity. A virtual entity is the composition of one or more
-      Things (e.g., a room consisting of several sensors and
-      actuators). One option for the composition is to provide a
-      single, consolidated <a href="#dfn-wot-thing-description"
-      class="internalDFN" data-link-type="dfn">WoT Thing
-      Description</a> that contains the superset of capabilities
-      for the virtual entity. In cases where the composition is
-      rather complex, its <a href="#dfn-td" class="internalDFN"
-      data-link-type="dfn">TD</a> may <em>link</em> to hierarchical
-      sub-Things within the composition. The main <a href="#dfn-td"
-      class="internalDFN" data-link-type="dfn">TD</a> acts as entry
-      point and only contain general metadata and potentially
-      overarching capabilities. This allows grouping of certain
-      aspects of more complex Things.</p>
-      <p>Linking does not only apply to hierarchical <a href=
-      "#dfn-thing" class="internalDFN" data-link-type=
-      "dfn">Things</a>, but relations between Things and other
-      resources in general. Link relation types express how Things
-      relate, for instance, a switch controlling a light or a room
-      monitored by a motion sensor. Other resources related to a
-      <a href="#dfn-thing" class="internalDFN" data-link-type=
-      "dfn">Thing</a> can be manuals, catalogs for spare parts, CAD
-      files, a graphical UI, or any other document on the Web.
-      Overall, Web linking among Things makes the Web of Things
-      navigable, for both humans and machines. This can be further
-      facilitated by providing Thing directories that manage a
-      catalog of available <a href="#dfn-thing" class="internalDFN"
-      data-link-type="dfn">Things</a>, usually by caching their TD
-      representation. In summary, <span class="rfc2119-assertion"
-      id="arch-td-linking"><a href="#dfn-wot-thing-description"
-      class="internalDFN" data-link-type="dfn">WoT Thing
-      Descriptions</a> <em class="rfc2119" title="MAY">MAY</em>
-      link to other <a href="#dfn-thing" class="internalDFN"
-      data-link-type="dfn">Things</a> and other resources on the
-      Web to form a Web of Things.</span></p>
+      <p><a href="#dfn-thing" class="internalDFN" data-link-type="dfn">事物</a>还可以是虚拟实体的抽象。虚拟实体是一个或多个事物的组合（比如，房间存在大量的传感器和执行器）。
+      组合的一种选项是提供一个单独，合并过的 <a href="#dfn-wot-thing-description" class="internalDFN" data-link-type="dfn">WoT 事物描述</a>，其中包含虚拟实体功能的超集。
+      在组合非常复杂的情况下，它的 <a href="#dfn-td" class="internalDFN" data-link-type="dfn">TD</a> 可能链接到组合与分层的子事物。主 <a href="#dfn-td" class="internalDFN" data-link-type="dfn">TD</a> 扮演入口，仅包含常规元数据和潜在的总体功能。
+      这允许对更复杂的事物的某些方面进行分组。</p>
+      <p>链接不仅适用于分层的<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">事物</a>，而且通常还适用于事物于其他资源之间的关系。
+      链接关系类型表达了事物是如何关联的，例如，控制灯的开关或被运动传感器所检测的房间。
+      其他与事物有关联的资源可以是说明书，额外部分的分类，CAD 文件，图形 UI或者 Web 上的任意其他文档。总之，事物中的 Web 链接让 Web of Things 对人类和机器都具有导航性。
+      通过提供事物目录来管理可用事物的目录（通常通过缓存其 TD陈述）可以进一步简化此操作。
+      概况来说，<span class="rfc2119-assertion" id="arch-td-linking"><a href="#dfn-wot-thing-description" class="internalDFN" data-link-type="dfn">WoT 事物描述</a><em class="rfc2119" title="MAY">可能</em> 在 Web 上从一个 Web of Things 链接到其他<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">事物</a>和其他资源.</span></p>
       <figure id="linked-things">
         <img src="images/architecture/linked-things.png" srcset=
         "images/architecture/linked-things.svg" class=
         "wot-arch-diagram" alt="linked things">
         <figcaption>
-          Figure <bdi class="figno">16</bdi> <span class=
-          "fig-title">Linked Things</span>
+          图<bdi class="figno">16</bdi> <span class=
+          "fig-title">链接的事物</span>
         </figcaption>
       </figure>
-      <p>Things must be hosted on networked system components with
-      a software stack to realize interaction through a
-      network-facing interface, the <a href="#dfn-wot-interface"
-      class="internalDFN" data-link-type="dfn">WoT Interface</a> of
-      a <a href="#dfn-thing" class="internalDFN" data-link-type=
-      "dfn">Thing</a>. One example of this is an HTTP server
-      running on an embedded device with sensors and actuators
-      interfacing the physical entity behind the <a href=
-      "#dfn-thing" class="internalDFN" data-link-type=
-      "dfn">Thing</a> abstraction. However, <abbr title=
-      "World Wide Web Consortium">W3C</abbr> WoT does not mandate
-      where <a href="#dfn-thing" class="internalDFN"
-      data-link-type="dfn">Things</a> are hosted; it can be on the
-      IoT device directly, an <a href="#dfn-edge-device" class=
-      "internalDFN" data-link-type="dfn">Edge device</a> such as a
-      gateway, or the cloud.</p>
-      <p>A typical deployment challenge is a scenario, where local
-      networks are not reachable from the Internet, usually because
-      of IPv4 Network Address Translation (NAT) or firewall
-      devices. To remedy this situation, <abbr title=
-      "World Wide Web Consortium">W3C</abbr> WoT allows for
-      <a href="#dfn-intermediary" class="internalDFN"
-      data-link-type="dfn">Intermediaries</a> between <a href=
-      "#dfn-thing" class="internalDFN" data-link-type=
-      "dfn">Things</a> and <a href="#dfn-consumer" class=
-      "internalDFN" data-link-type="dfn">Consumers</a>.</p>
-      <p><a href="#dfn-intermediary" class="internalDFN"
-      data-link-type="dfn">Intermediaries</a> can act as proxies
-      for <a href="#dfn-thing" class="internalDFN" data-link-type=
-      "dfn">Things</a>, where the <a href="#dfn-intermediary"
-      class="internalDFN" data-link-type="dfn">Intermediary</a> has
-      a <a href="#dfn-wot-thing-description" class="internalDFN"
-      data-link-type="dfn">WoT Thing Description</a> similar to the
-      original <a href="#dfn-thing" class="internalDFN"
-      data-link-type="dfn">Thing</a>, but which points to the
-      <a href="#dfn-wot-interface" class="internalDFN"
-      data-link-type="dfn">WoT Interface</a> provided by the
-      <a href="#dfn-intermediary" class="internalDFN"
-      data-link-type="dfn">Intermediary</a>. <a href=
-      "#dfn-intermediary" class="internalDFN" data-link-type=
-      "dfn">Intermediaries</a> may also augment existing <a href=
-      "#dfn-thing" class="internalDFN" data-link-type=
-      "dfn">Things</a> with additional capabilities or compose a
-      new <a href="#dfn-thing" class="internalDFN" data-link-type=
-      "dfn">Thing</a> out of multiple available <a href=
-      "#dfn-thing" class="internalDFN" data-link-type=
-      "dfn">Things</a>, thereby forming a virtual entity. To
+      <p>事物必须通过软件堆栈托管在网络化的系统组件上，以通过面向网络的接口（<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">事物</a>的 <a href="#dfn-wot-interface" class="internalDFN" data-link-type="dfn">WoT 接口</a>）实现真实交互，
+      一个示例是在带有传感器和执行器的嵌入式设备上运行的 HTTP 服务器，与隐藏在<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">事物</a>抽象后的物理实体相关交流。
+      然而，<abbr title="World Wide Web Consortium">W3C</abbr> WoT 不要求<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">事物</a>存放的地方；可以是直接在物联网设备上，<a href="#dfn-edge-device" class="internalDFN" data-link-type="dfn">边缘设备</a>上，比如网关或云。</p>
+      <p>典型的部署挑战是一种场景，其本地网络从 Internet 上不可访问，通常因为 IPv4 网络地址转换(NAT)或防火墙设备。
+      要解决这种情况，<abbr title="World Wide Web Consortium">W3C</abbr> WoT 允许在<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">事物</a>和<a href="#dfn-consumer" class="internalDFN" data-link-type="dfn">消费者</a>之间<a href="#dfn-intermediary" class="internalDFN" data-link-type="dfn">建立中介</a>。</p>
+      <p><a href="#dfn-intermediary" class="internalDFN" data-link-type="dfn">中介</a>可以充当<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">事物</a>的代理，
+      <a href="#dfn-intermediary" class="internalDFN" data-link-type="dfn">中介</a>具有与原生<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">事物</a>相似的 <a href="#dfn-wot-thing-description" class="internalDFN" data-link-type="dfn">WoT 事物描述</a>，
+      但是指向<a href="#dfn-intermediary" class="internalDFN" data-link-type="dfn">中介</a>提供的 <a href="#dfn-wot-interface" class="internalDFN" data-link-type="dfn">WoT 接口</a>。
+      <a href="#dfn-intermediary" class="internalDFN" data-link-type="dfn">中介</a>还可以通过附加功能来增强现有<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">事物</a>，
+      或从多个可用<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">事物</a>中构成一个新<a href="#dfn-thing" class="internalDFN" data-link-type="dfn">事物</a>，从而形成一个虚拟实体。
+      对于消费者来说，中介看上去像是事物，因为它们拥有 WoT 事物描述和提供 WoT 接口，因此可能与诸如Web [ REST ]的分层系统体系结构中的事物没有区别。
+      WoT事物描述中的标识符必须允许关联表示相同原始 事物或最终唯一物理实体的多个TD。
+
+       To
       <a href="#dfn-consumer" class="internalDFN" data-link-type=
       "dfn">Consumers</a>, <a href="#dfn-intermediary" class=
       "internalDFN" data-link-type="dfn">Intermediaries</a> look
@@ -4127,7 +3281,7 @@
         "images/architecture/intermediary.svg" class=
         "wot-arch-diagram" alt="intermediary">
         <figcaption>
-          Figure <bdi class="figno">17</bdi> <span class=
+          图<bdi class="figno">17</bdi> <span class=
           "fig-title">Intermediary</span>
         </figcaption>
       </figure>
@@ -4162,7 +3316,7 @@
       concepts introduced above can be applied and combined to
       address the use cases summarized in <a href=
       "#sec-use-case-summary" class="sec-ref">§&nbsp;<bdi class=
-      "secno">4.3</bdi> Summary</a>.</p>
+      "secno">4.3</bdi> 总结</a>.</p>
       <figure id="architecture-abstract">
         <img src="images/architecture/overview.png" srcset=
         "images/architecture/overview.svg" class="wot-arch-diagram"
@@ -4176,7 +3330,7 @@
     </section>
     <section id="sec-affordances">
       <h3 id="x6-2-affordances"><bdi class="secno">6.2</bdi>
-      Affordances<a class="self-link" aria-label="§" href=
+      自解释性<a class="self-link" aria-label="§" href=
       "#sec-affordances"></a></h3>
       <p>A central aspect in <abbr title=
       "World Wide Web Consortium">W3C</abbr> WoT is the provision
@@ -4253,8 +3407,7 @@
       community, who is working on Web services in general.</p>
     </section>
     <section id="sec-web-thing">
-      <h3 id="x6-3-web-thing"><bdi class="secno">6.3</bdi> Web
-      Thing<a class="self-link" aria-label="§" href=
+      <h3 id="x6-3-web-thing"><bdi class="secno">6.3</bdi> 网络事物<a class="self-link" aria-label="§" href=
       "#sec-web-thing"></a></h3>
       <p>A Web Thing has four architectural aspects of interest:
       its <em>behavior</em>, its <em><a href=
@@ -4306,8 +3459,7 @@
       </figure>
     </section>
     <section id="sec-interaction-model">
-      <h3 id="x6-4-interaction-model"><bdi class="secno">6.4</bdi>
-      Interaction Model<a class="self-link" aria-label="§" href=
+      <h3 id="x6-4-interaction-model"><bdi class="secno">6.4</bdi>交互模型<a class="self-link" aria-label="§" href=
       "#sec-interaction-model"></a></h3>
       <p>Originally, a Web resource usually represented a document
       on the World Wide Web that can simply be fetched by a Web
@@ -4353,7 +3505,7 @@
       in IoT devices and services.</p>
       <section id="properties">
         <h4 id="x6-4-1-properties"><bdi class="secno">6.4.1</bdi>
-        Properties<a class="self-link" aria-label="§" href=
+        属性<a class="self-link" aria-label="§" href=
         "#properties"></a></h4>
         <p>A Property is an Interaction Affordance that exposes the
         state of the Thing. <span class="rfc2119-assertion" id=
@@ -4385,7 +3537,7 @@
       </section>
       <section id="actions">
         <h4 id="x6-4-2-actions"><bdi class="secno">6.4.2</bdi>
-        Actions<a class="self-link" aria-label="§" href=
+        动作<a class="self-link" aria-label="§" href=
         "#actions"></a></h4>
         <p>An Action is an Interaction Affordance that allows to
         invoke a function of the Thing. <span class=
@@ -4415,7 +3567,7 @@
       </section>
       <section id="events">
         <h4 id="x6-4-3-events"><bdi class="secno">6.4.3</bdi>
-        Events<a class="self-link" aria-label="§" href=
+        事件<a class="self-link" aria-label="§" href=
         "#events"></a></h4>
         <p>An Event Interaction Affordance describes an event
         source that pushes data asynchronously from the Thing to
@@ -4438,7 +3590,7 @@
     </section>
     <section id="sec-hypermedia-controls">
       <h3 id="x6-5-hypermedia-controls"><bdi class=
-      "secno">6.5</bdi> Hypermedia Controls<a class="self-link"
+      "secno">6.5</bdi> 超媒体控件<a class="self-link"
       aria-label="§" href="#sec-hypermedia-controls"></a></h3>
       <p>On the Web, an affordance is the simultaneous presentation
       of information and controls, such that the information
@@ -4488,7 +3640,7 @@
       defined by the IETF.</p>
       <section id="sec-hypermedia-links">
         <h4 id="x6-5-1-links"><bdi class="secno">6.5.1</bdi>
-        Links<a class="self-link" aria-label="§" href=
+        链接<a class="self-link" aria-label="§" href=
         "#sec-hypermedia-links"></a></h4>
         <p>Links enable <a href="#dfn-consumer" class="internalDFN"
         data-link-type="dfn">Consumers</a> (or Web clients in the
@@ -4543,7 +3695,7 @@
       </section>
       <section id="sec-hypermedia-forms">
         <h4 id="x6-5-2-forms"><bdi class="secno">6.5.2</bdi>
-        Forms<a class="self-link" aria-label="§" href=
+        表单<a class="self-link" aria-label="§" href=
         "#sec-hypermedia-forms"></a></h4>
         <p>Forms enable <a href="#dfn-consumer" class="internalDFN"
         data-link-type="dfn">Consumers</a> (or Web clients in the
@@ -4761,7 +3913,7 @@
     </section>
     <section id="sec-protocol-bindings">
       <h3 id="x6-6-protocol-bindings"><bdi class="secno">6.6</bdi>
-      Protocol Bindings<a class="self-link" aria-label="§" href=
+      协议绑定<a class="self-link" aria-label="§" href=
       "#sec-protocol-bindings"></a></h3>
       <p>A Protocol Binding is the mapping from an <a href=
       "#dfn-interaction-affordance" class="internalDFN"
@@ -4793,13 +3945,13 @@
       are given in the assertions below.</p>
       <p>In the door example given in <a href="#sec-affordances"
       class="sec-ref">§&nbsp;<bdi class="secno">6.2</bdi>
-      Affordances</a>, the <a href="#dfn-wot-protocol-binding"
+      自解释性</a>, the <a href="#dfn-wot-protocol-binding"
       class="internalDFN" data-link-type="dfn">Protocol Binding</a>
       corresponds to the door handle at the level of knob vs lever,
       which suggests <em>how</em> the door can be opened.</p>
       <section id="hypermedia-driven">
         <h4 id="x6-6-1-hypermedia-driven"><bdi class=
-        "secno">6.6.1</bdi> Hypermedia-driven<a class="self-link"
+        "secno">6.6.1</bdi> 超媒体驱动<a class="self-link"
         aria-label="§" href="#hypermedia-driven"></a></h4>
         <p><span class="rfc2119-assertion" id=
         "arch-hypermedia">Interaction Affordances <em class=
@@ -4869,7 +4021,7 @@
       </section>
       <section id="sec-standard-method">
         <h4 id="x6-6-3-standard-set-of-methods"><bdi class=
-        "secno">6.6.3</bdi> Standard Set of Methods<a class=
+        "secno">6.6.3</bdi> 方法的标准集合<a class=
         "self-link" aria-label="§" href=
         "#sec-standard-method"></a></h4>
         <p><span class="rfc2119-assertion" id=
@@ -4895,8 +4047,7 @@
         "dfn">Consumers</a>.</p>
       </section>
       <section id="media-types">
-        <h4 id="x6-6-4-media-types"><bdi class="secno">6.6.4</bdi>
-        Media Types<a class="self-link" aria-label="§" href=
+        <h4 id="x6-6-4-media-types"><bdi class="secno">6.6.4</bdi>媒体类型<a class="self-link" aria-label="§" href=
         "#media-types"></a></h4>
         <p><span class="rfc2119-assertion" id="arch-media-type">All
         data (a.k.a. content) exchanged when activating Interaction
@@ -4944,8 +4095,7 @@
     <section id="sec-wot-servient-architecture-high-level">
       <h3 id=
       "x6-7-wot-system-components-and-their-interconnectivity">
-      <bdi class="secno">6.7</bdi> WoT System Components and Their
-      Interconnectivity<a class="self-link" aria-label="§" href=
+      <bdi class="secno">6.7</bdi> WoT系统组件和它们的互联性<a class="self-link" aria-label="§" href=
       "#sec-wot-servient-architecture-high-level"></a></h3>
       <p>Section <a href="#sec-architecture-overview" class=
       "sec-ref">§&nbsp;<bdi class="secno">6.1</bdi> Overview</a>
@@ -5075,7 +4225,7 @@
       </figure>
       <section id="direct-communication">
         <h4 id="x6-7-1-direct-communication"><bdi class=
-        "secno">6.7.1</bdi> Direct Communication<a class=
+        "secno">6.7.1</bdi> 直接通信<a class=
         "self-link" aria-label="§" href=
         "#direct-communication"></a></h4>
         <p><a href="#high-level-application-device" class="fig-ref"
@@ -5144,7 +4294,7 @@
       </section>
       <section id="indirect-communication">
         <h4 id="x6-7-2-indirect-communication"><bdi class=
-        "secno">6.7.2</bdi> Indirect Communication<a class=
+        "secno">6.7.2</bdi> 间接通信<a class=
         "self-link" aria-label="§" href=
         "#indirect-communication"></a></h4>
         <p>In <a href=
@@ -5271,10 +4421,9 @@
     </section>
   </section>
   <section id="sec-building-blocks">
-    <h2 id="x7-wot-building-blocks"><bdi class="secno">7.</bdi> WoT
-    Building Blocks<a class="self-link" aria-label="§" href=
+    <h2 id="x7-wot-building-blocks"><bdi class="secno">7.</bdi> WoT 构建块<a class="self-link" aria-label="§" href=
     "#sec-building-blocks"></a></h2>
-    <p><em>This section is normative.</em></p>
+    <p><em>本章节是标准的。</em></p>
     <p>The Web of Things (WoT) building blocks allow the
     implementation of systems that conform with the abstract WoT
     Architecture. The specifics of these building blocks are
@@ -5324,7 +4473,7 @@
     considered a fourth building block.</p>
     <section id="sec-thing-description">
       <h3 id="x7-1-wot-thing-description"><bdi class=
-      "secno">7.1</bdi> WoT Thing Description<a class="self-link"
+      "secno">7.1</bdi> WoT 事物描述<a class="self-link"
       aria-label="§" href="#sec-thing-description"></a></h3>
       <p>The <a href="#dfn-wot-thing-description" class=
       "internalDFN" data-link-type="dfn">WoT Thing Description</a>
@@ -5428,9 +4577,9 @@
     </section>
     <section id="sec-binding-templates" class="informative">
       <h3 id="x7-2-wot-binding-templates"><bdi class=
-      "secno">7.2</bdi> WoT Binding Templates<a class="self-link"
+      "secno">7.2</bdi> WoT 构建模板<a class="self-link"
       aria-label="§" href="#sec-binding-templates"></a></h3>
-      <p><em>This section is non-normative.</em></p>
+      <p><em>本章节是非标准的。</em></p>
       <p>The IoT uses a variety of protocols for accessing devices,
       since no single protocol is appropriate in all contexts.
       Thus, a central challenge for the Web of Things is to enable
@@ -5594,9 +4743,9 @@
     </section>
     <section id="sec-scripting-api" class="informative">
       <h3 id="x7-3-wot-scripting-api"><bdi class="secno">7.3</bdi>
-      WoT Scripting API<a class="self-link" aria-label="§" href=
+      WoT 脚本 API<a class="self-link" aria-label="§" href=
       "#sec-scripting-api"></a></h3>
-      <p><em>This section is non-normative.</em></p>
+      <p><em>本章节是非标准的。</em></p>
       <p>The <a href="#dfn-wot-scripting-api" class="internalDFN"
       data-link-type="dfn">WoT Scripting API</a> is an optional
       "convenience" building block of <abbr title=
@@ -5660,10 +4809,9 @@
     </section>
     <section id="sec-security-guidelines" class="informative">
       <h3 id="x7-4-wot-security-and-privacy-guidelines"><bdi class=
-      "secno">7.4</bdi> WoT Security and Privacy
-      Guidelines<a class="self-link" aria-label="§" href=
+      "secno">7.4</bdi> WoT 安全与隐私指南<a class="self-link" aria-label="§" href=
       "#sec-security-guidelines"></a></h3>
-      <p><em>This section is non-normative.</em></p>
+      <p><em>本章节是非标准的。</em></p>
       <p>Security is a cross-cutting concern and should be
       considered in all aspects of system design. In the WoT
       architecture, security is supported by certain explicit
@@ -5686,10 +4834,10 @@
   </section>
   <section id="sec-servient-implementation" class="informative">
     <h2 id="x8-abstract-servient-architecture"><bdi class=
-    "secno">8.</bdi> Abstract Servient Architecture<a class=
+    "secno">8.</bdi> 抽象服务方架构<a class=
     "self-link" aria-label="§" href=
     "#sec-servient-implementation"></a></h2>
-    <p><em>This section is non-normative.</em></p>
+    <p><em>本章节是非标准的。</em></p>
     <p>As defined in <a href=
     "#sec-wot-servient-architecture-high-level" class=
     "sec-ref">§&nbsp;<bdi class="secno">6.7</bdi> WoT System
@@ -5774,7 +4922,7 @@
     sections.</p>
     <section id="behavior-implementation">
       <h3 id="x8-1-behavior-implementation"><bdi class=
-      "secno">8.1</bdi> Behavior Implementation<a class="self-link"
+      "secno">8.1</bdi> 行为执行<a class="self-link"
       aria-label="§" href="#behavior-implementation"></a></h3>
       <p>The <em>behavior</em> defines the overall application
       logic of a <a href="#dfn-thing" class="internalDFN"
@@ -5852,7 +5000,7 @@
     </section>
     <section id="wot-runtime">
       <h3 id="x8-2-wot-runtime"><bdi class="secno">8.2</bdi> WoT
-      Runtime<a class="self-link" aria-label="§" href=
+      运行时<a class="self-link" aria-label="§" href=
       "#wot-runtime"></a></h3>
       <p>Technically, the <a href="#dfn-thing" class="internalDFN"
       data-link-type="dfn">Thing</a> abstraction and its <a href=
@@ -5927,7 +5075,7 @@
     </section>
     <section id="wot-scripting-api">
       <h3 id="x8-3-wot-scripting-api"><bdi class="secno">8.3</bdi>
-      WoT Scripting API<a class="self-link" aria-label="§" href=
+      WoT 脚本 API<a class="self-link" aria-label="§" href=
       "#wot-scripting-api"></a></h3>
       <p>The <a href="#dfn-wot-scripting-api" class="internalDFN"
       data-link-type="dfn">WoT Scripting API</a> building block
@@ -5949,8 +5097,7 @@
     </section>
     <section id="exposed-thing-and-consumed-thing-abstractions">
       <h3 id="x8-4-exposed-thing-and-consumed-thing-abstractions">
-      <bdi class="secno">8.4</bdi> Exposed Thing and Consumed Thing
-      Abstractions<a class="self-link" aria-label="§" href=
+      <bdi class="secno">8.4</bdi> 暴露事物和消费事物抽象<a class="self-link" aria-label="§" href=
       "#exposed-thing-and-consumed-thing-abstractions"></a></h3>
       <p>The <a href="#dfn-wot-runtime" class="internalDFN"
       data-link-type="dfn">WoT Runtime</a> instantiates software
@@ -6019,7 +5166,7 @@
     </section>
     <section id="private-security-data">
       <h3 id="x8-5-private-security-data"><bdi class=
-      "secno">8.5</bdi> Private Security Data<a class="self-link"
+      "secno">8.5</bdi> 私有安全数据<a class="self-link"
       aria-label="§" href="#private-security-data"></a></h3>
       <p>Private security data, such as a secret key for
       interacting with the Thing, is also conceptually managed by
@@ -6043,7 +5190,7 @@
     </section>
     <section id="protocol-stack-implementation">
       <h3 id="x8-6-protocol-stack-implementation"><bdi class=
-      "secno">8.6</bdi> Protocol Stack Implementation<a class=
+      "secno">8.6</bdi> 协议栈实现<a class=
       "self-link" aria-label="§" href=
       "#protocol-stack-implementation"></a></h3>
       <p>The protocol stack of a <a href="#dfn-servient" class=
@@ -6087,7 +5234,7 @@
       for details.</p>
     </section>
     <section id="system-api">
-      <h3 id="x8-7-system-api"><bdi class="secno">8.7</bdi> System
+      <h3 id="x8-7-system-api"><bdi class="secno">8.7</bdi> 系统
       API<a class="self-link" aria-label="§" href=
       "#system-api"></a></h3>
       <p>An implementation of a <a href="#dfn-wot-runtime" class=
@@ -6136,8 +5283,7 @@
     </section>
     <section id="alt-servient-impl">
       <h3 id="x8-8-alternative-servient-and-wot-implementations">
-      <bdi class="secno">8.8</bdi> Alternative Servient and WoT
-      Implementations<a class="self-link" aria-label="§" href=
+      <bdi class="secno">8.8</bdi> 交替服务方和 WoT 实施<a class="self-link" aria-label="§" href=
       "#alt-servient-impl"></a></h3>
       <p>The <a href="#dfn-wot-scripting-api" class="internalDFN"
       data-link-type="dfn">WoT Scripting API</a> building block is
@@ -6161,7 +5307,7 @@
       black-box implementation.</p>
       <section id="native-impl">
         <h4 id="x8-8-1-native-wot-api"><bdi class=
-        "secno">8.8.1</bdi> Native WoT API<a class="self-link"
+        "secno">8.8.1</bdi> 本地 WoT API<a class="self-link"
         aria-label="§" href="#native-impl"></a></h4>
         <p>There are various reasons why a developer may choose to
         implement a <a href="#dfn-servient" class="internalDFN"
@@ -6202,8 +5348,7 @@
       </section>
       <section id="existing-impl">
         <h4 id="x8-8-2-thing-description-for-existing-devices">
-        <bdi class="secno">8.8.2</bdi> Thing Description for
-        Existing Devices<a class="self-link" aria-label="§" href=
+        <bdi class="secno">8.8.2</bdi> 已存在设备的事物描述 <a class="self-link" aria-label="§" href=
         "#existing-impl"></a></h4>
         <p>It is also possible to integrate <em>existing</em> IoT
         devices or services into the <abbr title=
@@ -6253,9 +5398,9 @@
   </section>
   <section id="sec-deployment-scenario" class="informative">
     <h2 id="x9-example-wot-deployments"><bdi class="secno">9.</bdi>
-    Example WoT Deployments<a class="self-link" aria-label="§"
+    WoT 部署示例<a class="self-link" aria-label="§"
     href="#sec-deployment-scenario"></a></h2>
-    <p><em>This section is non-normative.</em></p>
+    <p><em>本章节是非标准的。</em></p>
     <p>This section provides various examples of how the Web of
     Things (WoT) abstract architecture may be instantiated when
     devices and services that implement the <a href="#dfn-thing"
@@ -6285,7 +5430,7 @@
     "dfn">Consumers</a>, respectively.</p>
     <section id="sec-client-server-roles">
       <h3 id="x9-1-thing-and-consumer-roles"><bdi class=
-      "secno">9.1</bdi> Thing and Consumer Roles<a class=
+      "secno">9.1</bdi> 事物和消费者角色<a class=
       "self-link" aria-label="§" href=
       "#sec-client-server-roles"></a></h3>
       <p>A <a href="#dfn-servient" class="internalDFN"
@@ -6387,8 +5532,7 @@
     <section id="sec-topologies-deployment-scenarios">
       <h3 id=
       "x9-2-topology-of-wot-systems-and-deployment-scenarios">
-      <bdi class="secno">9.2</bdi> Topology of WoT Systems and
-      Deployment Scenarios<a class="self-link" aria-label="§" href=
+      <bdi class="secno">9.2</bdi> WoT 系统的拓扑和部署场景<a class="self-link" aria-label="§" href=
       "#sec-topologies-deployment-scenarios"></a></h3>
       <p>Various topologies and deployment scenarios of WoT systems
       are discussed in this section. These are only example
@@ -6402,8 +5546,7 @@
       Requirements</a>).</p>
       <section id="sec-deployment-app-dev">
         <h4 id="x9-2-1-consumer-and-thing-on-the-same-network">
-        <bdi class="secno">9.2.1</bdi> Consumer and Thing on the
-        Same Network<a class="self-link" aria-label="§" href=
+        <bdi class="secno">9.2.1</bdi> 消费者和事物在同一个网络<a class="self-link" aria-label="§" href=
         "#sec-deployment-app-dev"></a></h4>
         <p>In the simplest interconnection topology, illustrated by
         <a href="#simple-conf-application-device" class="fig-ref"
@@ -6454,8 +5597,7 @@
       <section id="sec-deployment-intermediaries">
         <h4 id=
         "x9-2-2-consumer-and-thing-connected-via-intermediaries">
-        <bdi class="secno">9.2.2</bdi> Consumer and Thing Connected
-        via Intermediaries<a class="self-link" aria-label="§" href=
+        <bdi class="secno">9.2.2</bdi> 消费者和事物通过中介而连接<a class="self-link" aria-label="§" href=
         "#sec-deployment-intermediaries"></a></h4>
         <p>An <a href="#dfn-intermediary" class="internalDFN"
         data-link-type="dfn">Intermediary</a> plays both <a href=
@@ -6475,8 +5617,7 @@
         "dfn">Digital Twins</a>.</p>
         <section id="sec-deployment-app-proxy-dev">
           <h5 id="x9-2-2-1-intermediary-acting-as-a-proxy">
-          <bdi class="secno">9.2.2.1</bdi> Intermediary Acting as a
-          Proxy<a class="self-link" aria-label="§" href=
+          <bdi class="secno">9.2.2.1</bdi> 中介扮演着一个代理<a class="self-link" aria-label="§" href=
           "#sec-deployment-app-proxy-dev"></a></h5>
           <p>One simple application of an <a href=
           "#dfn-intermediary" class="internalDFN" data-link-type=
@@ -6536,8 +5677,7 @@
         </section>
         <section id="sec-deployment-digital-twin">
           <h5 id="x9-2-2-2-intermediary-acting-as-a-digital-twin">
-          <bdi class="secno">9.2.2.2</bdi> Intermediary Acting as a
-          Digital Twin<a class="self-link" aria-label="§" href=
+          <bdi class="secno">9.2.2.2</bdi> 中介扮演着一个数字孪生<a class="self-link" aria-label="§" href=
           "#sec-deployment-digital-twin"></a></h5>
           <p>More complex <a href="#dfn-intermediary" class=
           "internalDFN" data-link-type="dfn">Intermediaries</a> may
@@ -6583,8 +5723,7 @@
       <section id="sec-deployment-cloud">
         <h4 id=
         "x9-2-3-devices-in-a-local-network-controlled-from-a-cloud-service">
-        <bdi class="secno">9.2.3</bdi> Devices in a Local Network
-        Controlled from a Cloud Service<a class="self-link"
+        <bdi class="secno">9.2.3</bdi> 从云服务中控制本地网络中的设备<a class="self-link"
         aria-label="§" href="#sec-deployment-cloud"></a></h4>
         <p>In Smart Home use cases, devices (sensors and home
         appliances) connected to a home network are often monitored
@@ -6733,8 +5872,7 @@
       </section>
       <section id="sec-deployment-discovery-with-directory">
         <h4 id="x9-2-4-discovery-using-a-thing-directory">
-        <bdi class="secno">9.2.4</bdi> Discovery Using a Thing
-        Directory<a class="self-link" aria-label="§" href=
+        <bdi class="secno">9.2.4</bdi> 使用事物目录进行发现<a class="self-link" aria-label="§" href=
         "#sec-deployment-discovery-with-directory"></a></h4>
         <p>Once local devices (and possibly services) can be
         monitored or controlled by services on cloud, a variety of
@@ -6806,8 +5944,7 @@
       <section id="sec-deployment-service-to-service">
         <h4 id=
         "x9-2-5-service-to-service-connections-across-multiple-domains">
-        <bdi class="secno">9.2.5</bdi> Service-to-Service
-        Connections Across Multiple Domains<a class="self-link"
+        <bdi class="secno">9.2.5</bdi> 跨多域的服务到服务的连接<a class="self-link"
         aria-label="§" href=
         "#sec-deployment-service-to-service"></a></h4>
         <p>Multiple cloud eco-systems each based on different IoT
@@ -6828,8 +5965,7 @@
         "sec-deployment-service-to-service-synchronized">
           <h5 id=
           "x9-2-5-1-connection-through-thing-directory-synchronization">
-          <bdi class="secno">9.2.5.1</bdi> Connection Through Thing
-          Directory Synchronization<a class="self-link" aria-label=
+          <bdi class="secno">9.2.5.1</bdi> 通过事物目录同步进行连接<a class="self-link" aria-label=
           "§" href=
           "#sec-deployment-service-to-service-synchronized"></a></h5>
           <p>In <a href="#deployment-service-sync-directory" class=
@@ -6872,8 +6008,7 @@
         <section id="sec-deployment-service-sync-proxy">
           <h5 id=
           "x9-2-5-2-connection-through-proxy-synchronization">
-          <bdi class="secno">9.2.5.2</bdi> Connection Through Proxy
-          Synchronization<a class="self-link" aria-label="§" href=
+          <bdi class="secno">9.2.5.2</bdi> 通过代理同步进行连接<a class="self-link" aria-label="§" href=
           "#sec-deployment-service-sync-proxy"></a></h5>
           <p>In <a href="#deployment-service-sync-intermediary"
           class="fig-ref" title=
@@ -6917,10 +6052,10 @@
   </section>
   <section id="sec-security-considerations" class="informative">
     <h2 id="x10-security-and-privacy-considerations"><bdi class=
-    "secno">10.</bdi> Security and Privacy Considerations<a class=
+    "secno">10.</bdi> 安全和隐私注意事项<a class=
     "self-link" aria-label="§" href=
     "#sec-security-considerations"></a></h2>
-    <p><em>This section is non-normative.</em></p>
+    <p><em>本章节是非标准的。</em></p>
     <p>Security and privacy are a cross-cutting issues that need to
     be considered in all <a href="#sec-building-blocks">WoT
     building blocks</a> and WoT implementations. This chapter
@@ -6967,7 +6102,7 @@
     systems it describes and supports.</p>
     <section id="sec-security-consideration-td-risks">
       <h3 id="x10-1-wot-thing-description-risks"><bdi class=
-      "secno">10.1</bdi> WoT Thing Description Risks<a class=
+      "secno">10.1</bdi> WoT 事物描述风险<a class=
       "self-link" aria-label="§" href=
       "#sec-security-consideration-td-risks"></a></h3>
       <p>The metadata contained in a <a href=
@@ -6983,8 +6118,7 @@
       <section id="sec-security-consideration-td-private">
         <h4 id=
         "x10-1-1-thing-description-private-security-data-risk">
-        <bdi class="secno">10.1.1</bdi> Thing Description Private
-        Security Data Risk<a class="self-link" aria-label="§" href=
+        <bdi class="secno">10.1.1</bdi> 事物描述私有安全数据风险<a class="self-link" aria-label="§" href=
         "#sec-security-consideration-td-private"></a></h4>
         <p>TDs are designed to carry only <a href=
         "#dfn-public-security-metadata" class="internalDFN"
@@ -7027,8 +6161,7 @@
       <section id="sec-security-consideration-td-pii">
         <h4 id=
         "x10-1-2-thing-description-personally-identifiable-information-risk">
-        <bdi class="secno">10.1.2</bdi> Thing Description
-        Personally Identifiable Information Risk<a class=
+        <bdi class="secno">10.1.2</bdi> 事物描述个人身份信息风险<a class=
         "self-link" aria-label="§" href=
         "#sec-security-consideration-td-pii"></a></h4>
         <p>Thing descriptions can potentially contain <a href=
@@ -7080,8 +6213,7 @@
       <section id="sec-security-consideration-td-cm">
         <h4 id=
         "x10-1-3-thing-description-communication-metadata-risk">
-        <bdi class="secno">10.1.3</bdi> Thing Description
-        Communication Metadata Risk<a class="self-link" aria-label=
+        <bdi class="secno">10.1.3</bdi> 事物描述通信元数据风险<a class="self-link" aria-label=
         "§" href="#sec-security-consideration-td-cm"></a></h4>
         <p>The <a href="#dfn-wot-binding-templates" class=
         "internalDFN" data-link-type="dfn">WoT Binding
@@ -7115,8 +6247,7 @@
     </section>
     <section id="sec-security-consideration-scripting-risks">
       <h3 id="x10-2-wot-scripting-api-security-and-privacy-risks">
-      <bdi class="secno">10.2</bdi> WoT Scripting API Security and
-      Privacy Risks<a class="self-link" aria-label="§" href=
+      <bdi class="secno">10.2</bdi> WoT 脚本 API 安全性和隐私风险<a class="self-link" aria-label="§" href=
       "#sec-security-consideration-scripting-risks"></a></h3>
       <p>The <a href="#dfn-wot-runtime" class="internalDFN"
       data-link-type="dfn">WoT Runtime</a> implementation and the
@@ -7134,8 +6265,7 @@
       mitigations.</p>
       <section id="sec-security-consideration-cross-script">
         <h4 id="x10-2-1-cross-script-security-and-privacy-risk">
-        <bdi class="secno">10.2.1</bdi> Cross-Script Security and
-        Privacy Risk<a class="self-link" aria-label="§" href=
+        <bdi class="secno">10.2.1</bdi> 跨脚本安全和隐私风险<a class="self-link" aria-label="§" href=
         "#sec-security-consideration-cross-script"></a></h4>
         <p>In basic WoT setups, all scripts running inside the
         <a href="#dfn-wot-runtime" class="internalDFN"
@@ -7184,8 +6314,7 @@
       "sec-security-consideration-device-direct-access">
         <h4 id=
         "x10-2-2-physical-device-direct-access-security-and-privacy-risk">
-        <bdi class="secno">10.2.2</bdi> Physical Device Direct
-        Access Security and Privacy Risk<a class="self-link"
+        <bdi class="secno">10.2.2</bdi> 物理设备直接访问安全性和隐私风险<a class="self-link"
         aria-label="§" href=
         "#sec-security-consideration-device-direct-access"></a></h4>
         <p>In case a script is compromised or malfunctions the
@@ -7219,13 +6348,11 @@
     </section>
     <section id="sec-security-consideration-runtime-risks">
       <h3 id="x10-3-wot-runtime-security-and-privacy-risks">
-      <bdi class="secno">10.3</bdi> WoT Runtime Security and
-      Privacy Risks<a class="self-link" aria-label="§" href=
+      <bdi class="secno">10.3</bdi> WoT 运行时安全性和隐私风险<a class="self-link" aria-label="§" href=
       "#sec-security-consideration-runtime-risks"></a></h3>
       <section id="sec-security-consideration-update-provisioning">
         <h4 id="x10-3-1-provisioning-and-update-security-risk">
-        <bdi class="secno">10.3.1</bdi> Provisioning and Update
-        Security Risk<a class="self-link" aria-label="§" href=
+        <bdi class="secno">10.3.1</bdi> 配置和更新安全风险<a class="self-link" aria-label="§" href=
         "#sec-security-consideration-update-provisioning"></a></h4>
         <p>If the <a href="#dfn-wot-runtime" class="internalDFN"
         data-link-type="dfn">WoT Runtime</a> implementation
@@ -7254,8 +6381,7 @@
       <section id="sec-security-consideration-credentials-storage">
         <h4 id=
         "x10-3-2-security-credentials-storage-security-and-privacy-risk">
-        <bdi class="secno">10.3.2</bdi> Security Credentials
-        Storage Security and Privacy Risk<a class="self-link"
+        <bdi class="secno">10.3.2</bdi> 安全凭证存储安全性和隐私风险<a class="self-link"
         aria-label="§" href=
         "#sec-security-consideration-credentials-storage"></a></h4>
         <p>Typically the <a href="#dfn-wot-runtime" class=
@@ -7296,7 +6422,7 @@
   </section>
   <section id="changes" class="appendix">
     <h2 id="a-recent-specification-changes"><bdi class=
-    "secno">A.</bdi> Recent Specification Changes<a class=
+    "secno">A.</bdi> 近期标准变更<a class=
     "self-link" aria-label="§" href="#changes"></a></h2>
     <h2 id="changes-from-proposed-recommendation">Changes from
     Proposed Recommendation<a class="self-link" aria-label="§"
@@ -7341,7 +6467,7 @@
   </section>
   <section id="acknowledgements" class="appendix normative">
     <h2 id="b-acknowledgments"><bdi class="secno">B.</bdi>
-    Acknowledgments<a class="self-link" aria-label="§" href=
+    致谢<a class="self-link" aria-label="§" href=
     "#acknowledgements"></a></h2>
     <p>Special thanks to Michael McCool, Takuki Kamiya, Kazuyuki
     Ashimura, Sebastian Käbisch, Zoltan Kis, Elena Reshetova, Klaus
@@ -7379,11 +6505,11 @@
   </section>
   <section id="references" class="appendix">
     <h2 id="c-references"><bdi class="secno">C.</bdi>
-    References<a class="self-link" aria-label="§" href=
+    参考文献<a class="self-link" aria-label="§" href=
     "#references"></a></h2>
     <section id="normative-references">
       <h3 id="c-1-normative-references"><bdi class=
-      "secno">C.1</bdi> Normative references<a class="self-link"
+      "secno">C.1</bdi> 标准引用<a class="self-link"
       aria-label="§" href="#normative-references"></a></h3>
       <dl class="bibliography">
         <dt id="bib-rfc2046">[RFC2046]</dt>
@@ -7458,7 +6584,7 @@
     </section>
     <section id="informative-references">
       <h3 id="c-2-informative-references"><bdi class=
-      "secno">C.2</bdi> Informative references<a class="self-link"
+      "secno">C.2</bdi> 信息参考<a class="self-link"
       aria-label="§" href="#informative-references"></a></h3>
       <dl class="bibliography">
         <dt id="bib-coral">[CoRAL]</dt>
