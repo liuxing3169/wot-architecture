@@ -131,6 +131,114 @@
   max-height: 30vh;
   }
   </style>
+
+<style>/* --- ISSUES/NOTES --- */
+  div.issue-title, div.note-title , div.ednote-title, div.warning-title {
+      padding-right:  1em;
+      min-width: 7.5em;
+      color: #b9ab2d;
+  }
+  div.transheader {display: block;
+      border: solid #ccccbb; padding: 2%;
+      background: #eeeedd ;}
+      .transtitle {color: #555555;
+      background: #eeeedd ;
+      font-weight: bolder;}
+      .divcss1{ text-align:center}
+  
+  div.issue-title { color: #e05252; }
+  div.note-title, div.ednote-title { color: #2b2; }
+  div.warning-title { color: #f22; }
+  div.issue-title span, div.note-title span, div.ednote-title span, div.warning-title span {
+      text-transform: uppercase;
+  }
+  div.note, div.issue, div.ednote, div.warning {
+      margin-top: 1em;
+      margin-bottom: 1em;
+  }
+  .note > p:first-child, .ednote > p:first-child, .issue > p:first-child, .warning > p:first-child { margin-top: 0 }
+  .issue, .note, .ednote, .warning {
+      padding: .5em;
+      border-left-width: .5em;
+      border-left-style: solid;
+  }
+  div.issue, div.note , div.ednote,  div.warning {
+      padding: 1em 1.2em 0.5em;
+      margin: 1em 0;
+      position: relative;
+      clear: both;
+  }
+  span.note, span.ednote, span.issue, span.warning { padding: .1em .5em .15em; }
+  
+  .issue {
+      border-color: #e05252;
+      background: #fbe9e9;
+  }
+  .note, .ednote {
+      border-color: #52e052;
+      background: #e9fbe9;
+  }
+  
+  .doclinks {
+  
+      float: right;
+      border: thin solid black;
+      font-size: x-small;
+      display: block;
+      width: 25%;
+      hyphens: none;
+  
+  }
+  
+  .warning {
+      border-color: #f11;
+      border-width: .2em;
+      border-style: solid;
+      background: #fbe9e9;
+  }
+  
+  .warning-title:before{
+      content: "⚠"; /*U+26A0 WARNING SIGN*/
+      font-size: 3em;
+      float: left;
+      height: 100%;
+      padding-right: .3em;
+      vertical-align: top;
+      margin-top: -0.5em;
+  }
+  
+  li.task-list-item {
+      list-style: none;
+  }
+  
+  input.task-list-item-checkbox {
+      margin: 0 0.35em 0.25em -1.6em;
+      vertical-align: middle;
+  }
+  
+  .issue a.respec-gh-label {
+    padding: 5px;
+    margin: 0 2px 0 2px;
+    font-size: 10px;
+    text-transform: none;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    position: relative;
+    bottom: 2px;
+  }
+  
+  .issue a.respec-label-dark {
+    color: #fff;
+    background-color: #000;
+  }
+  
+  .issue a.respec-label-light {
+    color: #000;
+    background-color: #fff;
+  }
+  </style>
+
   <title>事物的万维网 (WoT) 架构</title>
   <style id="respec-mainstyle">
   /*****************************************************************
@@ -1616,6 +1724,18 @@
   "https://www.w3.org/StyleSheets/TR/2016/W3C-REC">
 </head>
 <body class="h-entry toc-inline">
+  
+  <div class="transheader">
+
+  <p class="transtitle">【注意】</p>
+  <p>此文档「事物的万维网 (WoT) 架构」系<a href="https://github.com/liuxing3169" target="blank">志愿者</a>从 W3C Web of Things (WoT) Architecture 翻译完成，由于专业水平和时间限制翻译难免出错。
+  </p>
+  <p>
+    本文仅供参考，以规范原文 <a class="u-url" href="https://www.w3.org/TR/2020/REC-wot-architecture-20200409/">Web of Things (WoT) Architecture</a> 为准。
+  </p>
+
+  </div>
+
   <div class="head">
     <a class="logo" href="https://www.w3.org/"><img alt="W3C"
     width="72" height="48" src=
